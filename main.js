@@ -60,8 +60,53 @@
 // let one =brand[0] + brand.slice(1).toLocaleLowerCase();
 // console.log(one)
 
-if (true) {
-  var a = 5;
-}
+// if (true) {
+//   var a = 5;
+// }
 
-console.log(a)
+// console.log(a)
+
+// const mainSalari = 600;
+// const maxSalari = 5000;
+// const pipol = 3;
+// total = 0;
+
+// for (i = 0; i <= pipol; i += 1){
+//  const salari = Math.round(Math.random() * (maxSalari - mainSalari) - mainSalari)
+  
+//   console.log(`Зарплата - ${i} = ${salari}`)
+  
+//   total += salari;
+// }
+// console.log(total)
+
+// const min = 5;
+// const max = 13;
+// let total = 0;
+
+// for (let i = min; i <= max; i += 1){
+//   if (i % 2 !== 0) {
+//     console.log('не четные: ', i);
+//     continue;
+//   }
+  
+//   console.log('четные: ', i);
+  
+//   total += i;
+// }
+
+//  console.log('total ',total)
+
+let balance = 10000;
+const payment = 2000;
+
+console.log(`На вашем балансе ${balance}`)
+
+if (payment <= balance) {
+  console.log(`Вы совершили покупку`);
+
+  balance -= payment;
+  
+  console.log(` на вашем счету ${balance}`);
+  
+} 
