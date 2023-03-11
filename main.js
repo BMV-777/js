@@ -110,24 +110,28 @@
 //   console.log(` на вашем счету ${balance}`);
   
 // }
-let totalSen = 5000;
-let payment = 500;
-let discount = 0;
+// let totalSen = 5000;
+// let payment = 500;
+// let discount = 0;
 
-if (totalSen >= 100 && totalSen < 1000) {
-  console.log('Бронзовая скидка 2%');
-  discount =0.02
-} else if (totalSen >= 1000 && totalSen < 2000) {
- console.log("Серебряный партнер 5%");
- discount = 0.05;
-} else if (totalSen >= 5000 ) {
- console.log("Золотой партнер 10%");
- discount = 0.1;
-}
+// if (totalSen >= 100 && totalSen < 1000) {
+//   console.log('Бронзовая скидка 2%');
+//   discount =0.02
+// } else if (totalSen >= 1000 && totalSen < 2000) {
+//  console.log("Серебряный партнер 5%");
+//  discount = 0.05;
+// } else if (totalSen >= 5000 ) {
+//  console.log("Золотой партнер 10%");
+//  discount = 0.1;
+// }
 
-totalSen -= payment * discount;
+// totalSen -= payment * discount;
 
-console.log(`Потрачино: ${payment} дискона на: ${discount * 100}%`)
+// console.log(`Потрачино: ${payment} дискона на: ${discount * 100}%`)
 
-totalSen += payment
-console.log(`${totalSen}`)
+// totalSen += payment
+// console.log(`${totalSen}`)
+
+let num = "I love JS!";
+let sum = num.slice(7,);
+console.log(sum)
