@@ -132,6 +132,209 @@
 // totalSen += payment
 // console.log(`${totalSen}`)
 
-let num = "I love JS!";
-let sum = num.slice(7,);
-console.log(sum)
+// let num = "I love JS!";
+// let sum = num.slice(5);
+// console.log(sum)
+
+// let user = prompt("Какое официальное назание Js?");
+
+//  if(user === '') {
+//   alert('Напишите ответ!!!');
+// }else if (user === 'ECMAScript') {
+//   alert("Это правильно!!!");
+// } else {
+//   alert("Вы незнаете ответ!!!");
+// }
+
+// let a = 40;
+// let b = 180;
+// let result;
+
+// if (a > 100 && b > 100) {
+
+//   if (a > b) {
+//     result= a;
+//   } else if (a < b) {
+//     result = b;
+//   }
+// } else {
+//   result =  b + 512;
+// }
+
+// console.log(result)
+
+// let link = "https://mu-site.com/about";
+
+// // if (!link.endsWith('/') && link.includes('mu-site')) {
+// // link += '/'
+// // }
+//  link.endsWith("/") && link.includes("mu-site") ? link+='/' : ''
+
+// console.log(link)
+
+// link = hours = 5;
+
+// if (hours < 17) {
+//  console.log("Pending")
+// } else if (hours >= 17 && hours <= 24) {
+//  console.log("Expires");
+// } else {
+//  console.log("Overdue")
+// }
+
+// hours < 17 ? ""
+
+// let user = prompt("Ведите логин");
+// console.log('user', user)
+
+
+// if (user === "Админ") {
+//   const password = prompt('пароль');
+//   console.log("password", password);
+  
+  
+// if (password === "Я админ") {
+//   console.log("Здраствуйте!!");
+// } else {
+//   console.log("Не верный пароль!!!");
+// }
+  
+// } else {
+// if (!user || user === null) {
+//   console.log("Отмена");
+// } else {
+//   console.log("Я вас незнаю!!!");
+// }
+
+// }
+
+
+// let num = 5.75
+// let sum = Math.round(num)
+// console.log(sum)
+
+// const friends = ['Ura', "Gru", "Yuli", "Muli"];
+
+// for (let i = 0; i < friends.length - 1; i += 1){
+  // friends[i]
+//   friends[i] += "/"
+// }
+
+// for (let friend of friends) {
+//   friend += "-1";
+// }
+
+  // console.table(friends)
+
+
+//----------masiv------///
+
+// const number = [20, 50, 100, 38, 15, 150];
+// let max = Math.min(...number)
+// console.log(max);
+// let total = 0;
+
+// for (let i = 0; i < number.length; i += 1){
+
+//   total += number[i]
+ 
+// }
+
+// console.log("Total:", total);
+
+
+// for (const value of number) {
+//   total += value
+// }
+
+
+// for (let i = 0; i < number.length; i += 1){
+// number[i]= Math.round(number[i] * 1.1)
+// }
+
+// console.log("Total:", number);
+
+// const number = [20, 50, 100,6,7,9,1, 38, 15, 150];
+// let total = 0;
+
+// for (let i = 0; i < number.length; i += 1){
+//   if (number[i] % 2 === 0) {
+    
+//   console.log("Четные:",number[i])
+//   } else {
+//   console.log("Не четные:", number[i])
+//   }
+//  total += number[i]
+// }
+
+// console.log('Total:', total)
+
+// const numbers = [20, 50, 100,  7, 9,  38, 15, 150];
+
+// let total = numbers[0];
+
+
+// for (const number of numbers) {
+
+//   if (number < total) {
+//    total = number
+//   }
+// }
+
+// console.log(total)
+
+const friends = ['Vika', 'I', "Yra", "Veronika"];
+// let string = '';
+
+// for (const friend of friends) {
+//   string += friend + ','
+// }
+
+// string = string.slice(0, string.length - 1);
+
+// friends.join('-$');
+// let string = friends.join('-$-')
+// const string = 'JaVaScript';
+// let letters = string.split("");
+// let invertedString = '';
+
+// for (const letter of letters) {
+
+  // if (letter === letter.toLowerCase()) {
+  //   console.log("Эта буква в нижнем регистре", letter);
+    
+  //   invertedString += letter.toUpperCase();
+  // } else {
+  //   console.log("Эта буква в верхнем регистре",  "- " + letter );
+    
+  //   invertedString += letter.toLowerCase()
+  // }
+  
+//   invertedString +=
+//     letter === letter.toLowerCase()
+//       ? letter.toUpperCase()
+//       : letter.toLowerCase();
+
+// }
+
+
+
+// console.log(invertedString);
+
+// const title = 'The lend 10 Hapi And';
+
+// const total = title.toLowerCase().split(' ').join('-')
+
+// console.log(total)
+
+const array1 = [5, 10, 15, 20];
+const array2 = [10, 20, 30];
+let total = 0;
+
+let numbers = array1.concat(array2)
+
+for (const number  of numbers) {
+  total += number
+}
+
+console.log(total)
