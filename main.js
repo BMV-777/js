@@ -327,14 +327,61 @@ const friends = ['Vika', 'I', "Yra", "Veronika"];
 
 // console.log(total)
 
-const array1 = [5, 10, 15, 20];
-const array2 = [10, 20, 30];
-let total = 0;
+// const array1 = [5, 10, 15, 20];
+// const array2 = [10, 20, 30];
+// let total = 0;
 
-let numbers = array1.concat(array2)
+// let numbers = array1.concat(array2)
 
-for (const number  of numbers) {
-  total += number
+// for (const number  of numbers) {
+//   total += number
+// }
+
+// console.log(total)
+
+// let a= [2, 3];
+// let b = [4, 5];
+
+
+
+// console.log(String([a, b] = [b, a]))
+
+//----------function-------------//git 
+
+// const colculatertotal = function (item) {
+  
+//   let total = 0;
+  
+//   for (sum of item) {
+  
+//    total += sum
+//   }
+
+//   return total;
+// }
+
+// console.log(colculatertotal([1, 3, 5]));
+
+ const logins = ["freedom", "food", "hom", "geri"];
+
+const findLogin = function (allLogin, setLogin) {
+  
+  // for (const login of allLogin) {
+  //   if (login === setLogin) {
+  //     return `Пользователь ${setLogin} найден`
+  //   }
+  // }
+  
+  // return `Пользователь ${setLogin} не найден`;
+  
+  return allLogin.includes(setLogin)
+    ? `Пользователь ${setLogin} найден`
+    : `Пользователь ${setLogin} не найден`;
+
 }
 
-console.log(total)
+
+console.log(findLogin(logins, 'freedom'));
+console.log(findLogin(logins, 'lint'));
+console.log(findLogin(logins, "hom"));
+console.log(findLogin(logins, "vergun"));
