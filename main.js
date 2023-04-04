@@ -283,7 +283,7 @@
 
 // console.log(total)
 
-const friends = ['Vika', 'I', "Yra", "Veronika"];
+// const friends = ['Vika', 'I', "Yra", "Veronika"];
 // let string = '';
 
 // for (const friend of friends) {
@@ -346,7 +346,7 @@ const friends = ['Vika', 'I', "Yra", "Veronika"];
 
 // console.log(String([a, b] = [b, a]))
 
-//----------function-------------//git 
+//----------function-------------//git
 
 // const colculatertotal = function (item) {
   
@@ -362,9 +362,9 @@ const friends = ['Vika', 'I', "Yra", "Veronika"];
 
 // console.log(colculatertotal([1, 3, 5]));
 
- const logins = ["freedom", "food", "hom", "geri"];
+//  const logins = ["freedom", "food", "hom", "geri"];
 
-const findLogin = function (allLogin, setLogin) {
+// const findLogin = function (allLogin, setLogin) {
   
   // for (const login of allLogin) {
   //   if (login === setLogin) {
@@ -374,14 +374,55 @@ const findLogin = function (allLogin, setLogin) {
   
   // return `Пользователь ${setLogin} не найден`;
   
-  return allLogin.includes(setLogin)
-    ? `Пользователь ${setLogin} найден`
-    : `Пользователь ${setLogin} не найден`;
+//   return allLogin.includes(setLogin)
+//     ? `Пользователь ${setLogin} найден`
+//     : `Пользователь ${setLogin} не найден`;
 
+// }
+
+
+// console.log(findLogin(logins, 'freedom'));
+// console.log(findLogin(logins, 'lint'));
+// console.log(findLogin(logins, "hom"));
+// console.log(findLogin(logins, "vergun"));
+
+
+// function fn(string) {
+//  console.log(string.includes(1));
+// }
+
+// fn('1');
+
+// const number = [2, 3, 5, 7, -2];
+// const arr = [1, 2, 3];
+// const max = Math.min(...arr);
+
+// console.log(max);
+
+// const user = ('free', 'Fghkk', 'gfrtrt')
+
+// console.log(user.split(' '))
+
+// const add = function (,b,c){
+//   console.log(,b,c)
+// }
+
+// console.log(add(1,2,3))
+
+
+
+const filterNumber = function (are, ...args) {
+  
+  const sum = [];
+  
+  for (const element of are) {
+    if (args.includes(element)) {
+      sum.push(element)
+    }
+  }
+  return sum;
 }
 
-
-console.log(findLogin(logins, 'freedom'));
-console.log(findLogin(logins, 'lint'));
-console.log(findLogin(logins, "hom"));
-console.log(findLogin(logins, "vergun"));
+console.log(filterNumber([2, 40, 30, 50], 10, 12, 2, 30));
+console.log(filterNumber([4, 40, 30, 50], 10, 12, 4, 50));
+console.log(filterNumber([200, 40, 35, 50], 10, 12, 200, 35));
