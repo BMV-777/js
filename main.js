@@ -411,18 +411,182 @@
 
 
 
-const filterNumber = function (are, ...args) {
+// const filterNumber = function (are, ...args) {
   
-  const sum = [];
+//   const sum = [];
   
-  for (const element of are) {
-    if (args.includes(element)) {
-      sum.push(element)
-    }
+//   for (const element of are) {
+//     if (args.includes(element)) {
+//       sum.push(element)
+//     }
+//   }
+//   return sum;
+// }
+
+// console.log(filterNumber([2, 40, 30, 50], 10, 12, 2, 30));
+// console.log(filterNumber([4, 40, 30, 50], 10, 12, 4, 50));
+// console.log(filterNumber([200, 40, 35, 50], 10, 12, 200, 35));
+
+
+// function updateLight(current) {
+//   switch (current) {
+//     case "green":
+//       console.log("yellow");
+//       break;
+//     case "yellow":
+//       console.log("red");
+//       break;
+//     case "red":
+//       console.log("green");
+//       break;
+//     default:
+//       console.log("Sorry");
+//   }
+// }
+
+
+//     console.log(updateLight("green"), "yellow");
+//     console.log(updateLight("yellow"), "red");
+//     console.log(updateLight("red"), "green");
+
+
+// function hoopCount(n) {
+//   return `${n}` > 10 ? '' : '';
+// }
+
+
+// console.log(hoopCount(3), "Great, now move on to tricks");
+// console.log(hoopCount(10), "Keep at it until you get it");
+
+// function setAlarm(employed, vacation){
+//   if (employed | vacation) {
+//    console.log('work')
+//   }
+// }
+
+// console.log((true, true), false, "Should be false.");
+
+// function doubleChar(str) {
+//   return [...str].map((s) => s.repeat(3)).join("");
+// }
+
+// console.log(doubleChar("abcd"));
+
+const english = 'Welcome';
+const czech = 'Vitejte';
+const danish = 'Velkomst';
+const dutch = 'Welkom';
+const estonian = 'Tere tulemast';
+const finnish = 'Tervetuloa';
+const flemish = 'Welgekomen';
+const french = 'Bienvenue';
+const german = 'Willkommen';
+const irish = 'Failte';
+const italian = 'Benvenuto';
+const latvian = 'Gaidits';
+const lithuanian = 'Laukiamas';
+const polish = 'Witamy';
+const spanish = 'Bienvenido';
+const swedish = 'Valkommen';
+const welsh = 'Croeso';
+
+function greet(language = 'english') {
+	switch (language) {
+    case "english":
+      console.log(
+        `${english}, "Your function should have returned ${english}. Try again.`
+      );
+      break;
+    case "czech":
+      console.log(
+        `${czech}, "Your function should have returned ${czech}. Try again.`
+      );
+      break;
+    case "danish":
+      console.log(
+        `${danish}, "Your function should have returned ${danish}. Try again.`
+      );
+      break;
+    case "dutch":
+      console.log(
+        `${dutch}, "Your function should have returned ${dutch}. Try again.`
+      );
+      break;
+    case "estonian":
+      console.log(
+        `${estonian}, "Your function should have returned ${estonian}. Try again.`
+      );
+      break;
+    case "finnish":
+      console.log(
+        `${finnish}, "Your function should have returned ${finnish}. Try again.`
+      );
+      break;
+    case "flemish":
+      console.log(
+        `${flemish}, "Your function should have returned ${flemish}. Try again.`
+      );
+      break;
+    case "french":
+      console.log(
+        `${french}, "Your function should have returned ${french}. Try again.`
+      );
+      break;
+    case "german":
+      console.log(
+        `${german}, "Your function should have returned ${german}. Try again.`
+      );
+      break;
+    case "irish":
+      console.log(
+        `${irish}, "Your function should have returned ${irish}. Try again.`
+      );
+      break;
+    case "italian":
+      console.log(
+        `${italian}, "Your function should have returned ${italian}. Try again.`
+      );
+      break;
+    case "latvian":
+      console.log(
+        `${latvian}, "Your function should have returned ${latvian}. Try again.`
+      );
+      break;
+    case "lithuanian":
+      console.log(
+        `${lithuanian}, "Your function should have returned ${lithuanian}. Try again.`
+      );
+      break;
+    case "polish":
+      console.log(
+        `${polish}, "Your function should have returned ${polish}. Try again.`
+      );
+      break;
+    case "spanish":
+      console.log(
+        `${spanish}, "Your function should have returned ${spanish}. Try again.`
+      );
+      break;
+    case "swedish":
+      console.log(
+        `${swedish}, "Your function should have returned ${swedish}. Try again.`
+      );
+      break;
+    case "welsh":
+      console.log(
+        `${welsh}, "Your function should have returned ${welsh}. Try again.`
+      );
+      break;
+    case "IP_ADDRESS_INVALID":
+    case  "IP_ADDRESS_NOT_FOUND":
+    case  "IP_ADDRESS_REQUIRED":
+      console.log(
+        'Welcome, "Your function should have returned Welcome. Try again.'
+      );
+      break;
+    default:
+      console.log("Not " + language + '.');
   }
-  return sum;
 }
 
-console.log(filterNumber([2, 40, 30, 50], 10, 12, 2, 30));
-console.log(filterNumber([4, 40, 30, 50], 10, 12, 4, 50));
-console.log(filterNumber([200, 40, 35, 50], 10, 12, 200, 35));
+console.log(greet("IP_ADDRESS_NOT_FOUND"));
