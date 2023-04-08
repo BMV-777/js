@@ -472,121 +472,130 @@
 
 // console.log(doubleChar("abcd"));
 
-const english = 'Welcome';
-const czech = 'Vitejte';
-const danish = 'Velkomst';
-const dutch = 'Welkom';
-const estonian = 'Tere tulemast';
-const finnish = 'Tervetuloa';
-const flemish = 'Welgekomen';
-const french = 'Bienvenue';
-const german = 'Willkommen';
-const irish = 'Failte';
-const italian = 'Benvenuto';
-const latvian = 'Gaidits';
-const lithuanian = 'Laukiamas';
-const polish = 'Witamy';
-const spanish = 'Bienvenido';
-const swedish = 'Valkommen';
-const welsh = 'Croeso';
+// const english = 'Welcome';
+// const czech = 'Vitejte';
+// const danish = 'Velkomst';
+// const dutch = 'Welkom';
+// const estonian = 'Tere tulemast';
+// const finnish = 'Tervetuloa';
+// const flemish = 'Welgekomen';
+// const french = 'Bienvenue';
+// const german = 'Willkommen';
+// const irish = 'Failte';
+// const italian = 'Benvenuto';
+// const latvian = 'Gaidits';
+// const lithuanian = 'Laukiamas';
+// const polish = 'Witamy';
+// const spanish = 'Bienvenido';
+// const swedish = 'Valkommen';
+// const welsh = 'Croeso';
 
-function greet(language = 'english') {
-	switch (language) {
-    case "english":
-      console.log(
-        `${english}, "Your function should have returned ${english}. Try again.`
-      );
-      break;
-    case "czech":
-      console.log(
-        `${czech}, "Your function should have returned ${czech}. Try again.`
-      );
-      break;
-    case "danish":
-      console.log(
-        `${danish}, "Your function should have returned ${danish}. Try again.`
-      );
-      break;
-    case "dutch":
-      console.log(
-        `${dutch}, "Your function should have returned ${dutch}. Try again.`
-      );
-      break;
-    case "estonian":
-      console.log(
-        `${estonian}, "Your function should have returned ${estonian}. Try again.`
-      );
-      break;
-    case "finnish":
-      console.log(
-        `${finnish}, "Your function should have returned ${finnish}. Try again.`
-      );
-      break;
-    case "flemish":
-      console.log(
-        `${flemish}, "Your function should have returned ${flemish}. Try again.`
-      );
-      break;
-    case "french":
-      console.log(
-        `${french}, "Your function should have returned ${french}. Try again.`
-      );
-      break;
-    case "german":
-      console.log(
-        `${german}, "Your function should have returned ${german}. Try again.`
-      );
-      break;
-    case "irish":
-      console.log(
-        `${irish}, "Your function should have returned ${irish}. Try again.`
-      );
-      break;
-    case "italian":
-      console.log(
-        `${italian}, "Your function should have returned ${italian}. Try again.`
-      );
-      break;
-    case "latvian":
-      console.log(
-        `${latvian}, "Your function should have returned ${latvian}. Try again.`
-      );
-      break;
-    case "lithuanian":
-      console.log(
-        `${lithuanian}, "Your function should have returned ${lithuanian}. Try again.`
-      );
-      break;
-    case "polish":
-      console.log(
-        `${polish}, "Your function should have returned ${polish}. Try again.`
-      );
-      break;
-    case "spanish":
-      console.log(
-        `${spanish}, "Your function should have returned ${spanish}. Try again.`
-      );
-      break;
-    case "swedish":
-      console.log(
-        `${swedish}, "Your function should have returned ${swedish}. Try again.`
-      );
-      break;
-    case "welsh":
-      console.log(
-        `${welsh}, "Your function should have returned ${welsh}. Try again.`
-      );
-      break;
-    case "IP_ADDRESS_INVALID":
-    case  "IP_ADDRESS_NOT_FOUND":
-    case  "IP_ADDRESS_REQUIRED":
-      console.log(
-        'Welcome, "Your function should have returned Welcome. Try again.'
-      );
-      break;
-    default:
-      console.log("Not " + language + '.');
-  }
-}
+// function greet(language = 'english') {
+// 	switch (language) {
+//     case "english":
+//       console.log(
+//         `${english}, "Your function should have returned ${english}. Try again.`
+//       );
+//       break;
+//     case "czech":
+//       console.log(
+//         `${czech}, "Your function should have returned ${czech}. Try again.`
+//       );
+//       break;
+//     case "danish":
+//       console.log(
+//         `${danish}, "Your function should have returned ${danish}. Try again.`
+//       );
+//       break;
+//     case "dutch":
+//       console.log(
+//         `${dutch}, "Your function should have returned ${dutch}. Try again.`
+//       );
+//       break;
+//     case "estonian":
+//       console.log(
+//         `${estonian}, "Your function should have returned ${estonian}. Try again.`
+//       );
+//       break;
+//     case "finnish":
+//       console.log(
+//         `${finnish}, "Your function should have returned ${finnish}. Try again.`
+//       );
+//       break;
+//     case "flemish":
+//       console.log(
+//         `${flemish}, "Your function should have returned ${flemish}. Try again.`
+//       );
+//       break;
+//     case "french":
+//       console.log(
+//         `${french}, "Your function should have returned ${french}. Try again.`
+//       );
+//       break;
+//     case "german":
+//       console.log(
+//         `${german}, "Your function should have returned ${german}. Try again.`
+//       );
+//       break;
+//     case "irish":
+//       console.log(
+//         `${irish}, "Your function should have returned ${irish}. Try again.`
+//       );
+//       break;
+//     case "italian":
+//       console.log(
+//         `${italian}, "Your function should have returned ${italian}. Try again.`
+//       );
+//       break;
+//     case "latvian":
+//       console.log(
+//         `${latvian}, "Your function should have returned ${latvian}. Try again.`
+//       );
+//       break;
+//     case "lithuanian":
+//       console.log(
+//         `${lithuanian}, "Your function should have returned ${lithuanian}. Try again.`
+//       );
+//       break;
+//     case "polish":
+//       console.log(
+//         `${polish}, "Your function should have returned ${polish}. Try again.`
+//       );
+//       break;
+//     case "spanish":
+//       console.log(
+//         `${spanish}, "Your function should have returned ${spanish}. Try again.`
+//       );
+//       break;
+//     case "swedish":
+//       console.log(
+//         `${swedish}, "Your function should have returned ${swedish}. Try again.`
+//       );
+//       break;
+//     case "welsh":
+//       console.log(
+//         `${welsh}, "Your function should have returned ${welsh}. Try again.`
+//       );
+//       break;
+//     case "IP_ADDRESS_INVALID":
+//     case  "IP_ADDRESS_NOT_FOUND":
+//     case  "IP_ADDRESS_REQUIRED":
+//       console.log(
+//         'Welcome, "Your function should have returned Welcome. Try again.'
+//       );
+//       break;
+//     default:
+//       console.log("Not " + language + '.');
+//   }
+// }
 
-console.log(greet("IP_ADDRESS_NOT_FOUND"));
+// console.log(greet("IP_ADDRESS_NOT_FOUND"));
+
+// const number = [1, 2, 3, 4];
+// const ar1 = [...number, 5,6,7,8];
+// console.log(number);
+// console.log(ar1);
+
+const music = ['jazz', 'rock', 'pops'];
+
+console.log(music[music.length-1])
