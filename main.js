@@ -596,6 +596,57 @@
 // console.log(number);
 // console.log(ar1);
 
-const music = ['jazz', 'rock', 'pops'];
+// const music = ['jazz', 'rock', 'pops'];
 
-console.log(music[music.length-1])
+// console.log(music[music.length-1])
+
+
+
+// const string = 'Welcome to Ukraine';
+// const strAre = string.split('').reverse().join('');
+
+// console.log(strAre)
+
+// const langs = ['puton', 'js', 'c++', 'haskel', 'php', 'rubi'];
+
+// for (let i = 0; i < langs.length; i += 1){
+//   for (let j = i + 1; j > langs.length; j += 1){
+    
+//     if (langs[i][0] > langs[j][0]) {
+//       const tmp = langs[i];
+//       langs[i] = langs[j];
+//       langs[j] = tmp;
+//     }
+//   }
+// }
+
+// console.log(langs)
+
+// const numbers = [1, 44, 54, 67, 2, 8];
+
+// console.log(Math.min(1, 44, 54, 67, 2, -8))
+// let min = numbers[0];
+// let max = numbers[0] ;
+
+// for (const number of numbers) {
+//   if (number < min) {
+//     min = number;
+//   }
+//    if (number > max) {
+//      max = number;
+//   }
+// }
+
+// console.log(min)
+//  console.log(max)
+
+const string = 'Welcome to Ukraine';
+const str = string.split('');
+const strAry = str.reverse().join('');
+
+// for (let i = 0; i < str.length; i += 1){
+//  console.log(str[i].split().reverse().join('')) 
+// }
+
+
+console.log(strAry)
