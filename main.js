@@ -640,13 +640,67 @@
 // console.log(min)
 //  console.log(max)
 
-const string = 'Welcome to Ukraine';
-const str = string.split('');
-const strAry = str.reverse().join('');
+// const string = 'Welcome to Ukraine';
+// const str = string.split('');
+// const strAry = str.reverse().join('');
 
 // for (let i = 0; i < str.length; i += 1){
-//  console.log(str[i].split().reverse().join('')) 
+//  console.log(str[i].split().reverse().join(''))
 // }
 
 
-console.log(strAry)
+// console.log(strAry)
+
+// youtube.com/watch?v=Xwo5mVxDql
+
+// const min = 5;
+// const max = 13;
+
+// const sum = [2, 5, 6, 8, 10, 20, 23, 44, 31];
+// let total = 0;
+
+// for (let i = 0; i < sum.length; i += 1){
+//   if (sum[i] % 2 === 0) {
+//     console.log("четные: ", sum[i]);
+//   }
+    
+  // } else {
+  //   console.log("Не четные: ", sum[i])
+  // }
+//  total += sum[i];
+   
+// }
+
+// console.log(total)
+
+
+// const number = [20, 50, 100,6,7,9,1, 38, 15, 150];
+// let total = 0;
+
+// for (let i = 0; i < number.length; i += 1){
+//   if (number[i] % 2 === 0) {
+    
+//   console.log("Четные:",number[i])
+//   } else {
+//   console.log("Не четные:", number[i])
+//   }
+//  total += number[i]
+// }
+
+// console.log('Total:', total)
+
+// const fn = (arr) =>
+//   arr.map((el) => {
+//     const item = document.createElement("div");
+//     item.textContent = el;
+
+//     return item;
+//   });
+
+// console.log(fn(["html", "css", "js", "react"]));
+
+// const a = b || c ? b + c : b - c;
+// const a = b || c : b + c ? b - c;
+// const a != b || c ? b + c : b - c;
+
+// console.log(a)
