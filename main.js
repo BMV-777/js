@@ -704,3 +704,56 @@
 // const a != b || c ? b + c : b - c;
 
 // console.log(a)
+
+// function diamont(arr) {
+// const [a,b] = arr.split(' ')
+
+//   return a * b;
+// }
+
+// console.log(diamont('8 11'))
+
+
+// const frut =(array) =>{
+// array.forEach((element, index) => {
+//   console.log(`${index + 1} - ${element}`)
+// });
+// }
+
+// frut(['mango', 'fango', 'banan']);
+// frut(["inter", "printer", "dog"]);
+
+// function printCountacts(names, phones) {
+//   const arreyname = names.split(',');
+//   const arreyphone = phones.split(',');
+  
+//   const printCounter = ((name,index) => {
+//    console.log(`${name} - ${arreyphone[index]}`);
+//   })
+  
+//   arreyname.forEach(printCounter)
+  
+  // arreyname.forEach((name,index) => {
+  //   console.log(`${name} - ${arreyphone[index]}`);
+  // });
+
+// }
+
+// printCountacts('Jon,Mony,Gren', '7777778,7777777,7777779');
+
+// function findLargestNumber(numbers) {
+
+//   let max = numbers[0];
+  
+//   for (const counter of numbers) {
+//     if (counter > max) {
+//       max = counter;
+//     }
+//   }
+//   return max
+// }
+
+const findLargestNumber = (numbers) => Math.min(...numbers)
+
+console.log(findLargestNumber([2, 5, 10, -1, 45, 94]));
+console.log(findLargestNumber([49, 15, 110, 1, 45, 94]));
