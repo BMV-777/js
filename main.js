@@ -759,44 +759,55 @@
 // console.log(findLargestNumber([49, 15, 110, 1, 45, 94]));
 
 
-const courses = ['HTML', 'CSS', 'JavaScript', 'React', 'PostgreSQL'];
+// const courses = ['HTML', 'CSS', 'JavaScript', 'React', 'PostgreSQL'];
 
-const addCourses = (cours) => {
-  if (courses.includes(cours)) {
-    console.log('Увас уже есть такой курс')
-    return;
-  }
-    courses.push(cours);
-}
+// const addCourses = (cours) => {
+//   if (courses.includes(cours)) {
+//     console.log('Увас уже есть такой курс')
+//     return;
+//   }
+//     courses.push(cours);
+// }
 
-const removeCoures = (cours) => {
-  const indx =courses.indexOf(cours);
-  if (indx === -1) {
-    console.log('Курс с таким именем не найден');
-    return;
-  }
+// const removeCoures = (cours) => {
+//   const indx =courses.indexOf(cours);
+//   if (indx === -1) {
+//     console.log('Курс с таким именем не найден');
+//     return;
+//   }
   
-  courses.splice(indx,1)
+//   courses.splice(indx,1)
+// }
+
+// const updateCourses = (oldCurses, newCourses) => {
+//   const indx = courses.indexOf(oldCurses);
+//   if (indx === -1) {
+//     console.log("Курс с таким именем  найден");
+//     return;
+//   }
+
+//   courses.splice(indx, 1, newCourses);
+// };
+
+// addCourses('Express');
+// console.log(courses);
+// addCourses('CSS');
+
+// removeCoures('React');
+// console.log(courses)
+// removeCoures('Vue');
+
+// updateCourses('Express', 'NestJs');
+// console.log(courses);
+// updateCourses("Express", 'NestJs');
+
+
+const username = 'Mango';
+const user = 'Jerd';
+
+const poli = {
+  usernee777: username,
 }
 
-const updateCourses = (oldCurses, newCourses) => {
-  const indx = courses.indexOf(oldCurses);
-  if (indx === -1) {
-    console.log("Курс с таким именем  найден");
-    return;
-  }
 
-  courses.splice(indx, 1, newCourses);
-};
-
-addCourses('Express');
-console.log(courses);
-addCourses('CSS');
-
-removeCoures('React');
-console.log(courses)
-removeCoures('Vue');
-
-updateCourses('Express', 'NestJs');
-console.log(courses);
-updateCourses("Express", 'NestJs');
+console.log(poli.A)
