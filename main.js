@@ -802,12 +802,64 @@
 // updateCourses("Express", 'NestJs');
 
 
-const username = 'Mango';
-const user = 'Jerd';
+// const username = 'Mango';
+// const user = 'Jerd';
 
-const poli = {
-  usernee777: username,
-}
+// const poli = {
+//   usernee777: username,
+// }
 
 
-console.log(poli.A)
+// console.log(poli.user);
+
+const frinds = [
+  { name: "Poli", online: false },
+  { name: "Jon", online: true },
+  { name: "Meri", online: false },
+  { name: "Gari", online: true },
+];
+
+const getFrensaName = (allName) => {
+  const friendsOnlain = [];
+
+  for (const friend of allName) {
+    console.log(friend.online);
+    if (!friend.online) {
+      friendsOnlain.push(friend);
+      
+      friend.sergh = 555;
+    }
+  }
+ return friendsOnlain;
+};
+console.table(getFrensaName(frinds));
+
+
+// const getFrensaName = (allName) => {
+  
+//   const names = [];
+  
+//   for (const frend of allName) {
+//     console.log(frend.name)
+//     names.push(frend.name);
+//   }
+//   return names;
+// }
+// console.log(getFrensaName(frinds));
+
+// const getFrensaName = (allFrends, allName) => {
+
+//   for (let frend of allFrends) {
+  
+//     if (frend.name === allName) {
+//       return ` ${allName}: Нашли!!`;
+//     }
+  
+//   }
+  
+//   return `Не нашли :( , ${allName}`;
+// }
+
+// console.log(getFrensaName(frends, "Poli"))
+// console.log(getFrensaName(frends, "nod"));
+
