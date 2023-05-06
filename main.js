@@ -812,27 +812,27 @@
 
 // console.log(poli.user);
 
-const frinds = [
-  { name: "Poli", online: false },
-  { name: "Jon", online: true },
-  { name: "Meri", online: false },
-  { name: "Gari", online: true },
-];
+// const frinds = [
+//   { name: "Poli", online: false },
+//   { name: "Jon", online: true },
+//   { name: "Meri", online: false },
+//   { name: "Gari", online: true },
+// ];
 
-const getFrensaName = (allName) => {
-  const friendsOnlain = [];
+// const getFrensaName = (allName) => {
+//   const friendsOnlain = [];
 
-  for (const friend of allName) {
-    console.log(friend.online);
-    if (!friend.online) {
-      friendsOnlain.push(friend);
+//   for (const friend of allName) {
+//     console.log(friend.online);
+//     if (!friend.online) {
+//       friendsOnlain.push(friend);
       
-      friend.sergh = 555;
-    }
-  }
- return friendsOnlain;
-};
-console.table(getFrensaName(frinds));
+//       friend.sergh = 555;
+//     }
+//   }
+//  return friendsOnlain;
+// };
+// console.table(getFrensaName(frinds));
 
 
 // const getFrensaName = (allName) => {
@@ -863,3 +863,36 @@ console.table(getFrensaName(frinds));
 // console.log(getFrensaName(frends, "Poli"))
 // console.log(getFrensaName(frends, "nod"));
 
+
+const cart = {
+  item: [],
+  getItems() {
+    this.item;
+  },
+  add(product) {
+    product.quantity = 1;
+    if (product.quantity) {
+      return product;
+    }
+    product.item.push;
+  },
+  remove(productName) {
+  
+  },
+  clear() {
+  
+  },
+  countTotalPrice() {
+  
+  },
+  increaseQuntity(productName) {
+  
+  },
+  decreaseQuantity(productName) {
+  
+  }
+}
+
+cart.add({ name: 'apple', price: 50 });
+
+console.table(cart.getItems());
