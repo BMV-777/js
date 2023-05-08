@@ -863,36 +863,78 @@
 // console.log(getFrensaName(frends, "Poli"))
 // console.log(getFrensaName(frends, "nod"));
 
+// const number = [{ a: 1  },{ b: 2 }, { c:3 } ];
 
-const cart = {
-  item: [],
-  getItems() {
-    this.item;
-  },
-  add(product) {
-    product.quantity = 1;
-    if (product.quantity) {
-      return product;
-    }
-    product.item.push;
-  },
-  remove(productName) {
-  
-  },
-  clear() {
-  
-  },
-  countTotalPrice() {
-  
-  },
-  increaseQuntity(productName) {
-  
-  },
-  decreaseQuantity(productName) {
-  
-  }
-}
+// const [a, b, c] = number;
 
-cart.add({ name: 'apple', price: 50 });
+// console.log(a)
 
-console.table(cart.getItems());
+// const playList = {
+//   name: 'fresbi',
+//   treck: ['frnds', 'ferri', 'geri'],
+//   countri: 3,
+// };
+
+// const { name, treck, countri, tottal=10 } = playList;
+
+// console.log(tottal)
+
+// const clients = ["Mango", "Ajax", "Poly"];
+
+// for (const client of clients) {
+//   console.log(client);
+// }
+
+// // const string = "javascript";
+
+// for (const character of string) {
+//   console.log(character);
+// }
+
+// const string = 'Welcome to Ukraine';
+// const strAre = string.split('').reverse().join('');
+
+// console.log(strAre)
+// const stringName = "javascript";
+
+// const user =stringName.split('');
+// console.log(user)
+
+ const title = 'The lend 10 Hapi And';
+
+const total = title.toUpperCase().split('')
+
+console.log(total)
+
+// const cart = {
+//   item: [],
+//   getItems() {
+//     this.item;
+//   },
+//   add(product) {
+//     product.quantity = 1;
+//     if (product.quantity) {
+//       return product;
+//     }
+//     product.item.push;
+//   },
+//   remove(productName) {
+  
+//   },
+//   clear() {
+  
+//   },
+//   countTotalPrice() {
+  
+//   },
+//   increaseQuntity(productName) {
+  
+//   },
+//   decreaseQuantity(productName) {
+  
+//   }
+// }
+
+// cart.add({ name: 'apple', price: 50 });
+
+// console.table(cart.getItems());
