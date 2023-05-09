@@ -900,41 +900,181 @@
 // const user =stringName.split('');
 // console.log(user)
 
- const title = 'The lend 10 Hapi And';
+//  const title = 'The lend 10 Hapi And';
 
-const total = title.toUpperCase().split('')
+// const total = title.toUpperCase().split('')
 
-console.log(total)
+// console.log(total)
+
+// const auters = {
+//   gren: 3,
+//   red: 4,
+//   blue: 5,
+//   white: 1,
+// }
+
+// const entri = Object.entries(auters);
+
+// for (const [name,user] of entri) {
+ 
+//   console.log(name, user)
+// }
+
+// const cards = {
+//   items: [],
+//   getItems() {
+//    return this.items
+//   },
+//   add(product) {
+    
+//     for (let item of this.items) {
+//       if (item.name === product.name) {
+//         item.quantiti += 1;
+//         return;
+//       }
+//     }
+    
+//     const newProduct = {
+//       ...product,
+//       quantiti: 1,
+//     };
+    
+//     this.items.push(newProduct);
+   
+//   },
+//   remove(productName) {
+
+//     for (let i = 0; i < this.items.length; i += 1) {
+//       if (this.items[i].name === productName) {
+//          this.items.splice(i, 1);
+//       }
+//     }
+ 
+//   },
+//   clear() {
+//     this.items = [];
+//   },
+//   countTotalPrice() {
+//     let total = 0;
+//     const { items } = this;
+    
+//     for (let { price, quantiti } of items) {
+        
+//       total += price * quantiti;
+//     }
+//     return total
+//   },
+//   increaseQuntity(productName) {
+    
+//     for (let i = 0; i < this.items.length; i += 1){
+//       if (productName === this.items[i].name) {
+//         productName = this.items[i].quantiti += 1;
+//       }
+//     }
+        
+//   },
+//   decreaseQuantity(productName) {
+//       for (let i = 0; i < this.items.length; i += 1) {
+//         if (productName === this.items[i].name) {
+//           productName = this.items[i].quantiti -= 1;
+//         }
+//       }
+//   }
+// }
+
+// cards.add({ name: "bananes", price: 50 });
+// cards.add({ name: "bananes", price: 50 });
+// cards.add({ name: "bananes", price: 50 });
+// cards.add({ name: "apple", price: 100 });
+// cards.add({ name: "apple", price: 50 });
+
+//  console.table(cards.getItems());
+
+// console.log("Total:", cards.countTotalPrice());
+
+  // cards.remove("apple");
+
+//    console.table(cards.getItems());
+
+//  console.log("Total:", cards.countTotalPrice());
+
+// cards.clear();
+
+//  console.log(cards.getItems());
+
+
+// console.log("Total:", cart.countTotalPrice());
+
+//  cards.increaseQuntity("apple");
+//  cards.increaseQuntity("apple");
+
+// console.table(cards.getItems());
+
+// cards.decreaseQuantity("apple");
+// cards.decreaseQuantity("apple");
+// console.table(cards.getItems());
+
 
 // const cart = {
 //   item: [],
 //   getItems() {
-//     this.item;
+//     return this.item;
 //   },
 //   add(product) {
-//     product.quantity = 1;
-//     if (product.quantity) {
-//       return product;
+//     for (const items of this.item) {
+//       // console.log(items);
+//       if (items.name === product.name) {
+//         items.quantiti += 1;
+//         return;
+//       }
 //     }
-//     product.item.push;
+
+//     const newProduct = {
+//       ...product,
+//       quantiti: 1,
+//     };
+
+//     this.item.push(newProduct);
 //   },
 //   remove(productName) {
-  
+//     const { item } = this;
+
+//     for (let i = 0; i < item.length; i += 1) {
+//       const item = this.item[i];
+
+//       if (productName === item.name) {
+//         console.log("Наши это продукт:", productName);
+//         console.log("индекс:", i);
+//         this.item.splice(i, 1);
+//       }
+//     }
 //   },
 //   clear() {
-  
+//     this.item = [];
 //   },
 //   countTotalPrice() {
-  
+//     const { item } = this;
+//     let total = 0;
+
+//     for (const { price, quantiti } of item) {
+//       total += price * quantiti;
+//     }
+//     return total;
 //   },
 //   increaseQuntity(productName) {
-  
+//     for (let i = 0; i < this.item.length; i += 1) {
+//       if (productName === this.item[i].name) {
+//         productName = this.item[i].quantiti += 1;
+//       }
+//     }
 //   },
 //   decreaseQuantity(productName) {
-  
-//   }
-// }
+//     for (let i = 0; i < this.item.length; i += 1) {
+//       if (productName === this.item[i].name) {
+//         productName = this.item[i].quantiti -= 1;
+//       }
+//     }
+//   },
+// };
 
-// cart.add({ name: 'apple', price: 50 });
 
-// console.table(cart.getItems());
