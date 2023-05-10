@@ -73,9 +73,9 @@
 
 // for (i = 0; i <= pipol; i += 1){
 //  const salari = Math.round(Math.random() * (maxSalari - mainSalari) - mainSalari)
-  
+
 //   console.log(`Зарплата - ${i} = ${salari}`)
-  
+
 //   total += salari;
 // }
 // console.log(total)
@@ -89,9 +89,9 @@
 //     console.log('не четные: ', i);
 //     continue;
 //   }
-  
+
 //   console.log('четные: ', i);
-  
+
 //   total += i;
 // }
 
@@ -106,9 +106,9 @@
 //   console.log(`Вы совершили покупку`);
 
 //   balance -= payment;
-  
+
 //   console.log(` на вашем счету ${balance}`);
-  
+
 // }
 // let totalSen = 5000;
 // let payment = 500;
@@ -187,18 +187,16 @@
 // let user = prompt("Ведите логин");
 // console.log('user', user)
 
-
 // if (user === "Админ") {
 //   const password = prompt('пароль');
 //   console.log("password", password);
-  
-  
+
 // if (password === "Я админ") {
 //   console.log("Здраствуйте!!");
 // } else {
 //   console.log("Не верный пароль!!!");
 // }
-  
+
 // } else {
 // if (!user || user === null) {
 //   console.log("Отмена");
@@ -208,7 +206,6 @@
 
 // }
 
-
 // let num = 5.75
 // let sum = Math.round(num)
 // console.log(sum)
@@ -216,7 +213,7 @@
 // const friends = ['Ura', "Gru", "Yuli", "Muli"];
 
 // for (let i = 0; i < friends.length - 1; i += 1){
-  // friends[i]
+// friends[i]
 //   friends[i] += "/"
 // }
 
@@ -224,8 +221,7 @@
 //   friend += "-1";
 // }
 
-  // console.table(friends)
-
+// console.table(friends)
 
 //----------masiv------///
 
@@ -237,16 +233,14 @@
 // for (let i = 0; i < number.length; i += 1){
 
 //   total += number[i]
- 
+
 // }
 
 // console.log("Total:", total);
 
-
 // for (const value of number) {
 //   total += value
 // }
-
 
 // for (let i = 0; i < number.length; i += 1){
 // number[i]= Math.round(number[i] * 1.1)
@@ -259,7 +253,7 @@
 
 // for (let i = 0; i < number.length; i += 1){
 //   if (number[i] % 2 === 0) {
-    
+
 //   console.log("Четные:",number[i])
 //   } else {
 //   console.log("Не четные:", number[i])
@@ -272,7 +266,6 @@
 // const numbers = [20, 50, 100,  7, 9,  38, 15, 150];
 
 // let total = numbers[0];
-
 
 // for (const number of numbers) {
 
@@ -300,24 +293,22 @@
 
 // for (const letter of letters) {
 
-  // if (letter === letter.toLowerCase()) {
-  //   console.log("Эта буква в нижнем регистре", letter);
-    
-  //   invertedString += letter.toUpperCase();
-  // } else {
-  //   console.log("Эта буква в верхнем регистре",  "- " + letter );
-    
-  //   invertedString += letter.toLowerCase()
-  // }
-  
+// if (letter === letter.toLowerCase()) {
+//   console.log("Эта буква в нижнем регистре", letter);
+
+//   invertedString += letter.toUpperCase();
+// } else {
+//   console.log("Эта буква в верхнем регистре",  "- " + letter );
+
+//   invertedString += letter.toLowerCase()
+// }
+
 //   invertedString +=
 //     letter === letter.toLowerCase()
 //       ? letter.toUpperCase()
 //       : letter.toLowerCase();
 
 // }
-
-
 
 // console.log(invertedString);
 
@@ -342,18 +333,16 @@
 // let a= [2, 3];
 // let b = [4, 5];
 
-
-
 // console.log(String([a, b] = [b, a]))
 
 //----------function-------------//git
 
 // const colculatertotal = function (item) {
-  
+
 //   let total = 0;
-  
+
 //   for (sum of item) {
-  
+
 //    total += sum
 //   }
 
@@ -365,27 +354,25 @@
 //  const logins = ["freedom", "food", "hom", "geri"];
 
 // const findLogin = function (allLogin, setLogin) {
-  
-  // for (const login of allLogin) {
-  //   if (login === setLogin) {
-  //     return `Пользователь ${setLogin} найден`
-  //   }
-  // }
-  
-  // return `Пользователь ${setLogin} не найден`;
-  
+
+// for (const login of allLogin) {
+//   if (login === setLogin) {
+//     return `Пользователь ${setLogin} найден`
+//   }
+// }
+
+// return `Пользователь ${setLogin} не найден`;
+
 //   return allLogin.includes(setLogin)
 //     ? `Пользователь ${setLogin} найден`
 //     : `Пользователь ${setLogin} не найден`;
 
 // }
 
-
 // console.log(findLogin(logins, 'freedom'));
 // console.log(findLogin(logins, 'lint'));
 // console.log(findLogin(logins, "hom"));
 // console.log(findLogin(logins, "vergun"));
-
 
 // function fn(string) {
 //  console.log(string.includes(1));
@@ -409,12 +396,10 @@
 
 // console.log(add(1,2,3))
 
-
-
 // const filterNumber = function (are, ...args) {
-  
+
 //   const sum = [];
-  
+
 //   for (const element of are) {
 //     if (args.includes(element)) {
 //       sum.push(element)
@@ -426,7 +411,6 @@
 // console.log(filterNumber([2, 40, 30, 50], 10, 12, 2, 30));
 // console.log(filterNumber([4, 40, 30, 50], 10, 12, 4, 50));
 // console.log(filterNumber([200, 40, 35, 50], 10, 12, 200, 35));
-
 
 // function updateLight(current) {
 //   switch (current) {
@@ -444,16 +428,13 @@
 //   }
 // }
 
-
 //     console.log(updateLight("green"), "yellow");
 //     console.log(updateLight("yellow"), "red");
 //     console.log(updateLight("red"), "green");
 
-
 // function hoopCount(n) {
 //   return `${n}` > 10 ? '' : '';
 // }
-
 
 // console.log(hoopCount(3), "Great, now move on to tricks");
 // console.log(hoopCount(10), "Keep at it until you get it");
@@ -600,8 +581,6 @@
 
 // console.log(music[music.length-1])
 
-
-
 // const string = 'Welcome to Ukraine';
 // const strAre = string.split('').reverse().join('');
 
@@ -611,7 +590,7 @@
 
 // for (let i = 0; i < langs.length; i += 1){
 //   for (let j = i + 1; j > langs.length; j += 1){
-    
+
 //     if (langs[i][0] > langs[j][0]) {
 //       const tmp = langs[i];
 //       langs[i] = langs[j];
@@ -648,7 +627,6 @@
 //  console.log(str[i].split().reverse().join(''))
 // }
 
-
 // console.log(strAry)
 
 // youtube.com/watch?v=Xwo5mVxDql
@@ -663,23 +641,22 @@
 //   if (sum[i] % 2 === 0) {
 //     console.log("четные: ", sum[i]);
 //   }
-    
-  // } else {
-  //   console.log("Не четные: ", sum[i])
-  // }
+
+// } else {
+//   console.log("Не четные: ", sum[i])
+// }
 //  total += sum[i];
-   
+
 // }
 
 // console.log(total)
-
 
 // const number = [20, 50, 100,6,7,9,1, 38, 15, 150];
 // let total = 0;
 
 // for (let i = 0; i < number.length; i += 1){
 //   if (number[i] % 2 === 0) {
-    
+
 //   console.log("Четные:",number[i])
 //   } else {
 //   console.log("Не четные:", number[i])
@@ -713,7 +690,6 @@
 
 // console.log(diamont('8 11'))
 
-
 // const frut =(array) =>{
 // array.forEach((element, index) => {
 //   console.log(`${index + 1} - ${element}`)
@@ -726,16 +702,16 @@
 // function printCountacts(names, phones) {
 //   const arreyname = names.split(',');
 //   const arreyphone = phones.split(',');
-  
+
 //   const printCounter = ((name,index) => {
 //    console.log(`${name} - ${arreyphone[index]}`);
 //   })
-  
+
 //   arreyname.forEach(printCounter)
-  
-  // arreyname.forEach((name,index) => {
-  //   console.log(`${name} - ${arreyphone[index]}`);
-  // });
+
+// arreyname.forEach((name,index) => {
+//   console.log(`${name} - ${arreyphone[index]}`);
+// });
 
 // }
 
@@ -744,7 +720,7 @@
 // function findLargestNumber(numbers) {
 
 //   let max = numbers[0];
-  
+
 //   for (const counter of numbers) {
 //     if (counter > max) {
 //       max = counter;
@@ -757,7 +733,6 @@
 
 // console.log(findLargestNumber([2, 5, 10, -1, 45, 94]));
 // console.log(findLargestNumber([49, 15, 110, 1, 45, 94]));
-
 
 // const courses = ['HTML', 'CSS', 'JavaScript', 'React', 'PostgreSQL'];
 
@@ -775,7 +750,7 @@
 //     console.log('Курс с таким именем не найден');
 //     return;
 //   }
-  
+
 //   courses.splice(indx,1)
 // }
 
@@ -801,14 +776,12 @@
 // console.log(courses);
 // updateCourses("Express", 'NestJs');
 
-
 // const username = 'Mango';
 // const user = 'Jerd';
 
 // const poli = {
 //   usernee777: username,
 // }
-
 
 // console.log(poli.user);
 
@@ -826,7 +799,7 @@
 //     console.log(friend.online);
 //     if (!friend.online) {
 //       friendsOnlain.push(friend);
-      
+
 //       friend.sergh = 555;
 //     }
 //   }
@@ -834,11 +807,10 @@
 // };
 // console.table(getFrensaName(frinds));
 
-
 // const getFrensaName = (allName) => {
-  
+
 //   const names = [];
-  
+
 //   for (const frend of allName) {
 //     console.log(frend.name)
 //     names.push(frend.name);
@@ -850,13 +822,13 @@
 // const getFrensaName = (allFrends, allName) => {
 
 //   for (let frend of allFrends) {
-  
+
 //     if (frend.name === allName) {
 //       return ` ${allName}: Нашли!!`;
 //     }
-  
+
 //   }
-  
+
 //   return `Не нашли :( , ${allName}`;
 // }
 
@@ -916,7 +888,7 @@
 // const entri = Object.entries(auters);
 
 // for (const [name,user] of entri) {
- 
+
 //   console.log(name, user)
 // }
 
@@ -926,21 +898,21 @@
 //    return this.items
 //   },
 //   add(product) {
-    
+
 //     for (let item of this.items) {
 //       if (item.name === product.name) {
 //         item.quantiti += 1;
 //         return;
 //       }
 //     }
-    
+
 //     const newProduct = {
 //       ...product,
 //       quantiti: 1,
 //     };
-    
+
 //     this.items.push(newProduct);
-   
+
 //   },
 //   remove(productName) {
 
@@ -949,7 +921,7 @@
 //          this.items.splice(i, 1);
 //       }
 //     }
- 
+
 //   },
 //   clear() {
 //     this.items = [];
@@ -957,21 +929,21 @@
 //   countTotalPrice() {
 //     let total = 0;
 //     const { items } = this;
-    
+
 //     for (let { price, quantiti } of items) {
-        
+
 //       total += price * quantiti;
 //     }
 //     return total
 //   },
 //   increaseQuntity(productName) {
-    
+
 //     for (let i = 0; i < this.items.length; i += 1){
 //       if (productName === this.items[i].name) {
 //         productName = this.items[i].quantiti += 1;
 //       }
 //     }
-        
+
 //   },
 //   decreaseQuantity(productName) {
 //       for (let i = 0; i < this.items.length; i += 1) {
@@ -992,7 +964,7 @@
 
 // console.log("Total:", cards.countTotalPrice());
 
-  // cards.remove("apple");
+// cards.remove("apple");
 
 //    console.table(cards.getItems());
 
@@ -1001,7 +973,6 @@
 // cards.clear();
 
 //  console.log(cards.getItems());
-
 
 // console.log("Total:", cart.countTotalPrice());
 
@@ -1013,7 +984,6 @@
 // cards.decreaseQuantity("apple");
 // cards.decreaseQuantity("apple");
 // console.table(cards.getItems());
-
 
 // const cart = {
 //   item: [],
@@ -1077,4 +1047,10 @@
 //   },
 // };
 
+const propName = "value";
+const user = {
+  age: 25,
+  [propName]: "Grin dey",
+};
 
+console.log(user.value);
