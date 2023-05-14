@@ -1047,10 +1047,90 @@
 //   },
 // };
 
-const propName = "value";
-const user = {
-  age: 25,
-  [propName]: "Grin dey",
+// const propName = "value";
+// const user = {
+//   age: 25,
+//   [propName]: "Grin dey",
+// };
+
+// console.log(user.value);
+
+// const user = {
+//   name: "Mango",
+//   age: 20,
+//   hobby: "thml",
+//   premium: true,
+// };
+
+// user.mode = "happy";
+// user.hobby = "skydiving";
+// user.premium = false;
+
+// console.log(user);
+
+// const keys = Object.keys(user);
+
+// for (const key of keys) {
+//   console.log(`${key}: ${user[key]}`);
+// }
+
+// / const entri = Object.entries(auters);
+
+// for (const [name,user] of entri) {
+
+//   console.log(name, user)
+// }
+
+// const key = Object.entries(user);
+
+// for (const [name, value] of key) {
+//   console.log(name , value);
+// }
+
+// for (let i = 0; i < key.length; i += 1) {
+//   console.log(key[i]);
+// }
+
+// let sum = 0;
+// const salaries = {
+//   // Johan: 100,
+//   // Anna: 160,
+//   // Pete: 130,
+// };
+
+// const values = Object.values(salaries);
+
+// for (let i = 0; i < values.length; i += 1) {
+//   sum += values[i];
+//   // console.log(sum);
+//   // return sum;
+// }
+// console.log(values);
+// console.log("sum:", sum);
+
+// for (const value of values) {
+//   sum += value;
+// }
+// console.log("sum:", sum);
+
+const strones = [
+  { name: "Изумруд", price: 1300, quntity: 4 },
+  { name: "Бриллиант", price: 1300, quntity: 4 },
+  { name: "Сапфир", price: 400, quntity: 2 },
+  { name: "Щебень", price: 200, quntity: 4 },
+];
+
+const calcTotalPrice = (strones, stroneNane) => {
+  for (const stron of strones) {
+    if (stron.name === stroneNane) {
+      return stron.price * stron.quntity;
+    }
+  }
+  return 0;
 };
 
-console.log(user.value);
+// calcTotalPrice(4 );
+console.log(calcTotalPrice(strones, "Сапфир"));
+console.log(calcTotalPrice(strones, "Щебень"));
+
+console.log(calcTotalPrice(strones, "Иffff"));
