@@ -1113,24 +1113,125 @@
 // }
 // console.log("sum:", sum);
 
-const strones = [
-  { name: "Изумруд", price: 1300, quntity: 4 },
-  { name: "Бриллиант", price: 1300, quntity: 4 },
-  { name: "Сапфир", price: 400, quntity: 2 },
-  { name: "Щебень", price: 200, quntity: 4 },
-];
+// const strones = [
+//   { name: "Изумруд", price: 1300, quntity: 4 },
+//   { name: "Бриллиант", price: 1300, quntity: 4 },
+//   { name: "Сапфир", price: 400, quntity: 2 },
+//   { name: "Щебень", price: 200, quntity: 4 },
+// ];
 
-const calcTotalPrice = (strones, stroneNane) => {
-  for (const stron of strones) {
-    if (stron.name === stroneNane) {
-      return stron.price * stron.quntity;
-    }
-  }
-  return 0;
+// const calcTotalPrice = (strones, stroneNane) => {
+//   for (const stron of strones) {
+//     if (stron.name === stroneNane) {
+//       return stron.price * stron.quntity;
+//     }
+//   }
+//   return 0;
+// };
+
+// // calcTotalPrice(4 );
+// console.log(calcTotalPrice(strones, "Сапфир"));
+// console.log(calcTotalPrice(strones, "Щебень"));
+
+// console.log(calcTotalPrice(strones, "Иffff"));
+
+// const ara = [1, 10, 13];
+
+// for (const sum of ara) {
+//   console.log(sum);
+// }
+
+// for (let i = 0; i < ara.length; i += 1) {
+//   console.log(ara[i]);
+// }
+
+// ara.forEach((item) => console.log(item));
+
+const Transction = {
+  DEPOSIT: "deposit",
+  WITHDROW: "withdrow",
 };
 
-// calcTotalPrice(4 );
-console.log(calcTotalPrice(strones, "Сапфир"));
-console.log(calcTotalPrice(strones, "Щебень"));
+const acount = {
+  balance: 0,
 
-console.log(calcTotalPrice(strones, "Иffff"));
+  transactions: [],
+
+  createTransaction(amount, type) {},
+
+  diposit(amount) {},
+
+  getBalance() {},
+
+  getTransactionDetails(id) {},
+
+  getTransactionTotal(type) {},
+
+  withdrow(amount) {},
+};
+
+acount.diposit(100);
+acount.diposit(200);
+acount.diposit(300);
+acount.diposit(400);
+
+console.log(acount.getBalance());
+
+acount.withdrow(100);
+acount.withdrow(400);
+
+console.log(acount.getTransactionDetails(3));
+
+console.log(acount.transactions);
+console.log(acount.getBalance());
+
+console.log(acount.getTransactionTotal(Transction.DEPOSIT));
+console.log(acount.getTransactionTotal(Transction.WITHDROW));
+
+// const acount = {
+//   balance: 0,
+
+//   transactions: [],
+
+//   createTransaction(amount, type) {
+//     return {
+//       id: this.transactions.length,
+//       amount,
+//       type,
+//     };
+//   },
+
+//   diposit(amount) {
+//     this.balance += amount;
+//     const newTransactions = this.createTransaction(amount, Transction.DEPOSIT);
+//     this.transactions.unshift(newTransactions);
+//   },
+
+//   getBalance() {
+//     return this.balance;
+//   },
+
+//   getTransactionDetails(id) {
+//     for (const transaction of this.transactions) {
+//       if (transaction.id === id) {
+//         return transaction;
+//       }
+//     }
+//   },
+
+//   getTransactionTotal(type) {
+//     let sum = 0;
+//     for (const transaction of this.transactions) {
+//       if (transaction.type === type) {
+//         sum += transaction.amount;
+//       }
+//     }
+//     return sum;
+//   },
+
+//   withdrow(amount) {
+//     this.balance -= amount;
+//     const newTransactions = this.createTransaction(amount, Transction.WITHDROW);
+//     this.transactions.unshift(newTransactions);
+//   },
+// };
