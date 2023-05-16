@@ -1147,46 +1147,10 @@
 
 // ara.forEach((item) => console.log(item));
 
-const Transction = {
-  DEPOSIT: "deposit",
-  WITHDROW: "withdrow",
-};
-
-const acount = {
-  balance: 0,
-
-  transactions: [],
-
-  createTransaction(amount, type) {},
-
-  diposit(amount) {},
-
-  getBalance() {},
-
-  getTransactionDetails(id) {},
-
-  getTransactionTotal(type) {},
-
-  withdrow(amount) {},
-};
-
-acount.diposit(100);
-acount.diposit(200);
-acount.diposit(300);
-acount.diposit(400);
-
-console.log(acount.getBalance());
-
-acount.withdrow(100);
-acount.withdrow(400);
-
-console.log(acount.getTransactionDetails(3));
-
-console.log(acount.transactions);
-console.log(acount.getBalance());
-
-console.log(acount.getTransactionTotal(Transction.DEPOSIT));
-console.log(acount.getTransactionTotal(Transction.WITHDROW));
+// const Transction = {
+//   DEPOSIT: "deposit",
+//   WITHDROW: "withdrow",
+// };
 
 // const acount = {
 //   balance: 0,
@@ -1195,7 +1159,7 @@ console.log(acount.getTransactionTotal(Transction.WITHDROW));
 
 //   createTransaction(amount, type) {
 //     return {
-//       id: this.transactions.length,
+//       id: Date(),
 //       amount,
 //       type,
 //     };
@@ -1203,8 +1167,10 @@ console.log(acount.getTransactionTotal(Transction.WITHDROW));
 
 //   diposit(amount) {
 //     this.balance += amount;
-//     const newTransactions = this.createTransaction(amount, Transction.DEPOSIT);
-//     this.transactions.unshift(newTransactions);
+
+//     this.transactions.unshift(
+//       this.createTransaction(amount, Transction.DEPOSIT)
+//     );
 //   },
 
 //   getBalance() {
@@ -1212,9 +1178,9 @@ console.log(acount.getTransactionTotal(Transction.WITHDROW));
 //   },
 
 //   getTransactionDetails(id) {
-//     for (const transaction of this.transactions) {
-//       if (transaction.id === id) {
-//         return transaction;
+//     for (const transition of this.transactions) {
+//       if (transition.id === id) {
+//         return transition;
 //       }
 //     }
 //   },
@@ -1230,8 +1196,54 @@ console.log(acount.getTransactionTotal(Transction.WITHDROW));
 //   },
 
 //   withdrow(amount) {
+//     if (amount > this.balance) {
+//       console.log("Недостаточно средст для снятие!!!");
+//     }
 //     this.balance -= amount;
 //     const newTransactions = this.createTransaction(amount, Transction.WITHDROW);
 //     this.transactions.unshift(newTransactions);
 //   },
 // };
+
+// acount.diposit(100);
+// acount.diposit(200);
+// acount.diposit(300);
+// acount.diposit(400);
+
+// console.log(acount.getBalance());
+
+// acount.withdrow(100);
+// acount.withdrow(400);
+
+// console.log(acount.getTransactionDetails(3));
+
+// console.log(acount.transactions);
+// console.log(acount.getBalance());
+
+// console.log(acount.getTransactionTotal(Transction.DEPOSIT));
+// console.log(acount.getTransactionTotal(Transction.WITHDROW));
+
+// const transition = {
+//   id: 0,
+//   name: "Meti",
+//   fruds: ["apple", "bananas", "solt"],
+// };
+
+// const tags = transition.fruds[transition.fruds.length - 1];
+
+// console.log(tags);
+
+// let a = 2;
+// let b = 5;
+// console.log(a, b);
+// let tem = a;
+// a = b;
+// b = tem;
+
+// console.log(a, b);
+
+let x = 2;
+let y = 5;
+console.log(x, y);
+[x, y] = [y, x];
+console.log(x, y);
