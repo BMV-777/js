@@ -1242,8 +1242,35 @@
 
 // console.log(a, b);
 
-let x = 2;
-let y = 5;
-console.log(x, y);
-[x, y] = [y, x];
-console.log(x, y);
+// let x = 2;
+// let y = 5;
+// console.log(x, y);
+// [x, y] = [y, x];
+// console.log(x, y);
+
+const transformUserName = ({ ferstName, lastName, ...user }) => {
+  return {
+    ...user,
+    fullName: `${ferstName} ${lastName}`,
+  };
+};
+
+console.log(
+  transformUserName({
+    id: 1,
+    ferstName: "Min",
+    lastName: "Poli",
+    email: "borenkovmv@gmail.com",
+    friendConter: 10,
+  })
+);
+
+console.log(
+  transformUserName({
+    id: 2,
+    ferstName: "Djin",
+    lastName: "Cross",
+    email: "borenkovmv@gmail.com",
+    friendConter: 20,
+  })
+);
