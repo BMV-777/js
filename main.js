@@ -619,16 +619,6 @@
 // console.log(min)
 //  console.log(max)
 
-// const string = 'Welcome to Ukraine';
-// const str = string.split('');
-// const strAry = str.reverse().join('');
-
-// for (let i = 0; i < str.length; i += 1){
-//  console.log(str[i].split().reverse().join(''))
-// }
-
-// console.log(strAry)
-
 // youtube.com/watch?v=Xwo5mVxDql
 
 // const min = 5;
@@ -733,48 +723,6 @@
 
 // console.log(findLargestNumber([2, 5, 10, -1, 45, 94]));
 // console.log(findLargestNumber([49, 15, 110, 1, 45, 94]));
-
-// const courses = ['HTML', 'CSS', 'JavaScript', 'React', 'PostgreSQL'];
-
-// const addCourses = (cours) => {
-//   if (courses.includes(cours)) {
-//     console.log('Увас уже есть такой курс')
-//     return;
-//   }
-//     courses.push(cours);
-// }
-
-// const removeCoures = (cours) => {
-//   const indx =courses.indexOf(cours);
-//   if (indx === -1) {
-//     console.log('Курс с таким именем не найден');
-//     return;
-//   }
-
-//   courses.splice(indx,1)
-// }
-
-// const updateCourses = (oldCurses, newCourses) => {
-//   const indx = courses.indexOf(oldCurses);
-//   if (indx === -1) {
-//     console.log("Курс с таким именем  найден");
-//     return;
-//   }
-
-//   courses.splice(indx, 1, newCourses);
-// };
-
-// addCourses('Express');
-// console.log(courses);
-// addCourses('CSS');
-
-// removeCoures('React');
-// console.log(courses)
-// removeCoures('Vue');
-
-// updateCourses('Express', 'NestJs');
-// console.log(courses);
-// updateCourses("Express", 'NestJs');
 
 // const username = 'Mango';
 // const user = 'Jerd';
@@ -892,98 +840,7 @@
 //   console.log(name, user)
 // }
 
-// const cards = {
-//   items: [],
-//   getItems() {
-//    return this.items
-//   },
-//   add(product) {
-
-//     for (let item of this.items) {
-//       if (item.name === product.name) {
-//         item.quantiti += 1;
-//         return;
-//       }
-//     }
-
-//     const newProduct = {
-//       ...product,
-//       quantiti: 1,
-//     };
-
-//     this.items.push(newProduct);
-
-//   },
-//   remove(productName) {
-
-//     for (let i = 0; i < this.items.length; i += 1) {
-//       if (this.items[i].name === productName) {
-//          this.items.splice(i, 1);
-//       }
-//     }
-
-//   },
-//   clear() {
-//     this.items = [];
-//   },
-//   countTotalPrice() {
-//     let total = 0;
-//     const { items } = this;
-
-//     for (let { price, quantiti } of items) {
-
-//       total += price * quantiti;
-//     }
-//     return total
-//   },
-//   increaseQuntity(productName) {
-
-//     for (let i = 0; i < this.items.length; i += 1){
-//       if (productName === this.items[i].name) {
-//         productName = this.items[i].quantiti += 1;
-//       }
-//     }
-
-//   },
-//   decreaseQuantity(productName) {
-//       for (let i = 0; i < this.items.length; i += 1) {
-//         if (productName === this.items[i].name) {
-//           productName = this.items[i].quantiti -= 1;
-//         }
-//       }
-//   }
-// }
-
-// cards.add({ name: "bananes", price: 50 });
-// cards.add({ name: "bananes", price: 50 });
-// cards.add({ name: "bananes", price: 50 });
-// cards.add({ name: "apple", price: 100 });
-// cards.add({ name: "apple", price: 50 });
-
-//  console.table(cards.getItems());
-
-// console.log("Total:", cards.countTotalPrice());
-
-// cards.remove("apple");
-
-//    console.table(cards.getItems());
-
-//  console.log("Total:", cards.countTotalPrice());
-
-// cards.clear();
-
-//  console.log(cards.getItems());
-
-// console.log("Total:", cart.countTotalPrice());
-
-//  cards.increaseQuntity("apple");
-//  cards.increaseQuntity("apple");
-
-// console.table(cards.getItems());
-
-// cards.decreaseQuantity("apple");
-// cards.decreaseQuantity("apple");
-// console.table(cards.getItems());
+//
 
 // const cart = {
 //   item: [],
@@ -1068,6 +925,8 @@
 
 // console.log(user);
 
+//-------------Object.keys--Object.entries--
+
 // const keys = Object.keys(user);
 
 // for (const key of keys) {
@@ -1090,6 +949,8 @@
 // for (let i = 0; i < key.length; i += 1) {
 //   console.log(key[i]);
 // }
+
+//--------------555555---------//
 
 // let sum = 0;
 // const salaries = {
@@ -1135,6 +996,8 @@
 
 // console.log(calcTotalPrice(strones, "Иffff"));
 
+//------------forEach-----------//
+
 // const ara = [1, 10, 13];
 
 // for (const sum of ara) {
@@ -1147,82 +1010,9 @@
 
 // ara.forEach((item) => console.log(item));
 
-// const Transction = {
-//   DEPOSIT: "deposit",
-//   WITHDROW: "withdrow",
-// };
+//-------------------------------------//
 
-// const acount = {
-//   balance: 0,
-
-//   transactions: [],
-
-//   createTransaction(amount, type) {
-//     return {
-//       id: Date(),
-//       amount,
-//       type,
-//     };
-//   },
-
-//   diposit(amount) {
-//     this.balance += amount;
-
-//     this.transactions.unshift(
-//       this.createTransaction(amount, Transction.DEPOSIT)
-//     );
-//   },
-
-//   getBalance() {
-//     return this.balance;
-//   },
-
-//   getTransactionDetails(id) {
-//     for (const transition of this.transactions) {
-//       if (transition.id === id) {
-//         return transition;
-//       }
-//     }
-//   },
-
-//   getTransactionTotal(type) {
-//     let sum = 0;
-//     for (const transaction of this.transactions) {
-//       if (transaction.type === type) {
-//         sum += transaction.amount;
-//       }
-//     }
-//     return sum;
-//   },
-
-//   withdrow(amount) {
-//     if (amount > this.balance) {
-//       console.log("Недостаточно средст для снятие!!!");
-//     }
-//     this.balance -= amount;
-//     const newTransactions = this.createTransaction(amount, Transction.WITHDROW);
-//     this.transactions.unshift(newTransactions);
-//   },
-// };
-
-// acount.diposit(100);
-// acount.diposit(200);
-// acount.diposit(300);
-// acount.diposit(400);
-
-// console.log(acount.getBalance());
-
-// acount.withdrow(100);
-// acount.withdrow(400);
-
-// console.log(acount.getTransactionDetails(3));
-
-// console.log(acount.transactions);
-// console.log(acount.getBalance());
-
-// console.log(acount.getTransactionTotal(Transction.DEPOSIT));
-// console.log(acount.getTransactionTotal(Transction.WITHDROW));
-
+//
 // const transition = {
 //   id: 0,
 //   name: "Meti",
@@ -1248,29 +1038,58 @@
 // [x, y] = [y, x];
 // console.log(x, y);
 
-const transformUserName = ({ ferstName, lastName, ...user }) => {
-  return {
-    ...user,
-    fullName: `${ferstName} ${lastName}`,
-  };
+//------------Object---------//
+
+// const transformUserName = ({ ferstName, lastName, ...user }) => {
+//   return {
+//     ...user,
+//     fullName: `${ferstName} ${lastName}`,
+//   };
+// };
+
+// console.log(
+//   transformUserName({
+//     id: 1,
+//     ferstName: "Min",
+//     lastName: "Poli",
+//     email: "borenkovmv@gmail.com",
+//     friendConter: 10,
+//   })
+// );
+
+// console.log(
+//   transformUserName({
+//     id: 2,
+//     ferstName: "Djin",
+//     lastName: "Cross",
+//     email: "borenkovmv@gmail.com",
+//     friendConter: 20,
+//   })
+// );
+
+//----------------callback  --------------//
+
+// const doMath = (a, b, callback) => {
+//   const result = callback(a, b);
+//   console.log(result);
+// };
+
+// const add = (x, y) => {
+//   return x + y;
+// };
+
+// const minus = (x, y) => {
+//   return x - y;
+// };
+
+// doMath(5, 2, add);
+// doMath(5, 2, function (x, y) {
+//   return x - y;
+// });
+
+const add = () => {
+  console.log("Кликнул раз!!");
 };
 
-console.log(
-  transformUserName({
-    id: 1,
-    ferstName: "Min",
-    lastName: "Poli",
-    email: "borenkovmv@gmail.com",
-    friendConter: 10,
-  })
-);
-
-console.log(
-  transformUserName({
-    id: 2,
-    ferstName: "Djin",
-    lastName: "Cross",
-    email: "borenkovmv@gmail.com",
-    friendConter: 20,
-  })
-);
+const bottonRef = document.querySelector(".js-button");
+bottonRef.addEventListener("click", add);
