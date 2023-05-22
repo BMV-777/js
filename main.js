@@ -1086,10 +1086,180 @@
 // doMath(5, 2, function (x, y) {
 //   return x - y;
 // });
+// var fn;
+// function foo() {
+//   var a = 2;
 
-const add = () => {
-  console.log("Кликнул раз!!");
+//   const baz = () => {
+//     console.log(a);
+//   };
+//   fn = baz;
+// }
+
+// const bar = (fn) => {
+//   return fn();
+// };
+// foo();
+// bar();
+
+// function wait(message) {
+//   setInterval(() => {
+//     console.log(message);
+//   }, 1000);
+// }
+
+// wait("hi");
+
+// let a = 2;
+// (IIFF = () => {
+//   console.log(a);
+// })();
+
+// for (let i = 0; i <= 5; i += 1) {
+//   (() => {
+//     let j = i;
+//     setTimeout(() => {
+//       console.log(j);
+//     }, j * 1000);
+//   })();
+// }
+
+// const doCool = () => {
+//   let something = "cool";
+//   let another = [1, 2, 3];
+
+//   function doSomething() {
+//     console.log(something);
+//   }
+//   const doAnother = () => {
+//     console.log(another.join(" ! "));
+//   };
+//   return {
+//     doSomething: doSomething,
+//     doAnother: doAnother,
+//   };
+// };
+
+// const foo = doCool();
+// foo.doSomething();
+// foo.doAnother();
+
+// var foo = (function CoolModule(id) {
+//   function change() {
+//     // modifying the public API
+//     publicAPI.identify = identify2;
+//   }
+
+//   function identify1() {
+//     console.log(id);
+//   }
+
+//   function identify2() {
+//     console.log(id.toUpperCase());
+//   }
+
+//   var publicAPI = {
+//     change: change,
+//     identify: identify1,
+//   };
+
+//   return publicAPI;
+// })("foo module");
+
+// foo.identify(); // foo module
+// // foo.change();
+// foo.identify();
+// const add = () => {
+//   console.log("Кликнул раз!!");
+// };
+
+// const bottonRef = document.querySelector(".js-button");
+// bottonRef.addEventListener("click", add);
+
+// const filter = (array, test) => {
+//   const arrayMasiv = [];
+
+//   for (const el of array) {
+//     const pass = test(el);
+//     if (pass) {
+//       arrayMasiv.push(el);
+//     }
+//   }
+//   return arrayMasiv;
+// };
+
+// const callback = (value) => {
+//   return value <= 3;
+// };
+
+// const r1 = filter([1, 2, 3, 4, 5], callback);
+
+// const frut = [
+//   { name: "banan", quantiti: 100, isOnlain: false },
+//   { name: "aple", quantiti: 150, isOnlain: true },
+//   { name: "duni", quantiti: 200, isOnlain: false },
+//   { name: "cheri", quantiti: 175, isOnlain: true },
+// ];
+
+// const frutTotal = (frutes) => {
+//   return frutes.isOnlain === false;
+// };
+
+// const r1 = filter(frut, frutTotal);
+
+// console.log(r1);
+
+//----------замыкание---------//
+
+// const myShef = (name) => {
+//   const myBludo = (dash) => {
+//     console.log(`${name} готовит ${dash}`);
+//   };
+//   return myBludo;
+// };
+
+// const mango = myShef("Mango");
+
+// mango("котлеты");
+
+// const geri = myShef("Geri");
+
+// geri("smuzi");
+
+// const rounder = (plase) => {
+//   return function (number) {
+//     return Number(number.toFixed(plase));
+//   };
+// };
+
+// const r1 = rounder(2);
+// const r2 = rounder(3);
+
+// console.log(r1(2.4444));
+// console.log(r2(5.4444));
+
+const praisMani = (eneble, salerius) => {
+  let salary = salerius;
+
+  return {
+    laur(amount) {
+      salary += amount;
+    },
+    minus(amount) {
+      salary -= amount;
+    },
+    getCurent() {
+      console.log(`Тикущая зарплата  ${eneble} - ${salary}`);
+    },
+  };
 };
 
-const bottonRef = document.querySelector(".js-button");
-bottonRef.addEventListener("click", add);
+const meneger = praisMani("Mango", 5000);
+
+meneger.getCurent();
+meneger.minus(1000);
+
+meneger.getCurent();
+
+meneger.laur(2000);
+meneger.getCurent();
