@@ -1238,28 +1238,57 @@
 // console.log(r1(2.4444));
 // console.log(r2(5.4444));
 
-const praisMani = (eneble, salerius) => {
-  let salary = salerius;
+// const praisMani = (eneble, salerius) => {
+//   let salary = salerius;
 
-  return {
-    laur(amount) {
-      salary += amount;
-    },
-    minus(amount) {
-      salary -= amount;
-    },
-    getCurent() {
-      console.log(`Тикущая зарплата  ${eneble} - ${salary}`);
-    },
-  };
-};
+//   const add = (amount) => {
+//     salary += amount;
+//   };
 
-const meneger = praisMani("Mango", 5000);
+//   return {
+//     laur(amount) {
+//       if (amount > 1000) {
+//         console.log("Ты офигел?");
+//       }
+//       add(amount);
+//     },
+//     minus(amount) {
+//       salary -= amount;
+//     },
+//     getCurent() {
+//       console.log(`Тикущая зарплата  ${eneble} - ${salary}`);
+//     },
+//   };
+// };
 
-meneger.getCurent();
-meneger.minus(1000);
+// const meneger = praisMani("Mango", 5000);
 
-meneger.getCurent();
+// meneger.getCurent();
+// meneger.minus(1000);
 
-meneger.laur(2000);
-meneger.getCurent();
+// meneger.getCurent();
+
+// meneger.laur(1000000);
+// meneger.getCurent();
+// const total = title.toLowerCase().split(" ").join("-");
+// const strin = "Hello I am is frontend";
+
+// const user = strin.split("").reverse().join("");
+// console.log(user);
+
+// const showThis = () => {
+//   console.log("thus in showThis: ", this);
+// };
+
+// // showThis();
+
+// const user = { name: "Mango" };
+// user.context = showThis;
+
+// user.context();
+// console.log(user);
+
+const numbers = [1, 2, 3, 4, 5, 6, 7];
+
+const numCjen = numbers.filter((num) => num <= 3);
+console.log(numCjen);
