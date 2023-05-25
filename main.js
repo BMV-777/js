@@ -1288,7 +1288,92 @@
 // user.context();
 // console.log(user);
 
-const numbers = [1, 2, 3, 4, 5, 6, 7];
+// const numbers = [1, 2, 3, 4, 5, 6, 7];
 
-const numCjen = numbers.filter((num) => num <= 3);
-console.log(numCjen);
+// const numCjen = numbers.filter((num) => num <= 3);
+// console.log(numCjen);
+
+// const User = (...name) => {
+//   // this.name = name;
+//   console.log(...name);
+// };
+
+// console.log(User("Mango"));
+
+// const frutis = frut.forEach((number, index, array) => {
+//   console.log(number.name);
+// });
+
+// console.table(frutis);
+// const sorting = frut
+//   .filter((num) => num.isOnlain)
+//   .sort((sorName, sortQuntiti) => sorName.quantiti + sortQuntiti.quantiti);
+
+// console.table(sorting);
+
+// const number = [1, 2, 3, 4, 5];
+// const user = {
+//   name: "mango",
+//   fullname: "Feri",
+//   age: 20,
+// };
+
+// const intres = Object.entries(user);
+
+// for (const [name, value] of intres) {
+//   console.log(name + ":", value);
+// }
+// const numbe = number.forEach((num) => console.log(num));
+
+// for (let i = 0; i < number.length; i += 1) {
+//   console.log(i);
+// }
+
+// for (const num of number) {
+//   console.log(num);
+// }
+
+// const igrock = "play-3";
+
+// const num = frut.map((nums) => {
+//   console.log(nums);
+//   if (igrock === nums.id) {
+//     console.log("Мы нашли его!!");
+
+//     return {
+//       ...nums,
+//       quantiti: nums.quantiti + 100,
+//     };
+//   }
+// });
+// const num = frut.map((nums) =>
+//   igrock === nums.id ? { ...nums, quantiti: nums.quantiti + 100 } : nums
+// );
+// console.table(num);
+
+// const frut = [
+//   { id: "play-1", name: "banan", quantiti: 100, isOnlain: false },
+//   { id: "play-2", name: "aple", quantiti: 150, isOnlain: true },
+//   { id: "play-3", name: "duni", quantiti: 200, isOnlain: false },
+//   { id: "play-4", name: "cheri", quantiti: 175, isOnlain: true },
+// ];
+
+// console.table(frut);
+
+// const igrock = "play-3";
+
+// const filterNumber = number.find((num) => num === 300);
+// const filterNumber = number.filter((num) => num < 5 || num > 30);
+
+// const filterNumber = frut.filter((num) => !num.isOnlain);
+
+const numbers = [1, 2, 3, 4, 10];
+
+// const numbersTotal = numbers.filter((num) => num > 4);
+let total = 0;
+
+for (const el of numbers) {
+  total += el;
+}
+
+console.log(total);
