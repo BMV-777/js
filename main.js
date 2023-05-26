@@ -1367,13 +1367,90 @@
 
 // const filterNumber = frut.filter((num) => !num.isOnlain);
 
-const numbers = [1, 2, 3, 4, 10];
+// const numbers = [1, 2, 3, 4, 10];
 
 // const numbersTotal = numbers.filter((num) => num > 4);
-let total = 0;
+// let total = 0;
 
-for (const el of numbers) {
-  total += el;
-}
+// for (const el of numbers) {
+//   total += el;
+// }
 
-console.log(total);
+// console.log(total);
+
+// const numbers = [5, 10, 15, 20, 25];
+
+// const reduse = numbers.reduce((acc, number) => {
+//   console.log("acc", acc);
+//   console.log("number", number);
+//   return acc + number;
+// }, 0);
+// console.log(reduse);
+
+// const salary = {
+//   mango: 100,
+//   poly: 50,
+//   ajax: 150,
+// };
+
+// const total = Object.values(salary).reduce((acc, saly) => {
+//   return acc + saly;
+// }, 0);
+
+// console.log(total);
+
+// const frut = [
+//   { label: "banan", quntiti: 50, price: 2 },
+//   { label: "duni", quntiti: 50, price: 2 },
+//   { label: "apple", quntiti: 50, price: 2 },
+//   { label: "cheri", quntiti: 50, price: 2 },
+// ];
+
+// const totalfrut = frut.reduce((total, quntiti) => {
+//   return total + quntiti.quntiti * quntiti.price;
+// }, 0);
+
+// console.log(totalfrut);
+
+const tweets = [
+  { id: "000", likes: 5, tags: ["js", "node.js"] },
+  { id: "001", likes: 2, tags: ["html", "css"] },
+  { id: "002", likes: 3, tags: ["js", "node.js", "css"] },
+  { id: "003", likes: 4, tags: ["js", "node.js", "react"] },
+];
+
+const totalTweets = tweets.reduce((tag, grup) => {
+  return [...tag, ...grup.tags];
+}, []);
+
+console.log(totalTweets);
+
+// const totalSar = totalTweets.reduce((acc, tag) => {
+//   console.log(acc);
+
+//   if (acc[tag]) {
+//     acc[tag] += 1;
+
+//     return acc;
+//   }
+
+//   acc[tag] = 1;
+//   return acc;
+// }, {});
+const totalSar = totalTweets.reduce((acc, tag) => {
+  console.log(acc);
+
+  return {
+    ...acc,
+    [tag]: acc[tag] ? acc[tag] + 1 : 1,
+  };
+}, {});
+
+console.log(totalSar);
+
+const user = {
+  name: "mango",
+};
+
+const key = "name";
+console.log(user[key]);
