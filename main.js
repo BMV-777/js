@@ -1333,6 +1333,8 @@
 //   console.log(num);
 // }
 
+//-------------- map--------//
+
 // const igrock = "play-3";
 
 // const num = frut.map((nums) => {
@@ -1350,6 +1352,8 @@
 //   igrock === nums.id ? { ...nums, quantiti: nums.quantiti + 100 } : nums
 // );
 // console.table(num);
+
+//-------------------find && fillter ------------//
 
 // const frut = [
 //   { id: "play-1", name: "banan", quantiti: 100, isOnlain: false },
@@ -1378,6 +1382,8 @@
 
 // console.log(total);
 
+//-------------reduce --------------//
+
 // const numbers = [5, 10, 15, 20, 25];
 
 // const reduse = numbers.reduce((acc, number) => {
@@ -1399,31 +1405,44 @@
 
 // console.log(total);
 
-// const frut = [
-//   { label: "banan", quntiti: 50, price: 2 },
-//   { label: "duni", quntiti: 50, price: 2 },
-//   { label: "apple", quntiti: 50, price: 2 },
-//   { label: "cheri", quntiti: 50, price: 2 },
-// ];
-
 // const totalfrut = frut.reduce((total, quntiti) => {
 //   return total + quntiti.quntiti * quntiti.price;
 // }, 0);
 
 // console.log(totalfrut);
 
-const tweets = [
-  { id: "000", likes: 5, tags: ["js", "node.js"] },
-  { id: "001", likes: 2, tags: ["html", "css"] },
-  { id: "002", likes: 3, tags: ["js", "node.js", "css"] },
-  { id: "003", likes: 4, tags: ["js", "node.js", "react"] },
-];
+// const tweets = [
+//   { id: "000", likes: 5, tags: ["js", "node.js"] },
+//   { id: "001", likes: 2, tags: ["html", "css"] },
+//   { id: "002", likes: 3, tags: ["js", "node.js", "css"] },
+//   { id: "003", likes: 4, tags: ["js", "node.js", "react"] },
+// ];
 
-const totalTweets = tweets.reduce((tag, grup) => {
-  return [...tag, ...grup.tags];
-}, []);
+// const reduser = tweets.reduce((acc, next) => {
+//   return [...acc, ...next.tags];
+// }, []);
 
-console.log(totalTweets);
+// const totalTags = reduser.reduce((acc, tag) => {
+//   return {
+//     ...acc,
+//     [tag]: acc[tag] ? acc[tag] + 1 : 1,
+//   };
+// }, {});
+
+// console.log(totalTags);
+
+//-------делет вместе map && flat   flatMapp   разглаживет масив----//
+
+// const teetsTags = tweets.flatMap((t) => t.tags);
+// console.log(teetsTags);
+
+//-------------------------------//
+
+// const totalTweets = tweets.reduce((tag, grup) => {
+//   return [...tag, ...grup.tags];
+// }, []);
+
+// console.log(totalTweets);
 
 // const totalSar = totalTweets.reduce((acc, tag) => {
 //   console.log(acc);
@@ -1437,20 +1456,72 @@ console.log(totalTweets);
 //   acc[tag] = 1;
 //   return acc;
 // }, {});
-const totalSar = totalTweets.reduce((acc, tag) => {
-  console.log(acc);
+// const totalSar = totalTweets.reduce((acc, tag) => {
+//   console.log(acc);
 
-  return {
-    ...acc,
-    [tag]: acc[tag] ? acc[tag] + 1 : 1,
-  };
-}, {});
+//   return {
+//     ...acc,
+//     [tag]: acc[tag] ? acc[tag] + 1 : 1,
+//   };
+// }, {});
 
-console.log(totalSar);
+// console.log(totalSar);
 
-const user = {
-  name: "mango",
-};
+// const user = {
+//   name: "mango",
+// };
 
-const key = "name";
-console.log(user[key]);
+// const key = "name";
+// console.log(user[key]);
+
+//----------------sort----------------//
+
+// const numbers = [1, 5, 7, 9, 8, 2, 3];
+
+// const numberSort = numbers.sort((sort, nextSort) => {
+//   return sort - nextSort;
+// });
+// const numberRest = [...numbers].sort((sort, nextSprt) => {
+//   return nextSprt - sort;
+// });
+// const numberRes = [...numbers].sort((a, b) => a - b);
+// console.log(numberRest);
+// console.log(numberRes);
+
+// const frut = [
+//   { label: "banan", quntiti: 50, price: 2, isOnlain: false },
+//   { label: "duni", quntiti: 50, price: 1, isOnlain: true },
+//   { label: "apple", quntiti: 50, price: 3, isOnlain: false },
+//   { label: "cheri", quntiti: 50, price: 5, isOnlain: true },
+// ];
+
+// const sortFrut = frut
+//   .filter((frutis) => !frutis.isOnlain)
+//   .sort((a, b) => a.price - b.price);
+// console.table(sortFrut);
+// const soertFrut = [...frut].sort((sort, nextSort) => {
+//   const result = sort.label[0] > nextSort.label[0];
+//   if (result) {
+//     return 1;
+//   }
+//   if (!result) {
+//     return -1;
+//   }
+// });
+
+// console.log(soertFrut);
+
+//--------------разглаживаем масив-----------//
+
+const numbers = [1, [2, [4]], [[3], 5], [[[9]]]];
+
+// console.log(numbers.flat(3));
+
+//---------------------------------//
+
+function duplicate(n) {
+  return [];
+}
+
+// _.flatMap(numbers, duplicate);
+console.log(_.flatMap(numbers, duplicate));
