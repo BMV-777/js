@@ -1513,15 +1513,52 @@
 
 //--------------разглаживаем масив-----------//
 
-const numbers = [1, [2, [4]], [[3], 5], [[[9]]]];
+// const numbers = [1, [2, [4]], [[3], 5], [[[9]]]];
 
 // console.log(numbers.flat(3));
 
+// console.log(_.flattenDeep(numbers));
+
 //---------------------------------//
 
-function duplicate(n) {
-  return [];
-}
+// function duplicate(n) {
+//   return [[n], [n]];
+// }
 
-// _.flatMap(numbers, duplicate);
-console.log(_.flatMap(numbers, duplicate));
+// // _.flatMap(numbers, duplicate);
+// console.log(_.flatMap([[1], [2]], duplicate));
+
+// const user = {
+//   name: "mango",
+//   floer: {
+//     city: "Lviv",
+//   },
+// };
+
+// console.log(user?.floer?.city);
+
+// console.log(_.flat([1, 2], [3, 4]));
+
+// const numbers = [10, 10, 10, 10];
+
+// const totalNumbers = numbers.reduce((num, sum) => {
+//   return num + sum;
+// }, 0);
+
+// console.log(totalNumbers);
+
+// const frut = [
+//   { label: "banan", quntiti: 150, price: 2, isOnlain: false },
+//   { label: "duni", quntiti: 50, price: 1, isOnlain: true },
+//   { label: "apple", quntiti: 250, price: 3, isOnlain: false },
+//   { label: "cheri", quntiti: 100, price: 5, isOnlain: true },
+// ];
+
+// console.log(_.flatMap(frut, (play) => play.isOnlain));
+
+// const user = frut.filter((a) => a.price > 2).sort((a, b) => b.price - a.price );
+// console.log(user);
+// const filterNumber = number.find((num) => num === 300);
+// const filterNumber = number.filter((num) => num < 5 || num > 30);
+
+// const filterNumber = frut.filter((num) => !num.isOnlain);
