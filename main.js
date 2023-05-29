@@ -1562,3 +1562,46 @@
 // const filterNumber = number.filter((num) => num < 5 || num > 30);
 
 // const filterNumber = frut.filter((num) => !num.isOnlain);
+
+// const logProduct = (product) => {
+//   console.log(product);
+// };
+
+// const callbac = (newproduct, callback) => {
+//   callback({
+//     id: Date.now(),
+//     ...newproduct,
+//   });
+// const newProduct = {
+//   id: Date.now(),
+//   ...newproduct,
+// };
+// collback(newProduct);
+// };
+
+// const logTotalPrice = (product) => {
+//   return console.log((product = product.price * product.quntity));
+// };
+
+// logProduct({ name: "apple", price: 30, quntity: 3 });
+// logTotalPrice({ name: "apple", price: 30, quntity: 3 }, logTotalPrice);
+// callbac({ name: "apple", price: 30, quntity: 3 }, logProduct);
+
+const each = (array, callback) => {
+  const newArray = [];
+
+  for (const value of array) {
+    // const newValue = callback(value);
+
+    newArray.push(callback(value));
+  }
+  return newArray;
+};
+
+console.log(
+  each([2, 4, 6, 8], function (value) {
+    return value * 2;
+  })
+);
+
+console.log(each([2, 4, 6, 8], (value) => value - 10));
