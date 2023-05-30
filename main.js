@@ -1587,21 +1587,94 @@
 // logTotalPrice({ name: "apple", price: 30, quntity: 3 }, logTotalPrice);
 // callbac({ name: "apple", price: 30, quntity: 3 }, logProduct);
 
-const each = (array, callback) => {
+// const each = (array, callback) => {
+//   const newArray = [];
+
+//   for (const value of array) {
+//     // const newValue = callback(value);
+
+//     newArray.push(callback(value));
+//   }
+//   return newArray;
+// };
+
+// console.log(
+//   each([2, 4, 6, 8], function (value) {
+//     return value * 2;
+//   })
+// );
+
+// console.log(each([2, 4, 6, 8], (value) => value - 10));
+
+// const logUser = (items) => {
+//   items.forEach((item, indx) => {
+//     console.log(`${indx + 1} - ${item}`);
+//   });
+// };
+
+// logUser(["mango", "Grendy", "Mark"]);
+// logUser(["apple", "duni", "bananas"]);
+
+// const printContctsInfo = ({ names, phones }) => {
+//   const nameList = names.split(",");
+//   const phonesList = phones.split(",");
+
+//   nameList.forEach((name, indx) => console.log(`${name}: ${phonesList[indx]}`));
+// };
+
+// printContctsInfo({
+//   names: "Geri, GEri, Meri, Frinds",
+//   phones: "89052311120, 8908889999, 999999999,777777777 ",
+// });
+
+// const calculateAveragel = (...array) => {
+//   let total = 0;
+
+//   array.forEach((value) => {
+//     total += value;
+//   });
+
+// for (let i = 0; i < array.length; i += 1) {
+//   total += array[i];
+// }
+
+//   return total / array.length;
+// };
+
+// console.log(calculateAveragel(1, 2, 3, 4)); //2.5
+// console.log(calculateAveragel(14, 8, 2)); //8
+// console.log(calculateAveragel(27, 43, 2, 8, 36)); //23/2
+
+// const fn = (...numbers) => {
+// let total = [];
+// const numbers = [1, 2, 4, 5, 6, 7];
+
+// for (let i = 0; i < numbers.length; i += 1) {
+//   if (numbers[i] % 2 === 0) {
+//     console.log("Четные: ", numbers[i]);
+//   } else if (numbers[i] % 2 !== 0) {
+//     console.log("не Четные: ", numbers[i]);
+//   }
+// }
+
+// return total;
+// };
+
+// console.log(fn([1, 2, 4, 6, 7, 8]));
+
+const fn = (item) => {
   const newArray = [];
 
-  for (const value of array) {
-    // const newValue = callback(value);
-
-    newArray.push(callback(value));
-  }
+  item.forEach((value) => {
+    if (value % 2 !== 0) {
+      newArray.push(value * 2);
+    }
+  });
   return newArray;
 };
 
-console.log(
-  each([2, 4, 6, 8], function (value) {
-    return value * 2;
-  })
-);
+const fn1 = (items) =>
+  items.reduce((acc, item) => (item % 2 === 0 ? [...acc, item * 2] : acc), []);
 
-console.log(each([2, 4, 6, 8], (value) => value - 10));
+console.log(fn([1, 2, 3, 4, 5, 6, 7, 8]));
+console.log(fn1([10, 13, 12]));
