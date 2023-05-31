@@ -5,6 +5,8 @@
 // console.log(num1, num2);
 // var sum = [12, 45, 2, 4, 73, 30];
 
+// const { get } = require("lodash");
+
 // sum.sort(function (a, b) {
 //   return a - b;
 // });
@@ -1587,6 +1589,8 @@
 // logTotalPrice({ name: "apple", price: 30, quntity: 3 }, logTotalPrice);
 // callbac({ name: "apple", price: 30, quntity: 3 }, logProduct);
 
+//----------------------------//
+
 // const each = (array, callback) => {
 //   const newArray = [];
 
@@ -1605,6 +1609,8 @@
 // );
 
 // console.log(each([2, 4, 6, 8], (value) => value - 10));
+
+//---------------------//
 
 // const logUser = (items) => {
 //   items.forEach((item, indx) => {
@@ -1662,19 +1668,64 @@
 
 // console.log(fn([1, 2, 4, 6, 7, 8]));
 
-const fn = (item) => {
-  const newArray = [];
+// const fn = (item) => {
+//   const newArray = [];
 
-  item.forEach((value) => {
-    if (value % 2 !== 0) {
-      newArray.push(value * 2);
-    }
-  });
-  return newArray;
-};
+//   item.forEach((value) => {
+//     if (value % 2 !== 0) {
+//       newArray.push(value * 2);
+//     }
+//   });
+//   return newArray;
+// };
 
-const fn1 = (items) =>
-  items.reduce((acc, item) => (item % 2 === 0 ? [...acc, item * 2] : acc), []);
+// const fn1 = (items) =>
+//   items.reduce((acc, item) => (item % 2 === 0 ? [...acc, item * 2] : acc), []);
 
-console.log(fn([1, 2, 3, 4, 5, 6, 7, 8]));
-console.log(fn1([10, 13, 12]));
+// console.log(fn([1, 2, 3, 4, 5, 6, 7, 8]));
+// console.log(fn1([10, 13, 12]));
+
+// const pizzaPalsce = {
+//   pizzas: ["Ultracheese", "Smoked", "Four meats"],
+//   order(pizzaName, onSechin, onErorre) {
+//     if (this.pizzas.includes(pizzaName)) {
+//       onSechin(pizzaName);
+//     } else {
+//       onErorre(pizzaName);
+//     }
+//   },
+// };
+
+// function makePizza(pizzaName) {
+//   console.log(`Yor order id accepted. Cooking pizza ${pizzaName}`);
+// }
+
+// function onOrderErorr(error) {
+//   console.log(`Erorr! ${error}`);
+// }
+
+// pizzaPalsce.order("Smokes", makePizza, onOrderErorr);
+// pizzaPalsce.order("Four meats", makePizza, onOrderErorr);
+// pizzaPalsce.order("Big Mike", makePizza, onOrderErorr);
+// pizzaPalsce.order("Vienna", makePizza, onOrderErorr);
+
+const tweets = [
+  { id: "000", likes: 5, tags: ["js", "node.js"] },
+  { id: "001", likes: 2, tags: ["html", "css"] },
+  { id: "002", likes: 3, tags: ["js", "node.js", "css"] },
+  { id: "003", likes: 4, tags: ["js", "node.js", "react"] },
+];
+
+const getName = tweets.reduce((tweet, item) => {
+  // tweet.push(...item.tags);
+  return [...tweet, ...item.tags];
+}, []);
+
+const user = getName.reduce((acc, tags) => {
+  return {
+    ...acc,
+    [tags]: acc[tags] ? acc[tags] + 1 : 1,
+  };
+}, {});
+
+console.log(user);
