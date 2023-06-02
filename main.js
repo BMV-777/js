@@ -5,6 +5,8 @@
 // console.log(num1, num2);
 // var sum = [12, 45, 2, 4, 73, 30];
 
+// const { bind } = require("lodash");
+
 // const { get } = require("lodash");
 
 // sum.sort(function (a, b) {
@@ -1709,23 +1711,186 @@
 // pizzaPalsce.order("Big Mike", makePizza, onOrderErorr);
 // pizzaPalsce.order("Vienna", makePizza, onOrderErorr);
 
-const tweets = [
-  { id: "000", likes: 5, tags: ["js", "node.js"] },
-  { id: "001", likes: 2, tags: ["html", "css"] },
-  { id: "002", likes: 3, tags: ["js", "node.js", "css"] },
-  { id: "003", likes: 4, tags: ["js", "node.js", "react"] },
-];
+// const tweets = [
+//   { id: "000", likes: 5, tags: ["js", "node.js"] },
+//   { id: "001", likes: 2, tags: ["html", "css"] },
+//   { id: "002", likes: 3, tags: ["js", "node.js", "css"] },
+//   { id: "003", likes: 4, tags: ["js", "node.js", "react"] },
+// ];
 
-const getName = tweets.reduce((tweet, item) => {
-  // tweet.push(...item.tags);
-  return [...tweet, ...item.tags];
-}, []);
+// const getName = tweets.reduce((tweet, item) => {
+//   // tweet.push(...item.tags);
+//   return [...tweet, ...item.tags];
+// }, []);
 
-const user = getName.reduce((acc, tags) => {
-  return {
-    ...acc,
-    [tags]: acc[tags] ? acc[tags] + 1 : 1,
-  };
-}, {});
+// const user = getName.reduce((acc, tags) => {
+//   return {
+//     ...acc,
+//     [tags]: acc[tags] ? acc[tags] + 1 : 1,
+//   };
+// }, {});
 
-console.log(user);
+// const fatTags = (acc, { tags }) => [...acc, ...tags];
+
+// const result = tweets.reduce(fatTags, []).reduce((acc, tag) => {
+//   return {
+//     ...acc,
+//     [tag]: acc[tag] ? acc[tag] + 1 : 1,
+//   };
+// }, {});
+
+// console.log(result);
+
+// var obj = {
+//   count: 0,
+//   cool: function () {
+//     var self = this;
+
+//     if (self.count < 1) {
+//       setTimeout(function timer() {
+//         self.count++;
+//         console.log("красива?");
+//       }, 100);
+//     }
+//   },
+// };
+// obj.cool();
+
+// var obj = {
+//   count: 0,
+//   cool: function () {
+//     if (this.count < 1) {
+//       setTimeout(
+//         function timer() {
+//           this.count++;
+//           console.log("ёщё красивее?");
+//         }.bind(this),
+//         100
+//       );
+//     }
+//   },
+// };
+// obj.cool();
+
+//---------------Пирамида с цисел-------------//
+
+// for (var i = 1; i <= 29; ++i) {
+//   for (var j = 1; j <= i; ++j) document.write(" " + j + " ");
+//   document.write("<br>");
+// }
+
+//-----------------------------------//
+import { cars } from "./car.js";
+console.log(...cars);
+
+// const detModels = (cars) => cars.map(({ model }) => model);
+
+// console.table(detModels(cars));
+
+// const filterByPrice = (cars, threshold) =>
+//   cars.map((car) => ({
+//     ...car,
+//     price: car.price - car.price * threshold,
+//   }));
+// console.table(filterByPrice(cars, 0.2));
+// console.table(filterByPrice(cars, 0.4));
+
+// const filterByPrice = (cars, threshold) => {
+//   return cars
+//     .filter((car) => car.price >= threshold)
+//     .sort((a, b) => b.price - a.price);
+// };
+
+// console.table(filterByPrice(cars, 30000));
+// console.table(filterByPrice(cars, 25000));
+
+// const filterByPrice = (cars) => cars.filter((car) => !car.onSale);
+
+// console.table(filterByPrice(cars));
+// console.table(filterByPrice(cars));
+
+// const filterByPrice = (cars, type) => cars.filter((car) => car.type == type);
+
+// console.table(filterByPrice(cars, "suv"));
+// console.table(filterByPrice(cars, "sedan"));
+
+// const filterByPrice = (cars, model) =>
+//   cars.find(({ model: carModal }) => carModal === model);
+
+// console.log(filterByPrice(cars, "lanos"));
+// console.table(filterByPrice(cars, "crv"));
+
+// const sortByPrice = (cars) =>
+//   [...cars].sort((car, ind) => car.amount - ind.amount);
+
+// console.table(sortByPrice(cars));
+// console.table(sortByPrice(cars));
+
+// const sortByPrice1 = (cars) =>
+//   [...cars].sort((car, ind) => ind.amount - car.amount);
+
+// console.table(sortByPrice1(cars));
+// console.table(sortByPrice1(cars));
+
+//---------------localeCompare-------------//
+
+// const sortByPrice = (cars, order) =>
+//   [...cars].sort((car1, car2) =>
+//     order === "desc"
+//       ? car2.model.localeCompare(car1.model)
+//       : car1.model.localeCompare(car2.model)
+//   );
+
+// console.table(sortByPrice(cars, "abc"));
+// console.table(sortByPrice(cars, "desc"));
+
+// const reduceByPrice = (cars) => cars.reduce((car, ind) => car + ind.amount, 0);
+
+// console.log(reduceByPrice(cars));
+
+//  const getName = tweets.reduce((tweet, item) => {
+//   // tweet.push(...item.tags);
+//   return [...tweet, ...item.tags];
+// }, []);
+
+// const getModelsOnSele = (cars) => {
+//   return cars.reduce(
+//     (acc, { onSale, model }) => (!onSale ? [...acc, model] : acc),
+//     []
+//   );
+// return cars.filter((item) => !item.onSale).map(({ model }) => model);
+// .sort((car1, car2) => car2.price - car1.price);
+// .reduce((acc, idx) => acc + idx.amount, 0)
+// .filter((item) => item.onSale)
+// .sort((car1, car2) => car2.price - car1.price)
+// };
+
+// console.table(getModelsOnSele(cars));
+
+// const totalSalaryPrise = (cars) =>
+//   cars
+//     .filter(({ onSale }) => onSale)
+//     .sort((car1, car2) => car2.price - car1.price);
+// // .map(({ model }) => model);
+
+// console.table(totalSalaryPrise(cars));
+
+//-------------реверс слов в двух экзепляре ----------//
+
+// const str = "Hello I veri god...";
+// const user = str.split("").reverse().join("").split(" ").reverse().join(" ");
+
+// console.log(user);
+// const world = (text) =>
+//   text
+//     .split(" ")
+//     .map((world) => world.split("").reverse().join(""))
+//     .join(" ");
+
+// const world1 = (text) =>
+//   text.split("").reverse().join("").split(" ").reverse().join(" ");
+
+// console.log(world(str));
+// console.log(world1(str));
+
+//--------------------------------------------//
