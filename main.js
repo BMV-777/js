@@ -1780,8 +1780,8 @@
 // }
 
 //-----------------------------------//
-import { cars } from "./car.js";
-console.log(...cars);
+// import { cars } from "./car.js";
+// console.log(...cars);
 
 // const detModels = (cars) => cars.map(({ model }) => model);
 
@@ -1893,4 +1893,23 @@ console.log(...cars);
 // console.log(world(str));
 // console.log(world1(str));
 
-//--------------------------------------------//
+//-----------------this--------------------------//
+
+// const myshout = function (color) {
+//   console.log("this=>", this);
+//   this.color = color;
+// };
+
+// const hat = {
+//   color: "red",
+// };
+
+// myshout.call(hat, "blue");
+// myshout.apply(hat, ["teal"]);
+
+// console.log(hat);
+// console.log(hat);
+
+// (function () {
+//   console.log("hello");
+// })();
