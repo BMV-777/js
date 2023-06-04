@@ -1,0 +1,35 @@
+.counter {
+  display: flex;
+  /* align-items: center; */
+  /* margin-top: 20px; */
+  /* width: 10px; */
+  /* height: 30px; */
+}
+
+.counter > p {
+  margin: 0;
+  font-size: 48px;
+  font-family: monospace;
+}
+
+button {
+  margin-right: 10px;
+  font-size: 16px;
+  font-family: inherit;
+}
+
+.js-increment {
+  margin-right: 10px;
+  font-size: 16px;
+  font-family: inherit;
+  height: 30px;
+  margin-top: 15px;
+}
+
+.js-decrement {
+  font-size: 16px;
+  font-family: inherit;
+  margin-left: 10px;
+  height: 30px;
+  margin-top: 15px;
+}
