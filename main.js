@@ -1915,30 +1915,104 @@
 // })();
 
 // decrementBtn.textContent = "23233";
-const counter = {
-  value: 0,
-  increment() {
-    console.log("this => ", this);
-    this.value += 1;
-  },
-  decrement() {
-    console.log("this =>", this);
-    this.value -= 1;
-  },
-};
+// const counter = {
+//   value: 0,
+//   increment() {
+//     console.log("this => ", this);
+//     this.value += 1;
+//   },
+//   decrement() {
+//     console.log("this =>", this);
+//     this.value -= 1;
+//   },
+// };
 
-const incrementBtn = document.querySelector(".js-increment");
-const decrementBtn = document.querySelector(".js-decrement");
-const valueTotal = document.querySelector(".js-value");
+// const incrementBtn = document.querySelector(".js-increment");
+// const dicrementBtn = document.querySelector(".js-decrement");
+// const valueTotal = document.querySelector(".js-value");
 
-incrementBtn.addEventListener("click", function () {
-  counter.increment();
-  valueTotal.textContent = counter.value;
-});
+// incrementBtn.addEventListener("click", function () {
+//   counter.increment();
 
-const remuve = () => {
-  counter.decrement();
-  valueTotal.textContent = counter.value;
-};
+//   valueTotal.textContent = counter.value;
+// });
 
-decrementBtn.addEventListener("click", remuve);
+// dicrementBtn.addEventListener("click", function () {
+//   counter.decrement();
+
+//   valueTotal.textContent = counter.value;
+// });
+
+// const incrementBtn = document.querySelector(".js-increment");
+// const decrementBtn = document.querySelector(".js-decrement");
+// const valueTotal = document.querySelector(".js-value");
+
+// incrementBtn.addEventListener("click", function () {
+//   counter.increment();
+//   valueTotal.textContent = counter.value;
+// });
+
+// const remuve = () => {
+//   counter.decrement();
+//   valueTotal.textContent = counter.value;
+// };
+
+// decrementBtn.addEventListener("click", remuve);
+
+//--------Object.create------------//
+
+// const objC = {
+//   z: 5,
+// };
+
+// const objB = Object.create(objC);
+
+// objB.y = 2;
+
+// const objA = Object.create(objB);
+// objA.x = 4;
+
+// console.log("dcdc", objA);
+
+// const Car = function ({ name, model, price } = {}) {
+//   (this.name = name), (this.model = model), (this.price = price);
+// };
+
+// Car.prototype.syHi = function () {
+//   console.log("Hello");
+// };
+
+// Car.prototype.chengPrice = function (newprice) {
+//   this.price = this.price - newprice * 0.2;
+// };
+
+// console.log(Car.prototype);
+
+// const car1 = new Car({
+//   name: "BMV",
+//   model: "X-7",
+//   price: 12000,
+// });
+
+// console.log(car1);
+// car1.syHi("dfdsf");
+// car1.chengPrice(12000);
+// console.log(car1);
+
+// const user = {
+//   name: "mango",
+//   age: 33,
+// };
+
+// const mango = Object.keys(user);
+// for (const el of mango) {
+//   console.log(el);
+// }
+
+// for (const [name, age] of mango) {
+//   console.log(name, age);
+// }
+
+// mango.forEach((item) => console.log(item.toString()));
+
+// console.log(mango);

@@ -243,3 +243,32 @@
 
 // console.log(acount.getTransactionTotal(Transction.DEPOSIT));
 // console.log(acount.getTransactionTotal(Transction.WITHDROW));
+
+const counter = {
+  value: 0,
+
+  increment() {
+    console.log("this => ", this);
+    this.value += 1;
+  },
+  decrement() {
+    console.log("this=> ", this);
+    this.value -= 1;
+  },
+};
+
+const incrementBtn = document.querySelector(".js-increment");
+const decrementBtn = document.querySelector(".js-decrement");
+const valueTotal = document.querySelector(".js-value");
+
+incrementBtn.addEventListener("click", function () {
+  counter.increment();
+
+  valueTotal.textContent = counter.value;
+});
+
+decrementBtn.addEventListener("click", function () {
+  counter.decrement();
+
+  valueTotal.textContent = counter.value;
+});
