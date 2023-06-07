@@ -2016,3 +2016,41 @@
 // mango.forEach((item) => console.log(item.toString()));
 
 // console.log(mango);
+
+class Car {
+  static description = "Hello my car!!";
+
+  static info(obj) {
+    console.log("🚀 ~ file: main.js:2025 ~ Car ~ info ~ info:", obj);
+  }
+
+  #test = "test";
+
+  pricemoFrencomani = 555;
+
+  constructor({ name, model, price } = {}) {
+    this.name = name;
+    this.model = model;
+    this.price = price;
+    this.pricemoFrencomani = this.pricemoFrencomani;
+  }
+
+  modelName(newModel) {
+    this.model = newModel;
+  }
+
+  priceTotal(newPrice) {
+    this.price = this.price - newPrice * 0.2;
+  }
+}
+
+const modelCar = new Car({
+  name: "BMV",
+  model: "Q-7",
+  price: 21000,
+});
+modelCar.priceTotal(21000);
+console.log(modelCar);
+
+// Car.info(modelCar);
+// console.log(Car.info(modelCar));
