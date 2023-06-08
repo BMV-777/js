@@ -2017,40 +2017,128 @@
 
 // console.log(mango);
 
-class Car {
-  static description = "Hello my car!!";
+// class Car {
+//   static description = "Hello my car!!";
 
-  static info(obj) {
-    console.log("🚀 ~ file: main.js:2025 ~ Car ~ info ~ info:", obj);
-  }
+//   static info(obj) {
+//     console.log("🚀 ~ file: main.js:2025 ~ Car ~ info ~ info:", obj);
+//   }
 
-  #test = "test";
+//   #test = "test";
 
-  pricemoFrencomani = 555;
+//   pricemoFrencomani = 555;
 
-  constructor({ name, model, price } = {}) {
-    this.name = name;
-    this.model = model;
-    this.price = price;
-    this.pricemoFrencomani = this.pricemoFrencomani;
-  }
+//   constructor({ name, model, price } = {}) {
+//     this.name = name;
+//     this.model = model;
+//     this.price = price;
+//     this.pricemoFrencomani = this.pricemoFrencomani;
+//   }
 
-  modelName(newModel) {
-    this.model = newModel;
-  }
+//   modelName(newModel) {
+//     this.model = newModel;
+//   }
 
-  priceTotal(newPrice) {
-    this.price = this.price - newPrice * 0.2;
-  }
-}
+//   priceTotal(newPrice) {
+//     this.price = this.price - newPrice * 0.2;
+//   }
+// }
 
-const modelCar = new Car({
-  name: "BMV",
-  model: "Q-7",
-  price: 21000,
-});
-modelCar.priceTotal(21000);
-console.log(modelCar);
+// const modelCar = new Car({
+//   name: "BMV",
+//   model: "Q-7",
+//   price: 21000,
+// });
+// modelCar.priceTotal(21000);
+// console.log(modelCar);
 
 // Car.info(modelCar);
 // console.log(Car.info(modelCar));
+
+// class Hero {
+//   constructor({ name = "hero", xp = 0 } = 0) {
+//     this.name = name;
+//     this.xp = xp;
+//   }
+
+//   getXp(amout) {
+//     console.log(`${this.name} получакт ${amout}`);
+//     this.xp += amout;
+//   }
+// }
+
+// class Meri extends Hero {
+//   constructor({ spired, ...restTols }) {
+//     super({ ...restTols });
+
+//     this.spired = spired;
+//   }
+
+//   atacc() {
+//     console.log(`${this.name} отакует ${this.spired}`);
+//   }
+// }
+
+// const mango = new Meri({ name: "Gringo", xp: 1000, spired: "Aлибардо" });
+
+// mango.getXp(2000);
+// mango.atacc();
+
+// console.log(mango);
+
+// class Klaus extends Hero {
+//   constructor({ splitt = [], ...restPrice } = {}) {
+//     super({ ...restPrice });
+
+//     this.splitt = splitt;
+//   }
+
+//   cast() {
+//     console.log(`${this.name} кастует`);
+//   }
+// }
+
+// const poli = new Klaus({ name: "Tor", xp: 500, splitt: ["freebol"] });
+// console.log(poli);
+
+// function saHi(a, b) {
+//   console.log(this, a + b);
+// }
+
+// const mango = { name: "Mango1" };
+// const man1 = { name: "Mango2" };
+// const obj = { name: "Mango3" };
+
+// const f1 = saHi.call(mango, 1, 1);
+// const f2 = saHi.apply(mango, [1, 1]);
+// const f3 = saHi.bind(mango, 1, 1);
+
+// setTimeout(f1, 3000);
+// setTimeout(f2, 3000);
+// setTimeout(f3, 3000);
+
+// saHi.call(man1, 1, 1);
+// saHi.apply(obj, [1, 1]);
+// console.log(saHi.apply(man2, 2, 2));
+
+function sayHello(a, b) {
+  console.log(this, a + b);
+}
+
+const obj1 = { name: "Mango" };
+const obj2 = { name: "Mango2" };
+
+function fn1(count, callback) {
+  return function () {
+    callback.apply(count, arguments);
+  };
+}
+
+const fn = fn1(obj1, sayHello);
+
+fn(1, 1);
+
+// setTimeout(fn, 2000);
+
+// sayHello.call(obj1);
+// sayHello.call(obj2);
