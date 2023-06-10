@@ -2121,24 +2121,91 @@
 // saHi.apply(obj, [1, 1]);
 // console.log(saHi.apply(man2, 2, 2));
 
-function sayHello(a, b) {
-  console.log(this, a + b);
-}
+// function sayHello(a, b) {
+//   console.log(this, a + b);
+// }
 
-const obj1 = { name: "Mango" };
-const obj2 = { name: "Mango2" };
+// const obj1 = { name: "Mango" };
+// const obj2 = { name: "Mango2" };
 
-function fn1(count, callback) {
-  return function () {
-    callback.apply(count, arguments);
-  };
-}
+// function fn1(count, callback) {
+//   return function () {
+//     callback.apply(count, arguments);
+//   };
+// }
 
-const fn = fn1(obj1, sayHello);
+// const fn = fn1(obj1, sayHello);
 
-fn(1, 1);
+// fn(1, 1);
 
 // setTimeout(fn, 2000);
 
 // sayHello.call(obj1);
 // sayHello.call(obj2);
+
+// const sayHi = function (a, b) {
+//   console.log(this, a + b);
+// };
+
+// const obj = { name: "Mango" };
+
+// // sayHi.call(obj);
+
+// function f1(count, callback) {
+//   return function () {
+//     callback.apply(count, arguments);
+//   };
+// }
+
+// const user = f1(obj, sayHi);
+// user(1, 1);
+
+// const chopShop = {
+//   stones: [
+//     { name: "Enerals", price: 1300, quantity: 4 },
+//     { name: "Dimand", price: 2700, quantity: 3 },
+//     { name: "Sapphire", price: 1400, quantity: 7 },
+//     { name: "Ruby", price: 800, quantity: 2 },
+//   ],
+
+//   calcTotalPrice(stoneName) {
+//     const { price, quantity } = this.stones.find(
+//       ({ name }) => name === stoneName
+//     );
+//     return price * quantity;
+//   },
+// };
+
+// console.log(chopShop.calcTotalPrice("Enerals")); //5200
+// console.log(chopShop.calcTotalPrice("Dimand")); //8100
+// console.log(chopShop.calcTotalPrice("Sapphire")); //9800
+// console.log(chopShop.calcTotalPrice("Ruby")); // 1600
+
+// const calculator = {
+//   reand(a, b) {
+//     this.a = a;
+//     this.b = b;
+//   },
+
+//   add() {
+//     return this.a + this.b;
+//   },
+
+//   mult() {
+//     return this.a * this.b;
+//   },
+// };
+
+// console.log(calculator);
+// calculator.reand(10, 2);
+// console.log(calculator.add());
+// console.log(calculator.mult());
+
+const arry = [1, 1, 1, 2, 2, 2, 3, 3, 3, 4, 4, 5, 5];
+
+const ensert = Array.from(new Set(arry));
+
+const arr1 = arry.filter((value, indx, count) => count.indexOf(value) === indx);
+
+console.log(ensert);
+console.log(arr1);
