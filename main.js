@@ -2201,11 +2201,110 @@
 // console.log(calculator.add());
 // console.log(calculator.mult());
 
-const arry = [1, 1, 1, 2, 2, 2, 3, 3, 3, 4, 4, 5, 5];
+// const arry = [1, 1, 1, 2, 2, 2, 3, 3, 3, 4, 4, 5, 5];
+// console.log(JSON.stringify(arry));
+// const ensert = Array.from(new Set(arry));
 
-const ensert = Array.from(new Set(arry));
+// const arr1 = arry.filter((value, indx, count) => count.indexOf(value) === indx);
 
-const arr1 = arry.filter((value, indx, count) => count.indexOf(value) === indx);
+// console.log(ensert);
+// console.log(arr1);
 
-console.log(ensert);
-console.log(arr1);
+// class User {
+//   constructor({
+//     email: name = "Grin",
+//     age = 0,
+//     numberOfPost = 0,
+//     topics = [],
+//   } = {}) {
+//     (this.email = name),
+//       (this.age = age),
+//       (this.numberOfPost = numberOfPost),
+//       (this.topics = topics);
+//   }
+
+//   getInfo() {
+//     return `User ${this.email} is ${this.age} years old and has ${this.numberOfPost} topics ${this.topics}`;
+//   }
+//   updatePostCount(value) {
+//     return (this.numberOfPost += value);
+//   }
+// }
+
+// const mango = new User({
+//   name: "borenkovmv@gmai.com",
+//   age: 24,
+//   numberOfPost: 20,
+//   // topics: ["tech", "cooking"],
+// });
+
+// console.log(mango.getInfo());
+// mango.updatePostCount(5);
+// console.log(mango.getInfo());
+
+// class Storage {
+//   // #name = [];
+//   constructor(items = []) {
+//     this.items = items;
+//   }
+
+//   getItems() {
+//     return this.items;
+//   }
+
+//   addItems(addProduct) {
+//     this.items = [...this.items, addProduct];
+//   }
+
+//   removeItems(removeProduct) {
+//     this.items = this.items.filter((item) => item !== removeProduct);
+//   }
+// }
+
+// const storage = new Storage(["apple", "duni", "vinograd", "arbuz"]);
+
+// console.log(storage);
+
+// // const product = storage.getItems();
+
+// console.table(storage.getItems());
+
+// storage.addItems("Hineme");
+
+// console.table(storage.getItems());
+
+// storage.removeItems("Hineme");
+// console.table(storage.getItems());
+
+class User {
+  #login;
+  #email;
+  constructor({ login = "ведите login", email = "@mail" } = {}) {
+    (this.#login = login), (this.#email = email);
+  }
+
+  get login() {
+    return this.#login;
+  }
+
+  set login(value) {
+    return (this.#login = value);
+  }
+  get email() {
+    return this.#email;
+  }
+
+  set email(value) {
+    return (this.#email = value);
+  }
+}
+
+const mango = new User({
+  login: "Mango",
+  email: "mango@gmail.com",
+});
+
+console.log(mango.login);
+// console.log(mahgo.getEmail("dfff"));
+mango.login = "hdjdkdkd";
+console.log(mango.login);
