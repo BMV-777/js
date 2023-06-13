@@ -2276,35 +2276,81 @@
 // storage.removeItems("Hineme");
 // console.table(storage.getItems());
 
-class User {
-  #login;
-  #email;
-  constructor({ login = "ведите login", email = "@mail" } = {}) {
-    (this.#login = login), (this.#email = email);
+// class User {
+//   #login;
+//   #email;
+//   constructor({ login = "ведите login", email = "@mail" } = {}) {
+//     (this.#login = login), (this.#email = email);
+//   }
+
+//   get login() {
+//     return this.#login;
+//   }
+
+//   set login(value) {
+//     return (this.#login = value);
+//   }
+//   get email() {
+//     return this.#email;
+//   }
+
+//   set email(value) {
+//     return (this.#email = value);
+//   }
+// }
+
+// const mango = new User({
+//   login: "Mango",
+//   email: "mango@gmail.com",
+// });
+
+// console.log(mango.login);
+// // console.log(mahgo.getEmail("dfff"));
+// mango.login = "hdjdkdkd";
+// console.log(mango.login);
+
+class Notes {
+  static Priority = {
+    LOW: "Low",
+    NORMAL: "normal",
+    HIGH: "high",
+  };
+
+  constructor(items) {
+    this.items = items;
   }
 
-  get login() {
-    return this.#login;
+  addNote(note) {
+    this.items = [...this.items, note];
   }
 
-  set login(value) {
-    return (this.#login = value);
-  }
-  get email() {
-    return this.#email;
+  removeNote(text) {
+    this.items = this.items.filter((item) => item.text !== text);
   }
 
-  set email(value) {
-    return (this.#email = value);
+  updatePriority(text, priority) {
+    this.items = this.items.map((item) =>
+      item.text === text ? { ...item, priority } : item
+    );
   }
 }
 
-const mango = new User({
-  login: "Mango",
-  email: "mango@gmail.com",
+const myNotes = new Notes([]);
+
+myNotes.addNote({
+  text: "Моя первая заметка",
+  priority: Notes.Priority.LOW,
+});
+myNotes.addNote({
+  text: "Моя вторая заметка",
+  priority: Notes.Priority.NORMAL,
 });
 
-console.log(mango.login);
-// console.log(mahgo.getEmail("dfff"));
-mango.login = "hdjdkdkd";
-console.log(mango.login);
+console.log(myNotes.items);
+
+myNotes.removeNote("Моя первая заметка");
+
+console.log(myNotes.items);
+
+myNotes.updatePriority("Моя вторая заметка", Notes.Priority.HIGH);
+console.log(myNotes.items);
