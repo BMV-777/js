@@ -2309,48 +2309,98 @@
 // mango.login = "hdjdkdkd";
 // console.log(mango.login);
 
-class Notes {
-  static Priority = {
-    LOW: "Low",
-    NORMAL: "normal",
-    HIGH: "high",
-  };
+// class Notes {
+//   static Priority = {
+//     LOW: "Low",
+//     NORMAL: "normal",
+//     HIGH: "high",
+//   };
 
-  constructor(items) {
-    this.items = items;
-  }
+//   constructor(items) {
+//     this.items = items;
+//   }
 
-  addNote(note) {
-    this.items = [...this.items, note];
-  }
+//   addNote(note) {
+//     this.items = [...this.items, note];
+//   }
 
-  removeNote(text) {
-    this.items = this.items.filter((item) => item.text !== text);
-  }
+//   removeNote(text) {
+//     this.items = this.items.filter((item) => item.text !== text);
+//   }
 
-  updatePriority(text, priority) {
-    this.items = this.items.map((item) =>
-      item.text === text ? { ...item, priority } : item
-    );
-  }
+//   updatePriority(text, priority) {
+//     this.items = this.items.map((item) =>
+//       item.text === text ? { ...item, priority } : item
+//     );
+//   }
+// }
+
+// const myNotes = new Notes([]);
+
+// myNotes.addNote({
+//   text: "Моя первая заметка",
+//   priority: Notes.Priority.LOW,
+// });
+// myNotes.addNote({
+//   text: "Моя вторая заметка",
+//   priority: Notes.Priority.NORMAL,
+// });
+
+// console.log(myNotes.items);
+
+// myNotes.removeNote("Моя первая заметка");
+
+// console.log(myNotes.items);
+
+// myNotes.updatePriority("Моя вторая заметка", Notes.Priority.HIGH);
+// console.log(myNotes.items);
+
+// function feruchi(str) {
+//   const result = str.split("").reduce((acc, later) => {
+//     return {
+//       ...acc,
+//       [later]: acc[later] ? acc[later] + 1 : 1,
+//     };
+//   }, {});
+
+//   return result;
+// }
+
+// console.log(feruchi("aaccbbnnyyrrraa"));
+
+// (function () {
+//   console.log("hi");
+// })();
+// setInterval(() => {
+//   (function () {
+//     console.log("hi");
+//   })();
+// }, 1000);
+
+// const plaList = [
+//   { id: 1, name: "Korn", tag: ["CSS", "HTML"] },
+//   { id: 1, name: "Korn", tag: ["CSS", "Ql", "Java"] },
+//   { id: 1, name: "Korn", tag: ["CSS", "HTML", "JS", "React"] },
+//   { id: 1, name: "Korn", tag: ["React", "HTML", "Ql"] },
+// ];
+
+// const tagis = plaList.reduce((acc, later) => {
+//   return [...acc, ...later.tag];
+// }, []);
+
+// const result = tagis.reduce((acc, next) => {
+//   return {
+//     ...acc,
+//     [next]: acc[next] ? acc[next] + 1 : 1,
+//   };
+// }, {});
+
+// console.log(result);
+
+for (var i = 1; i < 5; i += 1) {
+  (function fn(x) {
+    setTimeout(() => {
+      console.log(x);
+    }, 100);
+  })(i);
 }
-
-const myNotes = new Notes([]);
-
-myNotes.addNote({
-  text: "Моя первая заметка",
-  priority: Notes.Priority.LOW,
-});
-myNotes.addNote({
-  text: "Моя вторая заметка",
-  priority: Notes.Priority.NORMAL,
-});
-
-console.log(myNotes.items);
-
-myNotes.removeNote("Моя первая заметка");
-
-console.log(myNotes.items);
-
-myNotes.updatePriority("Моя вторая заметка", Notes.Priority.HIGH);
-console.log(myNotes.items);

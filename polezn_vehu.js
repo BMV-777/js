@@ -9,5 +9,12 @@
 // console.log(ensert);
 // console.log(arr1);
 
+//--------------замыкание(clouser) && IIFF------------------//
 
-//--------------------------------//
+for (var i = 1; i < 5; i += 1) {
+  (function fn(x) {
+    setTimeout(() => {
+      console.log(x);
+    }, 100);
+  })(i);
+}
