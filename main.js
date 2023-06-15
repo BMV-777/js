@@ -2397,10 +2397,36 @@
 
 // console.log(result);
 
-for (var i = 1; i < 5; i += 1) {
-  (function fn(x) {
-    setTimeout(() => {
-      console.log(x);
-    }, 100);
-  })(i);
-}
+// for (var i = 1; i < 5; i += 1) {
+//   (function fn(x) {
+//     setTimeout(() => {
+//       console.log(x);
+//     }, 100);
+//   })(i);
+// }
+
+const title = document.createElement("h1");
+title.classList.add("list_item");
+title.textContent = "Hello Wold";
+
+document.body.appendChild(title);
+
+const navElim = document.createElement("li");
+navElim.classList.add("nav-list");
+
+// console.log(navElim);
+
+const navLink = document.createElement("a");
+navLink.classList.add("nav-linc_element");
+navLink.textContent = "Личный кабинет";
+navLink.href = "./profale";
+//  console.log(navLink);
+
+navElim.appendChild(navLink);
+console.log(navElim);
+
+const list = document.querySelector(".nav-link");
+
+list.insertBefore(navElim, list.firstElementChild);
+
+// list.appendChild(navElim);
