@@ -2405,28 +2405,103 @@
 //   })(i);
 // }
 
-const title = document.createElement("h1");
-title.classList.add("list_item");
-title.textContent = "Hello Wold";
+// const title = document.createElement("h1");
+// title.classList.add("list_item");
+// title.textContent = "Hello Wold";
 
-document.body.appendChild(title);
+// document.body.appendChild(title);
 
-const navElim = document.createElement("li");
-navElim.classList.add("nav-list");
+// const navElim = document.createElement("li");
+// navElim.classList.add("nav-list");
 
+// // console.log(navElim);
+
+// const navLink = document.createElement("a");
+// navLink.classList.add("nav-linc_element");
+// navLink.textContent = "Личный кабинет";
+// navLink.href = "./profale";
+// //  console.log(navLink);
+
+// navElim.appendChild(navLink);
 // console.log(navElim);
 
-const navLink = document.createElement("a");
-navLink.classList.add("nav-linc_element");
-navLink.textContent = "Личный кабинет";
-navLink.href = "./profale";
-//  console.log(navLink);
+// const list = document.querySelector(".nav-link");
 
-navElim.appendChild(navLink);
-console.log(navElim);
+// list.insertBefore(navElim, list.firstElementChild);
 
-const list = document.querySelector(".nav-link");
+// // list.appendChild(navElim);
 
-list.insertBefore(navElim, list.firstElementChild);
+// const images = document.createElement("img");
+// images.src =
+//   "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlS8f-JWBT33SWjrY0WBmvT4DvzM_0-m7rTg&usqp=CAU";
+// images.alt = "foto";
+// images.width = 400;
 
-// list.appendChild(navElim);
+// list.insertBefore(images, list.firstElementChild);
+// list.appendChild(images);
+import product from "./server.js";
+// const product = {
+//   name: "Сероприводы",
+//   description:
+//     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae repellendus, illum tempore temporibus tenetur, nemo ratione esse alias dicta, et dignissimos quod nulla rem pariatur at sunt a officiis.",
+//   price: 4000,
+//   available: true,
+//   onSale: true,
+// };
+console.log(product);
+const list = document.querySelector(".nav");
+
+// const cards = product.map((opt) => {
+//   return {
+//     name: `${opt.name}`,
+//     description: `${opt.description}`,
+//     price: `Цена: ${opt.price}`,
+//   };
+// });
+
+// list.append(cards);
+
+const makeProductCard = ({ name, description, price }) => {
+  const productEl = document.createElement("article");
+  productEl.classList.add("product");
+
+  const tittleEl = document.createElement("h2");
+  tittleEl.textContent = name;
+  tittleEl.classList.add("product__name");
+
+  const descroptEl = document.createElement("p");
+  descroptEl.textContent = description;
+  descroptEl.classList.add("product__descript");
+
+  const priceEl = document.createElement("p");
+  priceEl.textContent = `Цена: ${price} кредитов`;
+  priceEl.classList.add("product__price");
+
+  productEl.append(tittleEl, descroptEl, priceEl);
+
+  return productEl;
+};
+
+const elenetEl = product.map(makeProductCard);
+list.append(...elenetEl);
+// console.log(list);
+
+// console.log(makeProductCard(product[2]));
+// const productEl = document.createElement("article");
+// productEl.classList.add("product");
+
+// const tittleEl = document.createElement("h2");
+// tittleEl.textContent = product.name;
+// tittleEl.classList.add("product__name");
+
+// const descroptEl = document.createElement("p");
+// descroptEl.textContent = product.description;
+// descroptEl.classList.add("product__descript");
+
+// const priceEl = document.createElement("p");
+// priceEl.textContent = `Цена: ${product.price} кредитов`;
+// priceEl.classList.add("product__price");
+
+// productEl.append(tittleEl, descroptEl, priceEl);
+
+//
