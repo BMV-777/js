@@ -2439,7 +2439,7 @@
 
 // list.insertBefore(images, list.firstElementChild);
 // list.appendChild(images);
-import product from "./server.js";
+// import product from "./server.js";
 // const product = {
 //   name: "Сероприводы",
 //   description:
@@ -2448,8 +2448,18 @@ import product from "./server.js";
 //   available: true,
 //   onSale: true,
 // };
-console.log(product);
-const list = document.querySelector(".nav");
+// console.log(product);
+
+// const title = document.querySelector(".js-title");
+
+// title.addEventListener("click", () => {
+//   console.log("ki");
+//   title.textContent = "frfrr";
+// });
+
+// title.innerHTML = "<a href=''>Cool</a> ";
+
+// const list = document.querySelector(".nav");
 
 // const cards = product.map((opt) => {
 //   return {
@@ -2461,29 +2471,29 @@ const list = document.querySelector(".nav");
 
 // list.append(cards);
 
-const makeProductCard = ({ name, description, price }) => {
-  const productEl = document.createElement("article");
-  productEl.classList.add("product");
+// const makeProductCard = ({ name, description, price }) => {
+//   const productEl = document.createElement("article");
+//   productEl.classList.add("product");
 
-  const tittleEl = document.createElement("h2");
-  tittleEl.textContent = name;
-  tittleEl.classList.add("product__name");
+//   const tittleEl = document.createElement("h2");
+//   tittleEl.textContent = name;
+//   tittleEl.classList.add("product__name");
 
-  const descroptEl = document.createElement("p");
-  descroptEl.textContent = description;
-  descroptEl.classList.add("product__descript");
+//   const descroptEl = document.createElement("p");
+//   descroptEl.textContent = description;
+//   descroptEl.classList.add("product__descript");
 
-  const priceEl = document.createElement("p");
-  priceEl.textContent = `Цена: ${price} кредитов`;
-  priceEl.classList.add("product__price");
+//   const priceEl = document.createElement("p");
+//   priceEl.textContent = `Цена: ${price} кредитов`;
+//   priceEl.classList.add("product__price");
 
-  productEl.append(tittleEl, descroptEl, priceEl);
+//   productEl.append(tittleEl, descroptEl, priceEl);
 
-  return productEl;
-};
+//   return productEl;
+// };
 
-const elenetEl = product.map(makeProductCard);
-list.append(...elenetEl);
+// const elenetEl = product.map(makeProductCard);
+// list.append(...elenetEl);
 // console.log(list);
 
 // console.log(makeProductCard(product[2]));
@@ -2504,4 +2514,20 @@ list.append(...elenetEl);
 
 // productEl.append(tittleEl, descroptEl, priceEl);
 
-//
+const targetBtn = document.querySelector(".js-target-btn");
+const addListnerBtn = document.querySelector(".js-add");
+const remuveBtn = document.querySelector(".js-remuve");
+
+addListnerBtn.addEventListener("click", () => {
+  console.log("Подписалися");
+  targetBtn.addEventListener("click", removeListBtn);
+});
+
+remuveBtn.addEventListener("click", () => {
+  console.log("От писалися");
+  targetBtn.removeEventListener("click", removeListBtn);
+});
+
+function removeListBtn() {
+  console.log();
+}
