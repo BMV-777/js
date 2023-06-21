@@ -2571,10 +2571,10 @@
 // const checkBtn = document.querySelector(".js-checkbox");
 // const submitBtn = document.querySelector(".js-button");
 
-const refs = {
-  output: document.querySelector(".js-output"),
-  clear: document.querySelector(".js-clear"),
-};
+// const refs = {
+//   output: document.querySelector(".js-output"),
+//   clear: document.querySelector(".js-clear"),
+// };
 
 // window.addEventListener("keydown", onClick);
 
@@ -2582,13 +2582,52 @@ const refs = {
 //   console.log(e.key);
 //   console.log(e.code);
 // }
-window.addEventListener("keypress", keypress);
-refs.clear.addEventListener("click", onClick);
+// window.addEventListener("keypress", keypress);
+// refs.clear.addEventListener("click", onClick);
 
-function keypress(e) {
-  refs.output.textContent += e.key;
+// function keypress(e) {
+//   refs.output.textContent += e.key;
+// }
+
+// function onClick() {
+//   refs.output.textContent = "";
+// }
+
+// const ref = {
+//   text: document.querySelector(".js-text"),
+//   nameLabel: document.querySelector(".js-btn > span"),
+//   chekBtn: document.querySelector(".js-checkbox"),
+//   buttonEl: document.querySelector(".js-btn"),
+// };
+
+// ref.text.addEventListener("input", onInput);
+// ref.chekBtn.addEventListener("change", onCgange);
+
+// function onInput(e) {
+//   console.log(e.currentTarget.value);
+//   ref.nameLabel.textContent = e.currentTarget.value;
+// }
+
+// function onCgange(e) {
+//   console.log(e);
+//   ref.buttonEl.disabled = !e.currentTarget.checked;
+// }
+
+const ref = {
+  output: document.querySelector(".js-output"),
+  clearBtn: document.querySelector(".js-clear"),
+};
+
+window.addEventListener("keypress", keydaun);
+ref.clearBtn.addEventListener("click", onClick);
+
+function keydaun(e) {
+  console.log(e.key);
+  console.log(e.code);
+  ref.output.textContent += e.key;
+  e;
 }
 
-function onClick() {
-  refs.output.textContent = "";
+function onClick(e) {
+  ref.output.textContent = "";
 }
