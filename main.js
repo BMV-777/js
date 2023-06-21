@@ -2514,20 +2514,81 @@
 
 // productEl.append(tittleEl, descroptEl, priceEl);
 
-const targetBtn = document.querySelector(".js-target-btn");
-const addListnerBtn = document.querySelector(".js-add");
-const remuveBtn = document.querySelector(".js-remuve");
+// const targetBtn = document.querySelector(".js-target-btn");
+// const addListnerBtn = document.querySelector(".js-add");
+// const remuveBtn = document.querySelector(".js-remuve");
 
-addListnerBtn.addEventListener("click", () => {
-  console.log("Подписалися");
-  targetBtn.addEventListener("click", removeListBtn);
-});
+// addListnerBtn.addEventListener("click", () => {
+//   console.log("Подписалися");
+//   targetBtn.addEventListener("click", removeListBtn);
+// });
 
-remuveBtn.addEventListener("click", () => {
-  console.log("От писалися");
-  targetBtn.removeEventListener("click", removeListBtn);
-});
+// remuveBtn.addEventListener("click", () => {
+//   console.log("От писалися");
+//   targetBtn.removeEventListener("click", removeListBtn);
+// });
 
-function removeListBtn() {
-  console.log();
+// function removeListBtn() {
+//   console.log();
+// }
+
+// const refs = {
+//   textBtn: document.querySelector(".js-text"),
+//   nameLabel: document.querySelector(".js-button > span"),
+//   checkBtn: document.querySelector(".js-checkbox"),
+//   submitBtn: document.querySelector(".js-button"),
+// };
+
+// refs.textBtn.addEventListener("input", onInput);
+// refs.checkBtn.addEventListener("change", onCgange);
+
+// function onInput(e) {
+//   console.log(e.currentTarget.value);
+//   refs.nameLabel.textContent = e.currentTarget.value;
+// }
+
+// function onCgange(e) {
+//   refs.submitBtn.disabled = !e.currentTarget.checked;
+// }
+
+// refs.textBtn.addEventListener("focus", onFocus);
+// refs.textBtn.addEventListener("blur", onBluer);
+// refs.textBtn.addEventListener("input", onInput);
+
+// function onFocus() {
+//   console.log("Получил фокус");
+// }
+
+// function onBluer() {
+//   console.log("Потерял фокус");
+// }
+
+// function onInput(e) {
+//   console.log(e.currentTarget.value);
+
+// const textBtn = document.querySelector(".js-text");
+// const nameLabel = document.querySelector(".js-button > span");
+// const checkBtn = document.querySelector(".js-checkbox");
+// const submitBtn = document.querySelector(".js-button");
+
+const refs = {
+  output: document.querySelector(".js-output"),
+  clear: document.querySelector(".js-clear"),
+};
+
+// window.addEventListener("keydown", onClick);
+
+// function onClick(e) {
+//   console.log(e.key);
+//   console.log(e.code);
+// }
+window.addEventListener("keypress", keypress);
+refs.clear.addEventListener("click", onClick);
+
+function keypress(e) {
+  refs.output.textContent += e.key;
+}
+
+function onClick() {
+  refs.output.textContent = "";
 }
