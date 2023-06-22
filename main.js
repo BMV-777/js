@@ -2613,21 +2613,82 @@
 //   ref.buttonEl.disabled = !e.currentTarget.checked;
 // }
 
-const ref = {
-  output: document.querySelector(".js-output"),
-  clearBtn: document.querySelector(".js-clear"),
-};
+// const ref = {
+//   output: document.querySelector(".js-output"),
+//   clearBtn: document.querySelector(".js-clear"),
+// };
 
-window.addEventListener("keypress", keydaun);
-ref.clearBtn.addEventListener("click", onClick);
+// window.addEventListener("keypress", keydaun);
+// ref.clearBtn.addEventListener("click", onClick);
 
-function keydaun(e) {
-  console.log(e.key);
-  console.log(e.code);
-  ref.output.textContent += e.key;
-  e;
-}
+// function keydaun(e) {
+//   console.log(e.key);
+//   console.log(e.code);
+//   ref.output.textContent += e.key;
+//   e;
+// }
 
-function onClick(e) {
-  ref.output.textContent = "";
+// function onClick(e) {
+//   ref.output.textContent = "";
+// }
+
+// function onOpenModal() {
+//   window.addEventListener("keydown", onEscBtn);
+//   document.body.classList.add("show-modal");
+// }
+
+// function onCloseModal() {
+//   window.removeEventListener("keydown", onEscBtn);
+//   document.body.classList.remove("show-modal");
+// }
+
+// function onBackdrob(e) {
+//   if (e.currentTarget === e.target) {
+//     onCloseModal();
+//   }
+// }
+
+// function onEscBtn(e) {
+//   const KEY_ESC = "Escape";
+//   if (e.code === KEY_ESC) {
+//     onCloseModal();
+//   }
+// }
+// const refs = {
+//   openModalBtn: document.querySelector('[data-action="open-modal"]'),
+//   closeModalBtn: document.querySelector('[data-action="close-modal"]'),
+//   backdrop: document.querySelector(".js-backdrop"),
+// };
+
+// refs.openModalBtn.addEventListener("click", onOpenModal);
+// refs.closeModalBtn.addEventListener("click", onCloseModal);
+// refs.backdrop.addEventListener("click", onBackdrob);
+
+// function onOpenModal() {
+//   window.addEventListener("keydown", keyDaun);
+//   document.body.classList.add("show-modal");
+// }
+
+// function onCloseModal() {
+//   window.removeEventListener("keydown", keyDaun);
+//   document.body.classList.remove("show-modal");
+// }
+
+// function onBackdrob(e) {
+//   console.log(e.currentTarget);
+//   console.log(e.target);
+
+//   if (e.currentTarget === e.target) {
+//     onCloseModal();
+//   }
+// }
+
+// function keyDaun(e) {
+//   console.log(e.code);
+
+//   const KEY_CODE = "Escape";
+
+//   if (e.code === KEY_CODE) {
+//     onCloseModal();
+//   }
 }
