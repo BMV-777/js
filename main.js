@@ -2691,4 +2691,20 @@
 //   if (e.code === KEY_CODE) {
 //     onCloseModal();
 //   }
+// }
+
+const ref = {
+  text: document.querySelector(".text"),
+  inpBtn: document.querySelector(".checbox"),
+};
+
+ref.inpBtn.addEventListener("click", onClick);
+
+function onClick(e) {
+  console.log(e);
+  if (e.target.checked) {
+    ref.text.classList.add("sow-now");
+  } else {
+    ref.text.classList.remove("sow-now");
+  }
 }

@@ -76,5 +76,9 @@ body.show-modal .modal {
   transition: transform 200ms ease-in-out;
 }
 
+.sow-now {
+  color: red;
+}
+
 /* 
 Конец стилей Модалки */
