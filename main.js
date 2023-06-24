@@ -2693,18 +2693,65 @@
 //   }
 // }
 
-const ref = {
-  text: document.querySelector(".text"),
-  inpBtn: document.querySelector(".checbox"),
+// const ref = {
+//   text: document.querySelector(".text"),
+//   inpBtn: document.querySelector(".checbox"),
+// };
+
+// ref.inpBtn.addEventListener("click", onClick);
+
+// function onClick(e) {
+//   console.log(e);
+//   if (e.target.checked) {
+//     ref.text.classList.add("sow-now");
+//   } else {
+//     ref.text.classList.remove("sow-now");
+//   }
+// }
+
+// const user = ["Bobi", "Meri", "Geri"];
+// const ul = document.createElement("ul");
+// const lis = user.map((name) => {
+//   const li = document.createElement("li");
+//   li.textContent = name;
+//   return li;
+// });
+
+// ul.append(...lis);
+
+// document.body.appendChild(ul);
+
+// const user = ["Bobi", "Meri", "Geri"];
+// const ul = document.createElement("ul");
+// const lis = user.map((name) => `<li>${name}</li>`);
+
+// ul.insertAdjacentHTML("beforeend", lis.join(""));
+
+// document.body.appendChild(ul);
+
+const refs = {
+  textAray: document.getElementById("text"),
+  buttonBn: document.querySelector("button"),
 };
 
-ref.inpBtn.addEventListener("click", onClick);
+refs.buttonBn.addEventListener("click", onClick);
 
-function onClick(e) {
-  console.log(e);
-  if (e.target.checked) {
-    ref.text.classList.add("sow-now");
-  } else {
-    ref.text.classList.remove("sow-now");
-  }
+function onClick() {
+  const link = document.createElement("a");
+  const text = refs.textAray.value;
+
+  link.setAttribute("download", "utr.text");
+  link.setAttribute(
+    "href",
+    `data:text/plain;charset=utf-8, ${encodeURIComponent(text)}`
+  );
+
+  // link.textContent = "fale";
+
+  // document.body.appendChild(link);
+
+  link.click();
+  // document.body.remove(link);
 }
+
+// frames.buttonBn.addEventListener("click", onClick);
