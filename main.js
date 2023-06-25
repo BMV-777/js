@@ -2729,29 +2729,49 @@
 
 // document.body.appendChild(ul);
 
-const refs = {
-  textAray: document.getElementById("text"),
-  buttonBn: document.querySelector("button"),
-};
+// const refs = {
+//   textAray: document.getElementById("text"),
+//   buttonBn: document.querySelector("button"),
+// };
 
-refs.buttonBn.addEventListener("click", onClick);
+// refs.buttonBn.addEventListener("click", onClick);
 
-function onClick() {
-  const link = document.createElement("a");
-  const text = refs.textAray.value;
+// function onClick() {
+//   const link = document.createElement("a");
+//   const text = refs.textAray.value;
 
-  link.setAttribute("download", "utr.text");
-  link.setAttribute(
-    "href",
-    `data:text/plain;charset=utf-8, ${encodeURIComponent(text)}`
-  );
+//   link.setAttribute("download", "utr.text");
+//   link.setAttribute(
+//     "href",
+//     `data:text/plain;charset=utf-8, ${encodeURIComponent(text)}`
+//   );
 
-  // link.textContent = "fale";
+// link.textContent = "fale";
 
-  // document.body.appendChild(link);
+// document.body.appendChild(link);
 
-  link.click();
-  // document.body.remove(link);
-}
+//   link.click();
+//   // document.body.remove(link);
+// }
 
 // frames.buttonBn.addEventListener("click", onClick);
+
+let value = 0;
+
+const refs = {
+  increment: document.getElementById("increment"),
+  decrement: document.getElementById("decrement"),
+};
+
+function onCgenge(step) {
+  value = value + step;
+  console.log(value);
+}
+
+refs.increment.addEventListener("click", () => {
+  onCgenge(1);
+});
+
+refs.decrement.addEventListener("click", () => {
+  onCgenge(-1);
+});
