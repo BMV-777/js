@@ -2756,22 +2756,33 @@
 
 // frames.buttonBn.addEventListener("click", onClick);
 
-let value = 0;
+// let value = 0;
 
-const refs = {
-  increment: document.getElementById("increment"),
-  decrement: document.getElementById("decrement"),
-};
+// const refs = {
+//   increment: document.getElementById("increment"),
+//   decrement: document.getElementById("decrement"),
+// };
 
-function onCgenge(step) {
-  value = value + step;
-  console.log(value);
-}
+// function onCgenge(step) {
+//   value = value + step;
+//   console.log(value);
+// }
 
-refs.increment.addEventListener("click", () => {
-  onCgenge(1);
-});
+// refs.increment.addEventListener("click", () => {
+//   onCgenge(1);
+// });
 
-refs.decrement.addEventListener("click", () => {
-  onCgenge(-1);
+// refs.decrement.addEventListener("click", () => {
+//   onCgenge(-1);
+// });
+
+const ulItemRef = document.querySelectorAll(".item");
+
+ulItemRef.forEach((elements) => {
+  const ulEl = elements.querySelector("h2");
+
+  const elem = elements.querySelectorAll("li");
+
+  console.log(`categorii: ${ulEl.textContent}`);
+  console.log(`elements: ${elem.length}`);
 });
