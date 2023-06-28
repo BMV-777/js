@@ -2654,13 +2654,17 @@
 //     onCloseModal();
 //   }
 // }
-// const refs = {
-//   openModalBtn: document.querySelector('[data-action="open-modal"]'),
-//   closeModalBtn: document.querySelector('[data-action="close-modal"]'),
-//   backdrop: document.querySelector(".js-backdrop"),
-// };
 
-// refs.openModalBtn.addEventListener("click", onOpenModal);
+//-----------------Модалка--------------//
+const refs = {
+  openModalBtn: document.querySelector('[data-action="open-modal"]'),
+  closeModalBtn: document.querySelector('[data-action="close-modal"]'),
+  backdrop: document.querySelector(".js-backdrop"),
+};
+// refs.openModalBtn.addEventListener("click", () => {
+//   console.log("click");
+// });
+refs.openModalBtn.addEventListener("click", onOpenModal);
 // refs.closeModalBtn.addEventListener("click", onCloseModal);
 // refs.backdrop.addEventListener("click", onBackdrob);
 
@@ -2692,7 +2696,7 @@
 //     onCloseModal();
 //   }
 // }
-
+//------------------------------------------------//
 // const ref = {
 //   text: document.querySelector(".text"),
 //   inpBtn: document.querySelector(".checbox"),
@@ -2775,14 +2779,3 @@
 // refs.decrement.addEventListener("click", () => {
 //   onCgenge(-1);
 // });
-
-const ulItemRef = document.querySelectorAll(".item");
-
-ulItemRef.forEach((elements) => {
-  const ulEl = elements.querySelector("h2");
-
-  const elem = elements.querySelectorAll("li");
-
-  console.log(`categorii: ${ulEl.textContent}`);
-  console.log(`elements: ${elem.length}`);
-});
