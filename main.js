@@ -2656,15 +2656,15 @@
 // }
 
 //-----------------Модалка--------------//
-const refs = {
-  openModalBtn: document.querySelector('[data-action="open-modal"]'),
-  closeModalBtn: document.querySelector('[data-action="close-modal"]'),
-  backdrop: document.querySelector(".js-backdrop"),
-};
-// refs.openModalBtn.addEventListener("click", () => {
-//   console.log("click");
-// });
-refs.openModalBtn.addEventListener("click", onOpenModal);
+// const refs = {
+//   openModalBtn: document.querySelector(".js-button-one"),
+//   closeModalBtn: document.querySelector('[data-action="close-modal"]'),
+//   backdrop: document.querySelector(".js-backdrop"),
+// };
+// // refs.openModalBtn.addEventListener("click", () => {
+// //   console.log("click");
+// // });
+// refs.openModalBtn.addEventListener("click", onOpenModal);
 // refs.closeModalBtn.addEventListener("click", onCloseModal);
 // refs.backdrop.addEventListener("click", onBackdrob);
 
@@ -2779,3 +2779,29 @@ refs.openModalBtn.addEventListener("click", onOpenModal);
 // refs.decrement.addEventListener("click", () => {
 //   onCgenge(-1);
 // });
+
+const counterEl = document.querySelector(".js-container");
+
+const buttonEl = document.querySelector(".js-btn");
+let labelCounter = 2;
+
+buttonEl.addEventListener("click", onClick);
+
+function onClick() {
+  const btnEl = document.createElement("button");
+  btnEl.type = "button";
+  btnEl.textContent = `Кнопка ${labelCounter}`;
+
+  counterEl.appendChild(btnEl);
+
+  labelCounter += 1;
+  onRemuve();
+}
+
+const removeBtn = document.querySelector(".js-btn-remuve");
+
+removeBtn.addEventListener("click", onRemuve);
+
+function onRemuve() {
+  labelCounter -= 1;
+}
