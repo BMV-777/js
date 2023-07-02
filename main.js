@@ -2795,7 +2795,6 @@ function onClick() {
   counterEl.appendChild(btnEl);
 
   labelCounter += 1;
-  onRemuve();
 }
 
 const removeBtn = document.querySelector(".js-btn-remuve");
