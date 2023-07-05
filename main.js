@@ -2804,3 +2804,10 @@ removeBtn.addEventListener("click", onRemuve);
 function onRemuve() {
   labelCounter -= 1;
 }
+
+// const name = {
+//   a: 22,
+// };
+// name.a = 13;
+
+// console.log(name);
