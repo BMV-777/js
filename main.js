@@ -2780,30 +2780,30 @@
 //   onCgenge(-1);
 // });
 
-const counterEl = document.querySelector(".js-container");
+// const counterEl = document.querySelector(".js-container");
 
-const buttonEl = document.querySelector(".js-btn");
-let labelCounter = 2;
+// const buttonEl = document.querySelector(".js-btn");
+// let labelCounter = 2;
 
-buttonEl.addEventListener("click", onClick);
+// buttonEl.addEventListener("click", onClick);
 
-function onClick() {
-  const btnEl = document.createElement("button");
-  btnEl.type = "button";
-  btnEl.textContent = `Кнопка ${labelCounter}`;
+// function onClick() {
+//   const btnEl = document.createElement("button");
+//   btnEl.type = "button";
+//   btnEl.textContent = `Кнопка ${labelCounter}`;
 
-  counterEl.appendChild(btnEl);
+//   counterEl.appendChild(btnEl);
 
-  labelCounter += 1;
-}
+//   labelCounter += 1;
+// }
 
-const removeBtn = document.querySelector(".js-btn-remuve");
+// const removeBtn = document.querySelector(".js-btn-remuve");
 
-removeBtn.addEventListener("click", onRemuve);
+// removeBtn.addEventListener("click", onRemuve);
 
-function onRemuve() {
-  labelCounter -= 1;
-}
+// function onRemuve() {
+//   labelCounter -= 1;
+// }
 
 // const name = {
 //   a: 22,
@@ -2811,3 +2811,47 @@ function onRemuve() {
 // name.a = 13;
 
 // console.log(name);
+
+const word0 = "Good";
+const word0translate = "Отлично";
+
+const word1 = "Boy";
+const word1translate = "Парень";
+
+const word2 = "Pragrammist";
+const word2translate = "Праграммист";
+
+const wordLeng = 3;
+
+const finishGoodMessage = "Молодец. Good test";
+const finishFalseMessage = "Молодец. папробуй еще все получится!";
+
+let counter = 0;
+
+const procentTest = 50;
+
+const userAnswer0 = prompt(word0);
+alert(userAnswer0 === word0translate);
+if (userAnswer0 === word0translate) {
+  counter = counter += 1;
+}
+
+const userAnswer1 = prompt(word1);
+alert(userAnswer1 === word1translate);
+if (userAnswer1 === word1translate) {
+  counter = counter += 1;
+}
+
+const userAnswer2 = prompt(word2);
+alert(userAnswer2 === word2translate);
+if (userAnswer2 === word2translate) {
+  counter = counter += 1;
+}
+
+const countWordleng = (counter / wordLeng) * 100;
+
+if (countWordleng > procentTest) {
+  alert(finishGoodMessage);
+} else {
+  alert(finishFalseMessage);
+}
