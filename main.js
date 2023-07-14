@@ -1772,7 +1772,7 @@
 // };
 // obj.cool();
 
-//---------------Пирамида с цисел-------------//
+//---------------Пирамида с чисел-------------//
 
 // for (var i = 1; i <= 29; ++i) {
 //   for (var j = 1; j <= i; ++j) document.write(" " + j + " ");
@@ -2856,10 +2856,45 @@
 //   alert(finishFalseMessage);
 // }
 
-const user = {
-  name: "Boby",
-  age: 37,
-};
-const templete = `Hello ${user.name}! You are ${user.age} years old`;
+// const user = {
+//   name: "Boby",
+//   age: 37,
+// };
+// const templete = `Hello ${user.name}! You are ${user.age} years old`;
 
-console.log(templete);
+// console.log(templete);
+
+// const user = ["Boby", "Gremi", "Emmi"];
+
+// const ul = document.createElement("ul");
+// const lis = user.map((name) => `<li>${name}</li>`);
+
+// ul.insertAdjacentHTML("beforeend", lis.join(""));
+
+// document.body.appendChild(ul);
+
+const refs = {
+  textAry: document.getElementById("textArea"),
+  button: document.querySelector("button"),
+};
+
+const download = () => {
+  const link = document.createElement("a");
+  const text = refs.textAry.value;
+
+  link.setAttribute("download", "output.text");
+  link.setAttribute(
+    "href",
+    `data:text/plain;charset=utf-8, ${encodeURIComponent(text)}`
+  );
+  // link.textContent = "file";
+
+  // document.body.appendChild(link);
+
+  link.click();
+  // document.body.remove(link);
+
+  console.log(text);
+};
+
+refs.button.addEventListener("click", download);
