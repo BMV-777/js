@@ -2873,28 +2873,35 @@
 
 // document.body.appendChild(ul);
 
+// const refs = {
+//   textAry: document.getElementById("textArea"),
+//   button: document.querySelector("button"),
+// };
+
+// const download = () => {
+//   const link = document.createElement("a");
+//   const text = refs.textAry.value;
+
+//   link.setAttribute("download", "output.text");
+//   link.setAttribute(
+//     "href",
+//     `data:text/plain;charset=utf-8, ${encodeURIComponent(text)}`
+// );
+// link.textContent = "file";
+
+// document.body.appendChild(link);
+
+//   link.click();
+//   // document.body.remove(link);
+
+//   console.log(text);
+// };
+
+// refs.button.addEventListener("click", download);
+
 const refs = {
-  textAry: document.getElementById("textArea"),
-  button: document.querySelector("button"),
+  colorRed: document.querySelector('li[data-color="red"]'),
+  colorGreen: document.querySelector('li[data-color="green"]'),
 };
 
-const download = () => {
-  const link = document.createElement("a");
-  const text = refs.textAry.value;
-
-  link.setAttribute("download", "output.text");
-  link.setAttribute(
-    "href",
-    `data:text/plain;charset=utf-8, ${encodeURIComponent(text)}`
-  );
-  // link.textContent = "file";
-
-  // document.body.appendChild(link);
-
-  link.click();
-  // document.body.remove(link);
-
-  console.log(text);
-};
-
-refs.button.addEventListener("click", download);
+// document.addEventListener("");
