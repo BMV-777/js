@@ -2899,9 +2899,51 @@
 
 // refs.button.addEventListener("click", download);
 
+//-------------------------filter--------------------//
+
+const tech = [
+  { label: "HTML" },
+  { label: "CSS" },
+  { label: "JS" },
+  { label: "React" },
+  { label: "Next.js" },
+  { label: "Mobix" },
+  { label: "Redux" },
+  { label: "React Router" },
+  { label: "GraphQl" },
+  { label: "Vue" },
+  { label: "Angular" },
+];
+
 const refs = {
-  colorRed: document.querySelector('li[data-color="red"]'),
-  colorGreen: document.querySelector('li[data-color="green"]'),
+  list: document.querySelector(".js-list"),
+  input: document.querySelector("#filter"),
 };
 
-// document.addEventListener("");
+const sciluList = (items) => {
+  return items.map((list) => `<li>${list.label}</li>`).join("");
+};
+
+refs.input.addEventListener("input", onChange);
+
+const mapList = sciluList(tech);
+
+population(mapList);
+
+function onChange(e) {
+  const filter = e.target.value.toLowerCase();
+
+  const filterItems = tech.filter((t) =>
+    t.label.toLowerCase().includes(filter)
+  );
+
+  const onGrupCgeng = sciluList(filterItems);
+
+  population(onGrupCgeng);
+}
+
+function population(markup) {
+  refs.list.innerHTML = markup;
+}
+
+//---------------------------------------------//
