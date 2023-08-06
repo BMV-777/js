@@ -2899,51 +2899,57 @@
 
 // refs.button.addEventListener("click", download);
 
-//-------------------------filter--------------------//
+//-------------------------filter and input--------------------//
 
-const tech = [
-  { label: "HTML" },
-  { label: "CSS" },
-  { label: "JS" },
-  { label: "React" },
-  { label: "Next.js" },
-  { label: "Mobix" },
-  { label: "Redux" },
-  { label: "React Router" },
-  { label: "GraphQl" },
-  { label: "Vue" },
-  { label: "Angular" },
-];
+//  <label>
+//       Что ищем?
+//       <input type="text" id="filter" />
+//     </label>
+//     <ul class="js-list"></ul>
 
-const refs = {
-  list: document.querySelector(".js-list"),
-  input: document.querySelector("#filter"),
-};
+// const tech = [
+//   { label: "HTML" },
+//   { label: "CSS" },
+//   { label: "JS" },
+//   { label: "React" },
+//   { label: "Next.js" },
+//   { label: "Mobix" },
+//   { label: "Redux" },
+//   { label: "React Router" },
+//   { label: "GraphQl" },
+//   { label: "Vue" },
+//   { label: "Angular" },
+// ];
 
-const sciluList = (items) => {
-  return items.map((list) => `<li>${list.label}</li>`).join("");
-};
+// const refs = {
+//   list: document.querySelector(".js-list"),
+//   input: document.querySelector("#filter"),
+// };
 
-refs.input.addEventListener("input", onChange);
+// const sciluList = (items) => {
+//   return items.map((list) => `<li>${list.label}</li>`).join("");
+// };
 
-const mapList = sciluList(tech);
+// refs.input.addEventListener("input", onChange);
 
-population(mapList);
+// const mapList = sciluList(tech);
 
-function onChange(e) {
-  const filter = e.target.value.toLowerCase();
+// population(mapList);
 
-  const filterItems = tech.filter((t) =>
-    t.label.toLowerCase().includes(filter)
-  );
+// function onChange(e) {
+//   const filter = e.target.value.toLowerCase();
 
-  const onGrupCgeng = sciluList(filterItems);
+//   const filterItems = tech.filter((t) =>
+//     t.label.toLowerCase().includes(filter)
+//   );
 
-  population(onGrupCgeng);
-}
+//   const onGrupCgeng = sciluList(filterItems);
 
-function population(markup) {
-  refs.list.innerHTML = markup;
-}
+//   population(onGrupCgeng);
+// }
+
+// function population(markup) {
+//   refs.list.innerHTML = markup;
+// }
 
 //---------------------------------------------//
