@@ -2953,3 +2953,39 @@
 // }
 
 //---------------------------------------------//
+// import throttle from "/node_modules/lodash.throttle/index";
+// _throttle = require("lodash.throttle");
+
+const refs = {
+  form: document.querySelector(".js-form"),
+  textarea: document.querySelector(".js-form textarea"),
+};
+
+refs.form.addEventListener("click", onFormSubmit);
+refs.textarea.addEventListener("input", throttle(onTextareaInput, 1000));
+
+const CASE_KEY = "fedbeck";
+
+// textPople();
+
+function onFormSubmit(e) {
+  e.preventDefault();
+
+  e.currentTarget.reset();
+  localStorage.removeItem(CASE_KEY);
+}
+
+function onTextareaInput(e) {
+  const messages = e.currentTarget.value;
+
+  localStorage.setItem(CASE_KEY, messages);
+  // localStorage.removeItem("fedbeck");
+}
+
+function textPople() {
+  const mesages = localStorage.getItem(CASE_KEY);
+
+  if (mesages) {
+    refs.textarea.value = mesages;
+  }
+}
