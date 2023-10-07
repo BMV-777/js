@@ -2956,36 +2956,90 @@
 // import throttle from "/node_modules/lodash.throttle/index";
 // _throttle = require("lodash.throttle");
 
-const refs = {
-  form: document.querySelector(".js-form"),
-  textarea: document.querySelector(".js-form textarea"),
-};
+// const refs = {
+//   form: document.querySelector(".js-form"),
+//   textarea: document.querySelector(".js-form textarea"),
+// };
 
-refs.form.addEventListener("click", onFormSubmit);
-refs.textarea.addEventListener("input", throttle(onTextareaInput, 1000));
+// refs.form.addEventListener("click", onFormSubmit);
+// refs.textarea.addEventListener("input", throttle(onTextareaInput, 1000));
 
-const CASE_KEY = "fedbeck";
+// const CASE_KEY = "fedbeck";
 
-// textPople();
+// // textPople();
 
-function onFormSubmit(e) {
-  e.preventDefault();
+// function onFormSubmit(e) {
+//   e.preventDefault();
 
-  e.currentTarget.reset();
-  localStorage.removeItem(CASE_KEY);
-}
+//   e.currentTarget.reset();
+//   localStorage.removeItem(CASE_KEY);
+// }
 
-function onTextareaInput(e) {
-  const messages = e.currentTarget.value;
+// function onTextareaInput(e) {
+//   const messages = e.currentTarget.value;
 
-  localStorage.setItem(CASE_KEY, messages);
-  // localStorage.removeItem("fedbeck");
-}
+//   localStorage.setItem(CASE_KEY, messages);
+//   // localStorage.removeItem("fedbeck");
+// }
 
-function textPople() {
-  const mesages = localStorage.getItem(CASE_KEY);
+// function textPople() {
+//   const mesages = localStorage.getItem(CASE_KEY);
 
-  if (mesages) {
-    refs.textarea.value = mesages;
-  }
-}
+//   if (mesages) {
+//     refs.textarea.value = mesages;
+//   }
+// }
+
+// var expect = function (val) {
+//   function toBe(val) {
+//     if (val === val) {
+//       return val;
+//     } else {
+//       return "Not Equal";
+//     }
+//   }
+//   function notToBe(val) {
+//     if (!val === val) {
+//       return;
+//     } else {
+//       return "Equal";
+//     }
+//   }
+// };
+
+// let expect = function (val) {
+//   let toBe = function (num, run) {
+//     if (num === run) {
+//       return num;
+//     } else {
+//       return "Not Equal";
+//     }
+//   };
+// };
+
+// console.log(expect().toBe());
+
+// console.log(expect(5).toBe(5)); // true
+// expect(5).notToBe(5); // throws "Equal"
+
+// const long = "I am Long string77";
+
+// let result = long.charAt(long.length - 1);
+// let result = long.length - 1;
+// let result = long.substring(5, 9);
+// console.log(result);
+
+// let favoritColor;
+
+// favoritColor = prompt("My ferst color");
+
+// console.log("My ferst color: " + favoritColor);
+
+// favoritColor = prompt("My two color");
+
+// console.log("My two color: " + favoritColor);
+
+const kilograms = prompt("Enter your weight in kilograms");
+const meters = prompt("Enter your height in meters");
+let result = prompt("Are you overweight?" + kilograms(m2) / meters(m2));
+2 / 21;
