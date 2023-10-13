@@ -3039,7 +3039,24 @@
 
 // console.log("My two color: " + favoritColor);
 
-const kilograms = prompt("Enter your weight in kilograms");
-const meters = prompt("Enter your height in meters");
-let result = prompt("Are you overweight?" + kilograms(m2) / meters(m2));
-2 / 21;
+// const width = prompt("Enter your weight in kilograms");
+// const heigth = prompt("Enter your height in meters");
+
+// const indexMass = width / Math.pow(heigth, 2);
+
+// const result = indexMass >= 25;
+
+// alert("Are you overweight?: " + result);
+// if (result) {
+//   alert("Yes,you BMI more than normal by " + `${indexMass - 25}`);
+//   console.log(result);
+// } else {
+//   alert("No, your weight is normal ");
+//   console.log(result);
+// }
+
+2 / 26;
+
+const string = true;
+
+console.log(typeof string);
