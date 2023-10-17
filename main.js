@@ -3046,17 +3046,30 @@
 
 // const result = indexMass >= 25;
 
-// alert("Are you overweight?: " + result);
+// // alert("Are you overweight?: " + result);
 // if (result) {
-//   alert("Yes,you BMI more than normal by " + `${indexMass - 25}`);
+//   alert("Yes,you BMI more than normal by " + `${Math.round(indexMass - 25)}`);
 //   console.log(result);
 // } else {
 //   alert("No, your weight is normal ");
 //   console.log(result);
 // }
 
-2 / 26;
+// const string = true;
 
-const string = true;
+// console.log(typeof string);
 
-console.log(typeof string);
+const age = prompt("Enter you age");
+
+age >= 18
+  ? alert("You can buy the alcohol")
+  : alert("You can not buy the alcohol");
+
+// if (age >= 18) {
+//   alert("You can buy the alcohol");
+//   console.log("You can buy the alcohol");
+// } else {
+//   alert("You can not buy the alcohol");
+//   console.log("You can not buy the alcohol");
+// }
+// 2 / 32;
