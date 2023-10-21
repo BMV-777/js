@@ -3059,11 +3059,11 @@
 
 // console.log(typeof string);
 
-const age = prompt("Enter you age");
+// const age = prompt("Enter you age");
 
-age >= 18
-  ? alert("You can buy the alcohol")
-  : alert("You can not buy the alcohol");
+// age >= 18
+//   ? alert("You can buy the alcohol")
+//   : alert("You can not buy the alcohol");
 
 // if (age >= 18) {
 //   alert("You can buy the alcohol");
@@ -3072,4 +3072,15 @@ age >= 18
 //   alert("You can not buy the alcohol");
 //   console.log("You can not buy the alcohol");
 // }
-// 2 / 32;
+// 2 / 37;
+
+// let serteFication = false;
+
+// const exzemp = true;
+
+// if (exzemp) serteFication = true;
+
+// if (serteFication) console.log("Wow");
+
+console.log(Number("79"));
+console.log("79");
