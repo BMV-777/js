@@ -3082,5 +3082,23 @@
 
 // if (serteFication) console.log("Wow");
 
-console.log(Number("79"));
-console.log("79");
+// console.log(Number("79"));
+// console.log("79");
+
+function getAverage(a, b, c) {
+  if ((b < a && a < c) || (c < a && a < b)) return a;
+  if ((a < b && b < c) || (c < b && b < a)) return b;
+  if ((a < c && c < b) || (b < c && c < a)) return c;
+}
+
+function printBonus(dept1AverSales, dept2AverSales) {
+  const getAveng = getAverage();
+}
+
+const monde = getAverage(8000, 5000, 3000);
+const twosde = getAverage(7000, 4000, 6000);
+const free = getAverage(7000, 4000, 6000);
+
+console.log(` Dept 1 January ${monde}  February ${twosde} March ${free} `);
+
+// function printBonus(dept1AverSales, dept2AverSales) {}
