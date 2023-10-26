@@ -3072,7 +3072,6 @@
 //   alert("You can not buy the alcohol");
 //   console.log("You can not buy the alcohol");
 // }
-// 2 / 37;
 
 // let serteFication = false;
 
@@ -3085,20 +3084,32 @@
 // console.log(Number("79"));
 // console.log("79");
 
-function getAverage(a, b, c) {
-  if ((b < a && a < c) || (c < a && a < b)) return a;
-  if ((a < b && b < c) || (c < b && b < a)) return b;
-  if ((a < c && c < b) || (b < c && c < a)) return c;
-}
+const getAverage = (a, b, c) => (a + b + c) / 3;
+
+const dept1AverSales = getAverage(35467, 129842, 38501);
+
+const dept2AverSales = getAverage(70533, 50121, 33899);
 
 function printBonus(dept1AverSales, dept2AverSales) {
-  const getAveng = getAverage();
+  if (dept1AverSales > dept2AverSales) {
+    let bonus = dept1AverSales - dept2AverSales;
+    let sum = (bonus / dept2AverSales) * 100;
+    if (sum >= 30) {
+      console.log(`Dep1 bonus ${Math.round(sum)} % `);
+    } else {
+      console.log("No bonus");
+    }
+  } else if (dept2AverSales > dept1AverSales) {
+    let bonus = dept2AverSales - dept1AverSales;
+    let sum = (bonus / dept1AverSales) * 100;
+    if (sum >= 30) {
+      console.log(`Dep2 bonus ${Math.round(sum)} % `);
+    } else {
+      console.log("No bonus");
+    }
+  }
 }
 
-const monde = getAverage(8000, 5000, 3000);
-const twosde = getAverage(7000, 4000, 6000);
-const free = getAverage(7000, 4000, 6000);
+printBonus(dept1AverSales, dept2AverSales);
 
-console.log(` Dept 1 January ${monde}  February ${twosde} March ${free} `);
-
-// function printBonus(dept1AverSales, dept2AverSales) {}
+// 2 / 40;
