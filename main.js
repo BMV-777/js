@@ -3084,32 +3084,96 @@
 // console.log(Number("79"));
 // console.log("79");
 
-const getAverage = (a, b, c) => (a + b + c) / 3;
+// const getAverage = (a, b, c) => (a + b + c) / 3;
 
-const dept1AverSales = getAverage(35467, 129842, 38501);
+// const dept1AverSales1 = getAverage(35467, 29842, 38501);
 
-const dept2AverSales = getAverage(70533, 50121, 33899);
+// const dept2AverSales1 = getAverage(70533, 50121, 33899);
 
-function printBonus(dept1AverSales, dept2AverSales) {
-  if (dept1AverSales > dept2AverSales) {
-    let bonus = dept1AverSales - dept2AverSales;
-    let sum = (bonus / dept2AverSales) * 100;
-    if (sum >= 30) {
-      console.log(`Dep1 bonus ${Math.round(sum)} % `);
-    } else {
-      console.log("No bonus");
-    }
-  } else if (dept2AverSales > dept1AverSales) {
-    let bonus = dept2AverSales - dept1AverSales;
-    let sum = (bonus / dept1AverSales) * 100;
-    if (sum >= 30) {
-      console.log(`Dep2 bonus ${Math.round(sum)} % `);
-    } else {
-      console.log("No bonus");
-    }
-  }
-}
+// console.log(dept1AverSales1, dept2AverSales1);
 
-printBonus(dept1AverSales, dept2AverSales);
+// const dept1AverSales2 = getAverage(50301, 21984, 19207);
 
-// 2 / 40;
+// const dept2AverSales2 = getAverage(72381, 41562, 29465);
+
+// console.log(dept1AverSales2, dept2AverSales2);
+
+// function printBonus(dept1AverSales, dept2AverSales) {
+//   if (dept1AverSales > dept2AverSales) {
+//     let bonus = dept1AverSales - dept2AverSales;
+//     let sum = (bonus / dept2AverSales1) * 100;
+//     if (sum >= 30) {
+//       console.log(`Dep1 bonus ${sum} % `);
+//     } else {
+//       console.log("No bonus");
+//     }
+//   } else if (dept2AverSales > dept1AverSales) {
+//     let bonus = dept2AverSales - dept1AverSales;
+//     let sum = (bonus / dept1AverSales) * 100;
+//     if (sum >= 30) {
+//       console.log(`Dep2 bonus ${sum} % `);
+//     } else {
+//       console.log("No bonus");
+//     }
+//   } else {
+//     console.log("No bonus");
+//   }
+// }
+
+// printBonus(dept1AverSales1, dept2AverSales1);
+// printBonus(dept1AverSales2, dept2AverSales2);
+
+// const colorMix = ["red", "green", "blue"];
+
+// console.log(colorMix.map((cur) => cur + " " + 1));
+
+// const stringNumbers = [32, 14, 10, 3, 45];
+
+// stringNumbers.splice(0, 0, 100);
+
+// console.log(stringNumbers);
+
+// console.log(stringNumbers.sort((a, b) => b - a));
+
+// const calculateTips = (bill) => {
+//   if (bill < 20) {
+//     console.log(
+//       `Счет ${bill} и того с 20% чаевых ${bill * 0.2} общая сумма: ${
+//         bill + bill * 0.2
+//       }€ `
+//     );
+//   } else if (bill >= 20) {
+//     console.log(
+//       ` Счет ${bill} и того с 15% чаевых ${bill * 0.15} %  общая сумма: ${
+//         bill + bill * 0.15
+//       }€ `
+//     );
+//   }
+// };
+
+// // calculateTips(30);
+
+// const testDate = [11, 20, 47];
+
+// calculateTips(testDate[0]),
+//   calculateTips(testDate[1]),
+//   calculateTips(testDate[2]);
+
+const maks = {
+  name: "Maks",
+  lastname: "Borenkov",
+  age: 37,
+  birdthYear: 1985,
+  job: "student progrsmming",
+  familyMembers: ["Katy", "Rita", "Maksim"],
+};
+
+console.log(maks.lastname);
+const basename = "name";
+console.log(maks["last" + basename]);
+
+console.log(
+  `${maks.familyMembers[2]} has ${maks.familyMembers.length} family and the first on is ${maks.familyMembers[0]} `
+);
+
+// 2 / 47;
