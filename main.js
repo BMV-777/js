@@ -3184,7 +3184,7 @@
 //   `${maks.familyMembers[2]} has ${maks.familyMembers.length} family and the first on is ${maks.familyMembers[0]} `
 // );
 
-// 2 / 47;
+// 2 / 48;
 
 // const width = prompt("Enter your weight in kilograms");
 // const heigth = prompt("Enter your height in meters");
@@ -3192,20 +3192,20 @@
 const Make = {
   name: "Make",
   lastname: "Black",
-  width: 91,
+  width: 100,
   heigth: 1.93,
   getUser: function () {
-    return `${this.name} ${this.lastname} width: ${this.width} height: ${this.heigth}`;
+    return `${this.name} width: ${this.width} kg height: ${this.heigth} m`;
   },
 };
 
 const Jack = {
   name: "Jack",
   lastname: "White",
-  width: 79,
+  width: 129,
   heigth: 1.71,
   getUser: function () {
-    return `${this.name} ${this.lastname} width: ${this.width} height: ${this.heigth}`;
+    return `${this.name} width: ${this.width} kg height: ${this.heigth} m`;
   },
   // indexMass: function () {
   //   const index = this.width / Math.pow(this.heigth, 2);
@@ -3218,31 +3218,38 @@ const Jack = {
   // },
 };
 
-console.log(Jack.getUser());
-console.log(Make.getUser());
+const indexMass = (name, fullName, width, heigth) => {
+  // console.log(name, fullName, width, heigth);
+  const index = width / Math.pow(heigth, 2);
 
-// Jack.indexMass();
-
-const indexMass = (index) => {
-  index = `${width} / ${Math.pow(heigth, 2)}`;
   const result = index >= 25;
+
+  if (!name || !fullName || !width || !heigth) return;
+
   if (result) {
-    console.log(`${index - 25}`);
+    console.log(`${name} ${fullName} BMI (${index - 25})`);
   } else {
     console.log("No, your weight is normal ");
   }
 };
-indexMass(Jack);
 
-// const indexMass = width / Math.pow(heigth, 2);
+indexMass(Make.name, Make.lastname, Make["width"], Make["heigth"]);
+indexMass(Jack.name, Jack.lastname, Jack["width"], Jack["heigth"]);
 
-// const result = indexMass >= 25;
+console.log(
+  Jack.width > Make.width
+    ? `${Jack.name} ${Jack.lastname} BMI (${Jack.width - Make.width}) and 
+   ${Make.name} ${Make.lastname} BMI (${Make.width - Jack.width})
+`
+    : Make.width - Jack.width
+);
 
-// alert("Are you overweight?: " + result);
-// if (result) {
-//   alert("Yes,you BMI more than normal by " + `${indexMass - 25}`);
-//   console.log(result);
-// } else {
-//   alert("No, your weight is normal ");
-//   console.log(result);
+// if (Jack.width < Make.width) {
+//   console.log(width);
+//   console.log(Jack.width - Make.width);
+// } else if (Make.width < Jack.width) {
+//   console.log(Make.width - Jack.width);
 // }
+
+console.log(Jack.getUser());
+console.log(Make.getUser());
