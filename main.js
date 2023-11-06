@@ -3189,60 +3189,84 @@
 // const width = prompt("Enter your weight in kilograms");
 // const heigth = prompt("Enter your height in meters");
 
-const Make = {
-  name: "Make",
-  lastname: "Black",
-  width: 100,
-  heigth: 1.93,
-  getUser: function () {
-    return `${this.name} width: ${this.width} kg height: ${this.heigth} m`;
-  },
-};
+// const mike = {
+//   name: "Mike",
+//   lastname: "Black",
+//   width: 79,
+//   heigth: 1.71,
+//   getUser: function () {
+//     this.bmi = this.width / this.heigth ** 2;
+//     return this.bmi;
+//     // return `${this.name} width: ${this.width} kg height: ${this.heigth} m`;
+//   },
+// };
 
-const Jack = {
-  name: "Jack",
-  lastname: "White",
-  width: 129,
-  heigth: 1.71,
-  getUser: function () {
-    return `${this.name} width: ${this.width} kg height: ${this.heigth} m`;
-  },
-  // indexMass: function () {
-  //   const index = this.width / Math.pow(this.heigth, 2);
-  //   const result = index >= 25;
-  //   if (result) {
-  //     console.log(`${index - 25}`);
-  //   } else {
-  //     console.log("No, your weight is normal ");
-  //   }
-  // },
-};
+// const jack = {
+//   name: "Jack",
+//   lastname: "White",
+//   width: 79,
+//   heigth: 1.71,
+//   getUser: function () {
+//     this.bmi = this.width / this.heigth ** 2;
+//     return this.bmi;
+//     // return `${this.name} width: ${this.width} kg height: ${this.heigth} m`;
+//   },
+// };
+// console.log(jack.getUser());
+// console.log(jack.bmi);
 
-const indexMass = (name, fullName, width, heigth) => {
-  // console.log(name, fullName, width, heigth);
-  const index = width / Math.pow(heigth, 2);
+// console.log(mike.getUser());
+// console.log(mike.bmi);
 
-  const result = index >= 25;
+// if (jack.bmi > mike.bmi) {
+//   console.log(`${jack.name} ${jack.lastname} BMI (${jack.bmi}) and
+//     ${mike.name} ${mike.lastname} BMI (${mike.bmi})`);
+// } else if (mike.bmi > jack.bmi) {
+//   console.log(`${mike.name} ${mike.lastname} BMI (${mike.bmi}) and
+//     ${jack.name} ${jack.lastname} BMI (${jack.bmi})`);
+// } else {
+//   console.log(
+//     `${jack.name} ${jack.lastname} and ${mike.name} ${mike.lastname}
+//      equal (${mike.bmi})!  `
+//   );
+// }
 
-  if (!name || !fullName || !width || !heigth) return;
+// indexMass: function () {
+//   const index = this.width / Math.pow(this.heigth, 2);
+//   const result = index >= 25;
+//   if (result) {
+//     console.log(`${index - 25}`);
+//   } else {
+//     console.log("No, your weight is normal ");
+//   }
+// },
+// };
 
-  if (result) {
-    console.log(`${name} ${fullName} BMI (${index - 25})`);
-  } else {
-    console.log("No, your weight is normal ");
-  }
-};
+// const indexMass = (name, fullName, width, heigth) => {
+//   // console.log(name, fullName, width, heigth);
+//   const index = width / Math.pow(heigth, 2);
 
-indexMass(Make.name, Make.lastname, Make["width"], Make["heigth"]);
-indexMass(Jack.name, Jack.lastname, Jack["width"], Jack["heigth"]);
+//   const result = index >= 25;
 
-console.log(
-  Jack.width > Make.width
-    ? `${Jack.name} ${Jack.lastname} BMI (${Jack.width - Make.width}) and 
-   ${Make.name} ${Make.lastname} BMI (${Make.width - Jack.width})
-`
-    : Make.width - Jack.width
-);
+//   if (!name || !fullName || !width || !heigth) return;
+
+//   if (result) {
+//     console.log(`${name} ${fullName} BMI (${index - 25})`);
+//   } else {
+//     console.log("No, your weight is normal ");
+//   }
+// };
+
+// indexMass(Make.name, Make.lastname, Make["width"], Make["heigth"]);
+// indexMass(Jack.name, Jack.lastname, Jack["width"], Jack["heigth"]);
+
+// console.log(
+//   Jack.width > Make.width
+//     ? `${Jack.name} ${Jack.lastname} BMI (${Jack.width - Make.width}) and
+//    ${Make.name} ${Make.lastname} BMI (${Make.width - Jack.width})
+// `
+//     : Make.width - Jack.width
+// );
 
 // if (Jack.width < Make.width) {
 //   console.log(width);
@@ -3251,5 +3275,21 @@ console.log(
 //   console.log(Make.width - Jack.width);
 // }
 
-console.log(Jack.getUser());
-console.log(Make.getUser());
+// console.log(Jack.getUser());
+// console.log(Make.getUser());
+
+// for (let i = 1; i <= 10; i += 1) {
+//   console.log(`Push ups repetition ${i}`);
+// }
+
+const birdthYear = [1985, 1987, 2014, 2017];
+
+const ages = [];
+
+for (let i = 0; i < birdthYear.length; i += 1) {
+  ages.push(2023 - birdthYear[i]);
+}
+
+console.log(ages.sort((a, b) => b - a));
+
+// 2/53
