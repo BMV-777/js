@@ -3282,14 +3282,41 @@
 //   console.log(`Push ups repetition ${i}`);
 // }
 
-const birdthYear = [1985, 1987, 2014, 2017];
+// const birdthYear = [1985, 1987, 2014, 2017];
 
-const ages = [];
+// const ages = [];
 
-for (let i = 0; i < birdthYear.length; i += 1) {
-  ages.push(2023 - birdthYear[i]);
+// for (let i = 0; i < birdthYear.length; i += 1) {
+//   ages.push(2023 - birdthYear[i]);
+// }
+
+// console.log(ages.sort((a, b) => b - a));
+
+// 2/55
+const bills = [31, 95, 276, 540, 27, 205, 11, 1180, 96, 57];
+
+let tip = [];
+let total = 0;
+
+const calculateTips = (bill) => {
+  if (bill < 20) {
+    console.log(
+      `Счет ${bill} и того с 20% чаевых ${bill * 0.2} общая сумма: ${
+        bill + bill * 0.2
+      }€ `
+    );
+  } else if (bill >= 20) {
+    console.log(
+      ` Счет ${bill} и того с 15% чаевых ${bill * 0.15} %  общая сумма: ${
+        bill + bill * 0.15
+      }€ `
+    );
+  }
+};
+calculateTips(30);
+
+for (let i = 0; i < bills.length; i++) {
+  total = calculateTips(i) + tip.push[i];
+  // calculateTips(i);
+  console.log(total);
 }
-
-console.log(ages.sort((a, b) => b - a));
-
-// 2/53
