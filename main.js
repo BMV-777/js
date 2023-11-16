@@ -3292,31 +3292,31 @@
 
 // console.log(ages.sort((a, b) => b - a));
 
-// 2/55
+const calculateTips = (bill) => (bill < 20 ? bill * 0.2 : bill * 0.15);
+
 const bills = [31, 95, 276, 540, 27, 205, 11, 1180, 96, 57];
 
-let tip = [];
-let total = 0;
+let tips = [];
+let totals = [];
 
-const calculateTips = (bill) => {
-  if (bill < 20) {
-    console.log(
-      `Счет ${bill} и того с 20% чаевых ${bill * 0.2} общая сумма: ${
-        bill + bill * 0.2
-      }€ `
-    );
-  } else if (bill >= 20) {
-    console.log(
-      ` Счет ${bill} и того с 15% чаевых ${bill * 0.15} %  общая сумма: ${
-        bill + bill * 0.15
-      }€ `
-    );
-  }
-};
-calculateTips(30);
-
-for (let i = 0; i < bills.length; i++) {
-  total = calculateTips(i) + tip.push[i];
-  // calculateTips(i);
-  console.log(total);
+for (let i = 0; i < bills.length; i += 1) {
+  const tip = calculateTips(bills[i]);
+  tips.push(tip);
+  totals.push(bills[i] + tip);
 }
+
+console.log(bills, tips, totals);
+
+const calculeteAvere = function (arr) {
+  let sum = 0;
+
+  for (let i = 0; i < arr.length; i += 1) {
+    sum = sum + arr[i];
+  }
+  return sum / arr.length;
+};
+
+console.log(calculeteAvere([1, 2, 3]));
+console.log(calculeteAvere(tips));
+console.log(calculeteAvere(totals));
+// 3/59
