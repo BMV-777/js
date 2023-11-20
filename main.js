@@ -3292,31 +3292,53 @@
 
 // console.log(ages.sort((a, b) => b - a));
 
-const calculateTips = (bill) => (bill < 20 ? bill * 0.2 : bill * 0.15);
+// const calculateTips = (bill) => (bill < 20 ? bill * 0.2 : bill * 0.15);
 
-const bills = [31, 95, 276, 540, 27, 205, 11, 1180, 96, 57];
+// const bills = [31, 95, 276, 540, 27, 205, 11, 1180, 96, 57];
 
-let tips = [];
-let totals = [];
+// let tips = [];
+// let totals = [];
 
-for (let i = 0; i < bills.length; i += 1) {
-  const tip = calculateTips(bills[i]);
-  tips.push(tip);
-  totals.push(bills[i] + tip);
+// for (let i = 0; i < bills.length; i += 1) {
+//   const tip = calculateTips(bills[i]);
+//   tips.push(tip);
+//   totals.push(bills[i] + tip);
+// }
+
+// console.log(bills, tips, totals);
+
+// const calculeteAvere = function (arr) {
+//   let sum = 0;
+
+//   for (let i = 0; i < arr.length; i += 1) {
+//     sum = sum + arr[i];
+//   }
+//   return sum / arr.length;
+// };
+
+// console.log(calculeteAvere([1, 2, 3]));
+// console.log(calculeteAvere(tips));
+// console.log(calculeteAvere(totals));
+// 3/59
+
+const humidities = [32, 45, 29, 19, "error", 58, 71, 47, 33, 42, 51, 49];
+
+const bag = [];
+
+function calculate(value) {
+  // if (value === "error") {
+  //   return console.log("Поизошол cбой!!!");
+  // } else {
+  //   return Math.min(...value);
+  // }
+  for (let i = 0; i < value.length; i += 1) {
+    if (typeof value[i] != "string") {
+      continue;
+    } else {
+      bag.push(value[i]);
+    }
+  }
+  return bag;
 }
 
-console.log(bills, tips, totals);
-
-const calculeteAvere = function (arr) {
-  let sum = 0;
-
-  for (let i = 0; i < arr.length; i += 1) {
-    sum = sum + arr[i];
-  }
-  return sum / arr.length;
-};
-
-console.log(calculeteAvere([1, 2, 3]));
-console.log(calculeteAvere(tips));
-console.log(calculeteAvere(totals));
-// 3/59
+console.log(calculate(humidities));
