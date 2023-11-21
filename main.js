@@ -3319,26 +3319,54 @@
 // console.log(calculeteAvere([1, 2, 3]));
 // console.log(calculeteAvere(tips));
 // console.log(calculeteAvere(totals));
-// 3/59
+// 3/62
 
 const humidities = [32, 45, 29, 19, "error", 58, 71, 47, 33, 42, 51, 49];
 
-const bag = [];
+// function calculateMax(array) {
+//   let max = array[0];
+//   let min = array[0];
 
-function calculate(value) {
-  // if (value === "error") {
-  //   return console.log("Поизошол cбой!!!");
-  // } else {
-  //   return Math.min(...value);
-  // }
-  for (let i = 0; i < value.length; i += 1) {
-    if (typeof value[i] != "string") {
-      continue;
-    } else {
-      bag.push(value[i]);
+//   for (let i = 1; i < array.length; i += 1) {
+//     const humiNiti = array[i];
+
+//     if (typeof humiNiti !== "number") continue;
+//     if (humiNiti > max) {
+//       max = humiNiti;
+//     }
+//     if (humiNiti < min) {
+//       min = humiNiti;
+//     }
+//   }
+//   console.log(min, max);
+//   return max - min;
+// }
+
+// calculateMax([1, 23, 45, 14, -2, -9, -21]);
+// const amplitide = calculateMax(humidities);
+// console.log(amplitide);
+
+const calculeteTwo = (h1, h2) => {
+  const huminiti = h1.concat(h2);
+  console.log(huminiti);
+
+  let max = huminiti[0];
+  let min = huminiti[0];
+
+  for (let i = 1; i < huminiti.length; i += 1) {
+    const hunHanter = huminiti[i];
+    if (typeof hunHanter !== "number") continue;
+    if (hunHanter > max) {
+      max = hunHanter;
+    }
+    if (hunHanter < min) {
+      min = hunHanter;
     }
   }
-  return bag;
-}
 
-console.log(calculate(humidities));
+  console.log(min, max);
+  return max - min;
+};
+
+const two = calculeteTwo([1, 2, 3, 4], [5, 6, 7, 8]);
+console.log(two);
