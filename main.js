@@ -3346,27 +3346,54 @@ const humidities = [32, 45, 29, 19, "error", 58, 71, 47, 33, 42, 51, 49];
 // const amplitide = calculateMax(humidities);
 // console.log(amplitide);
 
-const calculeteTwo = (h1, h2) => {
-  const huminiti = h1.concat(h2);
-  console.log(huminiti);
+// const calculeteTwo = (h1, h2) => {
+//   const huminiti = h1.concat(h2);
+//   console.log(huminiti);
 
-  let max = huminiti[0];
-  let min = huminiti[0];
+//   let max = huminiti[0];
+//   let min = huminiti[0];
 
-  for (let i = 1; i < huminiti.length; i += 1) {
-    const hunHanter = huminiti[i];
-    if (typeof hunHanter !== "number") continue;
-    if (hunHanter > max) {
-      max = hunHanter;
-    }
-    if (hunHanter < min) {
-      min = hunHanter;
-    }
+//   for (let i = 1; i < huminiti.length; i += 1) {
+//     const hunHanter = huminiti[i];
+//     if (typeof hunHanter !== "number") continue;
+//     if (hunHanter > max) {
+//       max = hunHanter;
+//     }
+//     if (hunHanter < min) {
+//       min = hunHanter;
+//     }
+//   }
+
+//   console.log(min, max);
+//   return max - min;
+// };
+
+// const two = calculeteTwo([1, 2, 3, 4], [5, 6, 7, 8]);
+// console.log(two);
+
+const data1 = [49, 51, 63];
+const data2 = [31, 29, 43, 58, 52];
+
+const printHumiditiesForecast = (array) => {
+  let str = "... ";
+  for (let i = 0; i < array.length; i += 1) {
+    str = str + `${array[i]} % humidity in ${i + 1} days ... `;
   }
 
-  console.log(min, max);
-  return max - min;
+  console.log(str.split(" ").join(" "));
+  // let cover = [];
+  // for (let i = 0; i < array.length; i += 1) {
+  //   let humiditi = `..${array[i]} % humidity in ${i + 1} days...`;
+  //   // console.log(`...${array[i]} % humidity in ${i + 1} days...`);
+
+  //   cover.push(humiditi);
+  // }
+  // console.log(cover.join(". "));
 };
 
-const two = calculeteTwo([1, 2, 3, 4], [5, 6, 7, 8]);
-console.log(two);
+console.log("-------One variant------------");
+printHumiditiesForecast(data1);
+
+console.log("---------Two variant---------");
+
+printHumiditiesForecast(data2);
