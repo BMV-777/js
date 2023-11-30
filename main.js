@@ -3397,3 +3397,4 @@ printHumiditiesForecast(data1);
 console.log("---------Two variant---------");
 
 printHumiditiesForecast(data2);
+4 / 71;
