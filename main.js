@@ -3371,30 +3371,672 @@ const humidities = [32, 45, 29, 19, "error", 58, 71, 47, 33, 42, 51, 49];
 // const two = calculeteTwo([1, 2, 3, 4], [5, 6, 7, 8]);
 // console.log(two);
 
-const data1 = [49, 51, 63];
-const data2 = [31, 29, 43, 58, 52];
+// const data1 = [49, 51, 63];
+// const data2 = [31, 29, 43, 58, 52];
 
-const printHumiditiesForecast = (array) => {
-  let str = "... ";
-  for (let i = 0; i < array.length; i += 1) {
-    str = str + `${array[i]} % humidity in ${i + 1} days ... `;
-  }
+// const printHumiditiesForecast = (array) => {
+//   let str = "... ";
+//   for (let i = 0; i < array.length; i += 1) {
+//     str = str + `${array[i]} % humidity in ${i + 1} days ... `;
+//   }
 
-  console.log(str.split(" ").join(" "));
-  // let cover = [];
-  // for (let i = 0; i < array.length; i += 1) {
-  //   let humiditi = `..${array[i]} % humidity in ${i + 1} days...`;
-  //   // console.log(`...${array[i]} % humidity in ${i + 1} days...`);
+//   console.log(str.split(" ").join(" "));
+// let cover = [];
+// for (let i = 0; i < array.length; i += 1) {
+//   let humiditi = `..${array[i]} % humidity in ${i + 1} days...`;
+//   // console.log(`...${array[i]} % humidity in ${i + 1} days...`);
 
-  //   cover.push(humiditi);
-  // }
-  // console.log(cover.join(". "));
+//   cover.push(humiditi);
+// }
+// console.log(cover.join(". "));
+// };
+
+// console.log("-------One variant------------");
+// printHumiditiesForecast(data1);
+
+// console.log("---------Two variant---------");
+
+// printHumiditiesForecast(data2);
+// 5 / 71;
+
+// const foo = () => {
+//   let x = 3;
+//   const y = bar(5, 5);
+//   x += y;
+//   return x;
+// };
+
+// function bar(a1, b1) {
+//   let z = 5;
+//   return z;
+// }
+
+// const n = foo();
+
+// console.log(n);
+
+// const products = [
+//   {
+//     id: 1,
+//     product_title: "Item 1",
+//     quantity: 2,
+//     price: 100.0,
+//   },
+//   {
+//     id: 2,
+//     product_title: "Item 2",
+//     quantity: 3,
+//     price: 300.0,
+//   },
+// ];
+// const countTotal = (items) =>
+//   items.reduce((acc, curr) => acc + curr.quantity * curr.price, 0);
+
+// console.log(countTotal());
+
+// console.log(
+//   Array(100)
+//     .fill(0)
+//     .map((_, i) => i + 1)
+// );
+// console.log(Array.from({ length: 100 }, (_, i) => i + 1));
+// export function fun1() {
+//   let refs = document.getElementById("one");
+
+//   if (refs.checked) {
+//     alert("he");
+//     // refs.control.classList.toggle("red");
+//   } else {
+//     alert("no");
+//   }
+// }
+
+// function fun1() {
+//   var chbox;
+//   chbox = document.getElementById("one");
+//   if (chbox.checked) {
+//     alert("Выбран");
+//   } else {
+//     alert("Не выбран");
+//   }
+// }
+// let top = bill * ((procent1 + procent2) /2 /100 )
+// react 97
+
+// 6 / 95;
+
+// const a = 1;
+// fun1();
+
+// function fun1() {
+//   var b = 2;
+
+//   fun2();
+//   // console.log(b);
+
+//   function fun2() {
+//     var c = 3;
+
+//     fun3();
+//     // console.log(c);
+//   }
+// }
+
+// function fun3() {
+//   var d = 4;
+//   console.log(a + b + c + d);
+// }
+
+// fun1();
+
+// console.log(arySum(1, 2));
+
+// var arySum = function (a, b) {
+//   return a + b;
+// };
+
+// var techer = "Jeck";
+
+// function CocaCola() {
+//   var techer = "Rozi";
+
+//   function asc(qestion) {
+//     console.log(techer, qestion);
+//   }
+//   asc("Why?");
+// }
+
+// CocaCola();
+// asc("???");
+
+// const array = [1, 3, [7, 9, [8, 4]]];
+
+// console.log(array.flat([1]));
+
+// const array = [1, 3, [7, 9]];
+
+// const [a, b, c, d] = array;
+// console.log(a, b, c, d);
+
+// const japanesRestaurant = {
+//   name: "Banzai",
+//   indexCotegori: 1,
+//   location: "108 Markham Woods Rd, USA",
+//   categories: ["Japanese", "Sushi", "Vegetarian", "Organic"],
+//   appetizerrs: ["Seawed saled", "Tempure shrimp", "Edamame", "Sushi rice"],
+//   mainMenu: ["Sushi", "Ramen", "Tempure"],
+
+//   suhiMy() {
+//     console.log(this.categories[this.indexCotegori]);
+//   },
+// };
+
+// japanesRestaurant.suhiMy();
+
+// const newMenu = [
+//   "Categories :",
+//   ...japanesRestaurant.categories,
+//   "Appetizerrs :",
+//   ...japanesRestaurant.appetizerrs,
+// ];
+
+// console.log(newMenu);
+// // 7 / 107
+// let y = 10;
+// let x = 5;
+// console.log(y, x);
+// [y, x] = [x, y];
+
+// console.log(x, y);
+
+// function symNumbers(...num) {
+//   let sum = 0;
+
+//   for (let i = 0; i < num.length; i += 1) {
+//     sum += num[i];
+//   }
+//   console.log(sum);
+// }
+
+// symNumbers(2, 2, 4);
+
+// const numbers = [2, 4, 5];
+
+// symNumbers(...numbers);
+//  7 / 109;\
+// const restoran = {
+//   wensdeu: {
+//     wen: {
+//       open: 12,
+//       closed: 19,
+//     },
+//     mon: {
+//       open: 9,
+//       closed: 20,
+//     },
+//     sat: {
+//       open: 0,
+//       closed: 24,
+//     },
+//     sun: {
+//       open: 1,
+//       closed: 15,
+//     },
+//   },
+
+//   onRamen: function (nudel = "test", ...color) {
+//     console.log(nudel);
+//     console.log(color);
+//   },
+// };
+
+// restoran.onRamen("Mivina", "Meat", "Chicken", "Onion");
+// restoran.onRamen();
+
+// const { sat, sun, ...arey } = restoran.wensdeu;
+
+// console.log(sat, sun, arey);
+
+// function sum(...nums) {
+//   let total = 0;
+
+//   for (let i = 0; i < nums.length; i++) {
+//     total += nums[i];
+//   }
+
+//   console.log(total);
+// }
+
+// sum(2, 5);
+// sum(2, 4, 5, 7);
+
+// console.log(allPlayers);
+// const [fieldPlayers, ern, ...gren] = [...players1];
+// console.log(fieldPlayers, ern, gren);
+
+// const game = {
+//   team1: "REAL MADRID",
+//   team2: "BARCELONA",
+
+//   players: [
+//     [
+//       "Courtois",
+//       "Vazquez",
+//       "Militao",
+//       "Nacho",
+//       "Mendy",
+//       "Casemiro",
+//       "Valverde",
+//       "Modrich",
+//       "Kroos",
+//       "Vinicius",
+//       "Benzema",
+//     ],
+//     [
+//       "Stegen",
+//       "Mingueza",
+//       "Araujo",
+//       "Lenglet",
+//       "Dest",
+//       "Busquets",
+//       "Jong",
+//       "Alba",
+//       "Messi",
+//       "Pedri",
+//       "Dembele",
+//     ],
+//   ],
+//   score: "2:1",
+//   scored: ["Kroos", "Benzema", "Mingueza"],
+//   date: "Apr 10th, 2021",
+//   odds: {
+//     team1: 1.48,
+//     draw: 2.53,
+//     team2: 4.25,
+//   },
+// };
+
+//Homwork 1
+
+//1
+// const [players1, players2] = game.players;
+
+// console.log(players1, players2);
+
+//2
+
+// const [goalkeeper, ...fieldPlayers] = players1;
+
+// console.log(goalkeeper);
+// console.log(fieldPlayers);
+
+//3
+
+// let allPlayers = [...players1, ...players2];
+
+// console.log(allPlayers);
+
+//4
+// const players1Total = [
+//   ...players1,
+//   "Marcelo",
+//   "Isco",
+//   "Asensio",
+//   "Diaz",
+//   "Odriozola",
+// ];
+
+// console.log(players1Total);
+
+//5
+// const {
+//   odds: { team1, draw, team2 },
+// } = game;
+
+// console.log(team1, draw, team2);
+// console.log(odds);
+
+//6
+
+// const printGoals = (...gamePlaers) => {
+//   // console.log(gamePlaers);
+//   console.log(` ${gamePlaers} ${gamePlaers.length} golls soccer`);
+
+//   let total = 0;
+//   for (let i = 0; i < `${gamePlaers.length}`; i += 1) {
+//     console.log(gamePlaers[i], 1);
+//   }
+
+// let total = 0;
+// for (let i = 0; i < gamePlaers.length; i += 1) {
+//   console.log((total += `${gamePlaers[i]}` + gamePlaers[i]));
+// }
+// for (let [key, value, scored] of Object.entries(gamePlaers)) {
+//   console.log(key, value, scored);
+// }
+// };
+
+// function sum(...nums) {
+//   let total = 0;
+
+//   for (let i = 0; i < nums.length; i++) {
+//     total += nums[i];
+//   }
+
+//   console.log(total);
+// }
+
+// printGoals("Mingueza", "Messi", "Modrich", "Nachc");
+
+// printGoals(...game.scored);
+
+// team1 < team2 && console.log(`${game.team1} is more likely to win`);
+// team1 > team2 && console.log(`${game.team2} is more likely to win`);
+
+//Homwork 2
+
+// const game = {
+//   team1: "REAL MADRID",
+//   team2: "BARCELONA",
+
+//   players: [
+//     [
+//       "Courtois",
+//       "Vazquez",
+//       "Militao",
+//       "Nacho",
+//       "Mendy",
+//       "Casemiro",
+//       "Valverde",
+//       "Modrich",
+//       "Kroos",
+//       "Vinicius",
+//       "Benzema",
+//     ],
+//     [
+//       "Stegen",
+//       "Mingueza",
+//       "Araujo",
+//       "Lenglet",
+//       "Dest",
+//       "Busquets",
+//       "Jong",
+//       "Alba",
+//       "Messi",
+//       "Pedri",
+//       "Dembele",
+//     ],
+//   ],
+//   score: "2:1",
+//   scored: ["Kroos", "Benzema", "Mingueza", "Benzema"],
+//   date: "Apr 10th, 2021",
+//   odds: {
+//     team1: 1.48,
+//     draw: 2.53,
+//     team2: 4.25,
+//   },
+// };
+
+// let gollScore = { `${name}, ${number}` };
+
+// const { team3, team4 } = game;
+
+// console.log(team3, team4);
+
+// {
+//   /* <p className="number">{num < 9 ? `0${num + 1}` : num + 1}</p>; */
+// }
+//1
+// for (let i = 0; i < game.scored.length; i += 1) {
+//   console.log("Goal ", i + 1, "-", game.scored[i]);
+// // }
+// for (const [index, name] of game.scored.entries()) {
+//   // console.log(index, name);
+//   console.log(`Goal ${index + 1} - ${name}`);
+// }
+
+//2
+
+// let oddSum = 0;
+
+// let odds = Object.values(game.odds);
+
+// for (const ods of odds) {
+//   // console.log(ods);
+//   oddSum += ods;
+// }
+
+// let avergete = oddSum / odds.length;
+
+// console.log(avergete);
+
+// const calculete = (...nums) => {
+//   return nums.reduce((a, b) => a + b) / nums.length;
+// };
+
+// const { team1, team2, draw } = game.odds;
+
+// console.log(team1, team2, draw);
+
+// console.log(calculete(team1, team2, draw));
+
+//3
+
+// console.log(`Rate for ${game.team1} victory: ${team1}`);
+// console.log(`Rate for draw: ${draw}`);
+// console.log(`Rate for ${game.team2} victory ${team2}`);
+
+// for (const [name, odd] of Object.entries(game.odds)) {
+//   // console.log(name, odd);
+//   let mutabelText = name === "draw" ? "draw" : `${game[name]} victory`;
+//   console.log(`Rate for ${mutabelText}: ${odd}`);
+// console.log(`Rate for draw: ${game[name]}`);
+// console.log(`Rate for ${game[name]} victory ${odd}`);
+// }
+
+//4
+
+// let gollScorers = {};
+
+// for (const play of game.scored) {
+//   // gollScorers[play] = 1;
+//   gollScorers[play] ? (gollScorers[play] += 1) : (gollScorers[play] = 1);
+// }
+// console.log(gollScorers);
+
+// for (let [gool, name] of Object.entries(game.scored)) {
+//   console.log(gool[0] < 2 ?? gool[0] + 1);
+// }
+
+// const dauses = ["mond", "tue", "wen", "sat"];
+
+// const workinHors = {
+//   [dauses[0]]: {
+//     open: 12,
+//     closed: 0,
+//   },
+//   [dauses[1]]: {
+//     open: 10,
+//     closed: 19,
+//   },
+//   [dauses[2]]: {
+//     open: 9,
+//     closed: 20,
+//   },
+//   [dauses[3]]: {
+//     open: 10,
+//     closed: 17,
+//   },
+// };
+
+// const hors = { open: { her: 12 }, clossed: { mer: 10 } };
+
+// const value = Object.keys(workinHors).length;
+
+// console.log(value);
+
+// const key = Object.keys(workinHors);
+// console.log(key);
+
+// for (let [day, { open, closed }] of Object.entries(workinHors)) {
+//   console.log(day, open, closed);
+// }
+
+// const order = new Set(["Sushi", "Ramen", "Tempura", "Ramen", "Sushi"]);
+
+// console.log(order);
+
+// const restoran = new Map();
+
+// restoran
+//   .set("name", "Brench")
+//   .set(1, ["Gren", "Mandarin", "Pepsi"])
+//   .set("open", 10)
+//   .set("closed", 23)
+//   .set(true, "Bench is open :)")
+//   .set(false, "Bench is closed :(");
+
+// console.log(restoran.get(1));
+
+// const curentBrench = 19;
+
+// restoran.set(
+//   curentBrench > restoran.get("open") && curentBrench < restoran.get("closed")
+// );
+
+// console.log(
+//   restoran.get(
+//     curentBrench > restoran.get("open") && curentBrench < restoran.get("closed")
+//   )
+// );
+
+// const question = new Map([
+//   ["question", "what is the most popular programming language for front-end"],
+//   [1, "Jawascript"],
+//   [2, "Java"],
+//   [3, "Phaiten"],
+//   ["Corectansver", 1],
+//   [true, "Yes you win :)"],
+//   [false, "You los"],
+// ]);
+
+// console.log([...question]);
+
+// // console.log([...question.entries()]);
+// console.log([...question.keys()]);
+// console.log([...question.values()]);
+
+// console.log(question.get("question"));
+
+// for (const [key, value] of question) {
+//   if (typeof key === "number") {
+//     console.log(`${key} ${value}`);
+//   }
+// }
+
+// const answer = Number(prompt("Choose the option number"));
+
+// console.log(question.get(question.get("Corectansver") === answer));
+
+// if (answer === question.get("Corectansver")) {
+//   console.log(question.get(true));
+// } else {
+//   console.log(question.get(false));
+// }
+// const meri = new Map(Object.entries([question]));
+// console.log(meri);
+
+// console.log(question);
+// console.log(Object.values([question]));
+
+// const maping = new Map(Object.entries(question));
+
+// console.log(maping);
+
+const events = new Map([
+  [19, "Goal"],
+  [21, "Substitution"],
+  [43, "Goal"],
+  [56, "Substitution"],
+  [69, "Yellow card"],
+  [73, "Substitution"],
+  [75, "Yellow card"],
+  [79, "Substitution"],
+  [81, "Red card"],
+  [93, "Goal"],
+]);
+
+const game = {
+  team1: "REAL MADRID",
+  team2: "BARCELONA",
+  players: [
+    [
+      "Courtois",
+      "Vazquez",
+      "Militao",
+      "Nacho",
+      "Mendy",
+      "Casemiro",
+      "Valverde",
+      "Modrich",
+      "Kroos",
+      "Vinicius",
+      "Benzema",
+    ],
+    [
+      "Stegen",
+      "Mingueza",
+      "Araujo",
+      "Lenglet",
+      "Dest",
+      "Busquets",
+      "Jong",
+      "Alba",
+      "Messi",
+      "Pedri",
+      "Dembele",
+    ],
+  ],
+  score: "2:1",
+  scored: ["Kroos", "Benzema", "Mingueza"],
+  date: "Apr 10th, 2021",
+  odds: {
+    team1: 1.48,
+    draw: 2.53,
+    team2: 4.25,
+  },
 };
 
-console.log("-------One variant------------");
-printHumiditiesForecast(data1);
+//1
+const gameEvents = events;
 
-console.log("---------Two variant---------");
+// console.log(events);
+// console.log(gameEvents);
 
-printHumiditiesForecast(data2);
-4 / 71;
+//2
+if (gameEvents.get(75) === "Yellow card") {
+  events.delete(75, "Yellow card");
+}
+
+// console.log(gameEvents);
+// console.log(events);
+
+//3
+
+const calculete = (...nums) => {
+  return nums.reduce((a, b) => a + b) / (nums.length / 90);
+};
+
+const sum = gameEvents.keys();
+const total = gameEvents.size;
+
+console.log(calculete(total));
+
+//4
+for (const [key, value] of events) {
+  const avter = 45;
+  if (key < avter) {
+    console.log(`[FERST HALF] ${key}: ${value}`);
+  }
+}
+// 7/ 122

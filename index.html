@@ -125,9 +125,46 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, nesciunt.
       <button type="submit">Отправить</button>
     </form>
 
+    <p id="two">Hi niger!!</p>
+    <input type="checkbox" id="one" onchange="fun1()" />
+
     <!-- <a href="https://learn.javascript.ru/">
       <button>Click</button>
     </a> -->
+<style>
+.open{
+ list-style: none;
+color: rgb(118, 238, 238);
+}
+</style>
+
+    <ul class="open" 
+      <li true >HTML</li>
+      <li>CSS</li>
+      <li>JS</li>
+      <li>React</li>
+    </ul>
+    <script>
+      let number = document.getElementById('open');
+      //  number < 9 ? `0${li + 1}`: li + 1;
+  if(number){
+  number.map((el, i) => el < 9 ? `0${i + 1}` : i + 1)
+}
+      
+  console.log(number)
+ 
+
+      function fun1() {
+        var chbox;
+        chbox = document.getElementById("one");
+        let p = document.getElementById("two");
+        if (chbox.checked) {
+          p.style.color = "red";
+        } else if (!chbox.checked) {
+          p.style.color = "green";
+        }
+      }
+    </script>
     <script src="main.js" type="module"></script>
   </body>
 </html>
