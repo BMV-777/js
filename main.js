@@ -3953,90 +3953,141 @@ const humidities = [32, 45, 29, 19, "error", 58, 71, 47, 33, 42, 51, 49];
 
 // console.log(maping);
 
-const events = new Map([
-  [19, "Goal"],
-  [21, "Substitution"],
-  [43, "Goal"],
-  [56, "Substitution"],
-  [69, "Yellow card"],
-  [73, "Substitution"],
-  [75, "Yellow card"],
-  [79, "Substitution"],
-  [81, "Red card"],
-  [93, "Goal"],
-]);
+// const events = new Map([
+//   [19, "Goal"],
+//   [21, "Substitution"],
+//   [43, "Goal"],
+//   [56, "Substitution"],
+//   [69, "Yellow card"],
+//   [73, "Substitution"],
+//   [75, "Yellow card"],
+//   [79, "Substitution"],
+//   [81, "Red card"],
+//   [93, "Goal"],
+// ]);
 
-const game = {
-  team1: "REAL MADRID",
-  team2: "BARCELONA",
-  players: [
-    [
-      "Courtois",
-      "Vazquez",
-      "Militao",
-      "Nacho",
-      "Mendy",
-      "Casemiro",
-      "Valverde",
-      "Modrich",
-      "Kroos",
-      "Vinicius",
-      "Benzema",
-    ],
-    [
-      "Stegen",
-      "Mingueza",
-      "Araujo",
-      "Lenglet",
-      "Dest",
-      "Busquets",
-      "Jong",
-      "Alba",
-      "Messi",
-      "Pedri",
-      "Dembele",
-    ],
-  ],
-  score: "2:1",
-  scored: ["Kroos", "Benzema", "Mingueza"],
-  date: "Apr 10th, 2021",
-  odds: {
-    team1: 1.48,
-    draw: 2.53,
-    team2: 4.25,
-  },
-};
+// const game = {
+//   team1: "REAL MADRID",
+//   team2: "BARCELONA",
+//   players: [
+//     [
+//       "Courtois",
+//       "Vazquez",
+//       "Militao",
+//       "Nacho",
+//       "Mendy",
+//       "Casemiro",
+//       "Valverde",
+//       "Modrich",
+//       "Kroos",
+//       "Vinicius",
+//       "Benzema",
+//     ],
+//     [
+//       "Stegen",
+//       "Mingueza",
+//       "Araujo",
+//       "Lenglet",
+//       "Dest",
+//       "Busquets",
+//       "Jong",
+//       "Alba",
+//       "Messi",
+//       "Pedri",
+//       "Dembele",
+//     ],
+//   ],
+//   score: "2:1",
+//   scored: ["Kroos", "Benzema", "Mingueza"],
+//   date: "Apr 10th, 2021",
+//   odds: {
+//     team1: 1.48,
+//     draw: 2.53,
+//     team2: 4.25,
+//   },
+// };
 
 //1
-const gameEvents = events;
+// console.log(events.values());
+// const gameEvents = [...new Set(events.values())];
 
 // console.log(events);
 // console.log(gameEvents);
 
 //2
-if (gameEvents.get(75) === "Yellow card") {
-  events.delete(75, "Yellow card");
-}
+// if (gameEvents.get(75) === "Yellow card") {
+//   events.delete(75, "Yellow card");
+// }
+// events.delete(75);
+// console.log(events);
 
 // console.log(gameEvents);
 // console.log(events);
 
 //3
 
-const calculete = (...nums) => {
-  return nums.reduce((a, b) => a + b) / (nums.length / 90);
-};
+// console.log(` On average, an event happened every ${90 / events.size} minutes`);
+// const calculete = (...nums) => {
+//   return nums.reduce((a, b) => a + b) / (nums.length / 90);
+// };
 
-const sum = gameEvents.keys();
-const total = gameEvents.size;
+// const sum = gameEvents.keys();
+// const total = gameEvents.size;
 
-console.log(calculete(total));
+// console.log(calculete(total));
 
 //4
-for (const [key, value] of events) {
-  const avter = 45;
-  if (key < avter) {
-    console.log(`[FERST HALF] ${key}: ${value}`);
-  }
-}
-// 7/ 122
+// for (const [key, value] of events) {
+//   const avter = 45;
+//   if (key < avter) {
+//     console.log(`[FERST HALF] ${key}: ${value}`);
+//   }
+// }
+
+// for (const [key, value] of events) {
+//   const half = key <= 45 ? "FIRST" : "SECOND";
+
+//   console.log(`[${half} HALF] ${key}: ${value}`);
+// }
+
+// https://docs.docker.com/desktop/troubleshoot/topics/#virtualization
+
+// const name = "lInDA";
+
+// name.toLowerCase();
+// console.log(name.toLowerCase());
+// console.log(name.slice(toUperCase(0)));
+// const friman = name.toLowerCase();
+// console.log(friman);
+
+// const fixsedName = friman[0].toUpperCase() + friman.slice(1);
+
+// console.log(fixsedName);
+
+// function parsName(name) {
+//   const nameLowerCase = name.toLowerCase();
+
+//   const nameUperCase = nameLowerCase[0].toUpperCase() + nameLowerCase.slice(1);
+//   console.log(nameUperCase);
+// }
+
+// parsName("hriNdeyMan");
+
+// const point =
+//   "All passengers of flight ES234 come to boarding door 18. Boarding door 18!";
+
+// point.replace("door", "gate");
+
+// console.log(point.replace("door", "gate"));
+// console.log(point.replaceAll("door", "gate"));
+// console.log(point.slice("-10"));
+
+const maskCreditCardt = function (cardNumber) {
+  const cards = cardNumber + "";
+  const cardsName = cards.slice(-4);
+
+  return cardsName.padStart(cards.length, "*");
+};
+
+console.log(maskCreditCardt(11111112234343345));
+// 7/ 127
